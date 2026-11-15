@@ -938,13 +938,11 @@ function generateThisSemPanel(data, courses, pick = data.semList.length - 1) {
   const scholar = !held && !group.hasFailOrInc && group.totalUnits >= 15
     ? (group.gwa <= 1.45 ? 'University Scholar' : group.gwa <= 1.75 ? 'College Scholar' : null) : null;
   const g = sem.gwa;
-  const [title, message] =
-    scholar ? [scholar, 'Ikaw na. Screenshot mo na, deserve mo.']
-    : g <= 1.75 ? ['Uno-heavy sem', 'Ang ganda ng sem mo. Flex mo na.']
-    : g <= 2.0 ? ['Solid sem', 'Kinaya mo lahat. Proud of u.']
-    : g <= 2.5 ? ['Steady sem', 'Pasado lahat ng pinaghirapan mo. Pahinga ka muna.']
-    : g <= 3.0 ? ['Survived the sem', 'Tapos na, nakaraos ka. Panalo pa rin.']
-    : ['Bawi next sem', "Mabigat 'tong sem na 'to. Kaya mo pa 'yan."];
+  const title = scholar || (g <= 1.75 ? 'Uno-heavy sem'
+    : g <= 2.0 ? 'Solid sem'
+    : g <= 2.5 ? 'Steady sem'
+    : g <= 3.0 ? 'Survived the sem'
+    : 'Bawi next sem');
   let top = null;
   taken.forEach(c => {
     const v = parseFloat(c.grade);
@@ -956,7 +954,7 @@ function generateThisSemPanel(data, courses, pick = data.semList.length - 1) {
     : prev - g >= 0.01 ? `Up ${(prev - g).toFixed(2)} from last sem`
     : `${taken.reduce((u, c) => u + (c.units || 0), 0)} units done this sem`;
   return {
-    emoji: '🍓', title, value: g.toFixed(4), subtitle: sem.name, message, extra, frame: 'sem',
+    emoji: '🍓', title, value: g.toFixed(4), subtitle: sem.name, message: '', extra, frame: 'sem',
     highlights: top ? [{ label: '🏆 Best course', name: top.code, detail: top.grade.toFixed(2) }] : [],
   };
 }
@@ -981,14 +979,12 @@ function generateSemesterPanel(data) {
   const n = data.semList.length;
   const b = data.bestSem;
   if (!b) return { emoji: '📅', title: 'Sem stats', value: '--', subtitle: 'No sem has grades yet', message: 'Check back once grades are in.' };
-  const bestWord = b.gwa <= 1.25 ? 'Your peak' : b.gwa <= 1.5 ? 'Nice run' : b.gwa <= 1.75 ? 'Solid sem' : b.gwa <= 2 ? 'Good one' : 'Best so far';
-  const highlights = [{ label: '🏆 Best sem', name: b.name, detail: `GWA ${b.gwa.toFixed(4)}. ${bestWord}` }];
+  const highlights = [{ label: '🏆 Best sem', name: b.name, detail: `GWA ${b.gwa.toFixed(4)}` }];
   const t = data.worstSem;
   const up = data.comeback;
   if (up && up.sem.name !== b.name) highlights.push({ label: '📈 Comeback sem', name: up.sem.name, detail: `GWA ${up.sem.gwa.toFixed(4)}. Up ${up.up.toFixed(2)} from the sem before` });
   else if (t && t.name !== b.name) {
-    const word = t.gwa >= 3 ? 'Rough one' : t.gwa >= 2.5 ? 'Challenging' : t.gwa >= 2 ? 'Tough load' : 'Room to grow';
-    highlights.push({ label: '📈 Toughest sem', name: t.name, detail: `GWA ${t.gwa.toFixed(4)}. ${word}` });
+    highlights.push({ label: '📈 Toughest sem', name: t.name, detail: `GWA ${t.gwa.toFixed(4)}` });
   }
   const message = n >= 8 ? `${n} sems done. Almost there.`
     : n >= 6 ? `${n} sems done. The end is in sight.`
@@ -1000,9 +996,9 @@ function generateSemesterPanel(data) {
 
 function generateHighlightsPanel(data) {
   const highlights = [];
-  if (data.best) highlights.push({ label: '🏆 Best performance', name: data.best.code, detail: `Grade ${data.best.grade.toFixed(2)}` });
-  if (data.worst) highlights.push({ label: '📈 Room to grow', name: data.worst.code, detail: `Grade ${data.worst.grade.toFixed(2)}` });
-  if (data.mostRetaken) highlights.push({ label: '🔄 Persistence award', name: data.mostRetaken.code, detail: `Taken ${data.mostRetaken.count} times. You didn't give up` });
+  if (data.best) highlights.push({ label: '🏆 Best grade', name: data.best.code, detail: `Grade ${data.best.grade.toFixed(2)}` });
+  if (data.worst) highlights.push({ label: '📈 Lowest grade', name: data.worst.code, detail: `Grade ${data.worst.grade.toFixed(2)}` });
+  if (data.mostRetaken) highlights.push({ label: '🔄 Most retaken', name: data.mostRetaken.code, detail: `Taken ${data.mostRetaken.count} times` });
   return {
     emoji: '🫴', title: 'Your highlights', highlights,
     subtitle: highlights.length ? null : 'Pass a course to see your highlights.',
@@ -1022,7 +1018,7 @@ function generateCollectorPanel(data) {
   const badges = Array.from(data.distinct).filter(Boolean).sort()
     .map(text => ({ text, special: NON_NUMERIC_GRADES.includes(text) }));
   const f = data.fails;
-  const extra = f === 0 ? 'Zero 5.00s. Clean record.' : f === 1 ? 'One 5.00, and still here.' : `${f} 5.00s, and still standing.`;
+  const extra = f === 0 ? 'Zero 5.00s' : f === 1 ? 'One 5.00' : `${f} 5.00s`;
   return { emoji, title, value: String(total), subtitle: total === 1 ? 'kind of grade' : 'kinds of grades', badges, message, extra, frame: total > 0 && 'note' };
 }
 
@@ -1183,41 +1179,46 @@ async function drawTinFrame(canvas, p) {
   if (p.frame === 'sem') {
     const top = id.top ? p.highlights[0] : null;
     const [term, ay] = p.subtitle.split(' AY ');
-    if (id.photo) at(345, 744, -0.163, () => ctx.drawImage(photo, -175, -185, 350, 375));
-    at(752, 730, -0.16, () => {
+    if (id.photo) at(340, 743, -0.174, () => {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(-216, -216, 432, 432);
+      ctx.drawImage(photo, 0, 10, 280, 280, -194, -194, 388, 388);
+    });
+    at(745, 715, -0.192, () => {
       text('My', 600, 36, SOFT, -66, 280);
       text(term, 800, 56, INK, 0, 290);
       if (ay) text(`AY ${ay}`, 700, 38, RED, 56, 290);
     });
-    at(595, 1228, -0.14, () => {
-      const lines = [];
-      if (id.line || p.extra) lines.push([id.line || p.extra, 700, 44, INK]);
-      if (top) lines.push([`Best course ${top.name}, ${top.detail}`, 600, 38, SOFT]);
-      let y = g ? -150 : -95;
-      if (/Scholar$/.test(p.title)) {
-        ctx.font = `800 58px ${font}`;
-        const w = ctx.measureText(p.title).width + 120;
-        ctx.fillStyle = RED;
-        ctx.beginPath();
-        ctx.moveTo(-w / 2 - 40, y - 52);
-        ctx.lineTo(w / 2 + 40, y - 52);
-        ctx.lineTo(w / 2 + 10, y - 8);
-        ctx.lineTo(w / 2 + 40, y + 36);
-        ctx.lineTo(-w / 2 - 40, y + 36);
-        ctx.lineTo(-w / 2 - 10, y - 8);
-        ctx.closePath();
-        ctx.fill();
-        text(p.title, 800, 58, '#fff4e0', y + 12, w - 60);
-        star(-w / 2 + 6, y - 56, 40, -0.3);
-        star(w / 2 - 6, y - 52, 32, 0.25);
-      } else text(p.title, 800, g ? 72 : 96, INK, y + 10, 680);
-      if (g) text(g, 800, 170, RED, (y += 175));
-      y += g ? 70 : 85;
-      lines.forEach(([t, weight, size, color]) => {
-        text(t, weight, size, color, y, 680);
-        y += size + 22;
+    // The stack is centered on the tray, a 787 by 462 cloth.
+    at(590, 1219, -0.195, () => {
+      const scholar = /Scholar$/.test(p.title);
+      const rows = [[p.title, 800, scholar ? 58 : g ? 66 : 90, scholar ? '#fff4e0' : INK]];
+      if (g) rows.push([g, 800, 150, RED]);
+      if (id.line || p.extra) rows.push([id.line || p.extra, 700, 42, INK]);
+      if (top) rows.push([`Best course ${top.name}, ${top.detail}`, 600, 36, SOFT]);
+      rows.push([URL, 600, 30, SOFT]);
+      const tall = rows.map(([, , size], k) => (k === 0 && scholar ? 88 : size * 0.74));
+      let y = -(tall.reduce((a, b) => a + b, 0) + 20 * (rows.length - 1)) / 2;
+      rows.forEach(([t, weight, size, color], k) => {
+        if (k === 0 && scholar) {
+          ctx.font = `800 58px ${font}`;
+          const w = ctx.measureText(t).width + 120;
+          ctx.fillStyle = RED;
+          ctx.beginPath();
+          ctx.moveTo(-w / 2 - 40, y);
+          ctx.lineTo(w / 2 + 40, y);
+          ctx.lineTo(w / 2 + 10, y + 44);
+          ctx.lineTo(w / 2 + 40, y + 88);
+          ctx.lineTo(-w / 2 - 40, y + 88);
+          ctx.lineTo(-w / 2 - 10, y + 44);
+          ctx.closePath();
+          ctx.fill();
+          text(t, weight, size, color, y + 64, w - 60);
+          star(-w / 2 + 6, y - 4, 40, -0.3);
+          star(w / 2 - 6, y, 32, 0.25);
+        } else text(t, weight, size, color, y + tall[k], 680);
+        y += tall[k] + 20;
       });
-      text(URL, 600, 32, SOFT, Math.max(y + 8, 200));
     });
     return canvas;
   }
@@ -1310,7 +1311,7 @@ async function drawTinFrame(canvas, p) {
       text(detail, 700, 34, RED, 60, 300);
     });
     corner(838, 805, low, ['', '', '']);
-    corner(860, 1185, kept, ['So far', p.extra, 'and counting']);
+    corner(860, 1185, kept, ['So far', p.extra, '']);
     tag(URL, 36, 540, 1478, -0.05);
     return canvas;
   }
@@ -1354,7 +1355,7 @@ function redrawTin() {
 }
 
 function wrappedPanel(p) {
-  if (p.frame) return [tinCanvas(p), h('p', { class: 'panel-message' }, p.message)];
+  if (p.frame) return [tinCanvas(p)];
   return [
     h('div', { class: 'panel-emoji', 'aria-hidden': 'true' }, p.emoji),
     h('h3', { class: 'panel-title' }, p.title),

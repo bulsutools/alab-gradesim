@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.18 (2026-11-16)
+
+### Changes
+- The sem card lines up with Reann's tin. The photo covers the note, and the text follows the tin's tilt and sits centered on the cloth.
+- The line under each Wrapped card is gone, and the photo hint sits under its checkbox.
+- Previous, Next and Save this card sit right under the card in Wrapped, with the card options below a line.
+- The Wrapped cards drop the words after each fact, such as "Your peak", "Tough load" and "You didn't give up".
+
 ## 2.1.17 (2026-11-16)
 
 ### Changes
