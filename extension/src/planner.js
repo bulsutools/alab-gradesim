@@ -324,15 +324,22 @@ function compute() {
   const left = remainingRequirements(state.courses, hist.attempts.filter(a => a.result === 'passed'),
     { substitutions: d.substitutions, overrides: d.customCourseStatus });
 
-  const conflicts = prereqConflicts(state.courses, code => (info[code] ? info[code].status : passed.has(code) && 'passed'));
+  const statusOf = code => (info[code] ? info[code].status : passed.has(code) && 'passed');
+  const conflicts = prereqConflicts(state.courses, statusOf);
 
-  return { hist, info, startAbs, passed: now.passed, failures, costs, now, ideal, noWhatif, slips, unitCaps, capAt, byChecklist, left, conflicts };
+  return { hist, info, startAbs, passed: now.passed, failures, costs, now, ideal, noWhatif, slips, unitCaps, capAt, byChecklist, left, conflicts, statusOf };
 }
 
 /* ---------- Summary ---------- */
 
 // "N terms later" counted in terms the student would attend: midyears count
 // only when the plan uses them.
+// The new conflict a mark would create, such as a failed prerequisite of a passed course.
+function markConflict(v, code, mark) {
+  const known = new Set(v.conflicts.map(c => `${c.code}>${c.pre}`));
+  return prereqConflicts(state.courses, c => (c === code ? mark : v.statusOf(c))).find(c => !known.has(`${c.code}>${c.pre}`));
+}
+
 function termsLate(v, fromT, toT) {
   let n = 0;
   for (let t = fromT + 1; t <= toT; t++) {
@@ -346,7 +353,7 @@ function renderSummary(v) {
   const r = v.now.result;
   const gradAbs = r.gradTermIndex >= 0 ? v.startAbs + r.gradTermIndex : null;
   $('gradTerm').textContent = gradAbs == null
-    ? (r.unschedulable.length ? 'Some courses cannot be placed' : 'All planned requirements done')
+    ? (r.unschedulable.length ? "Some courses can't be placed" : 'All planned requirements done')
     : `Graduate ${absLabel(gradAbs)}`;
 
   const delta = termsLate(v, v.ideal.result.gradTermIndex, r.gradTermIndex);
@@ -370,7 +377,7 @@ function renderSummary(v) {
   const termsLeft = r.plan.filter(p => p.courses.length).length;
   const nowTaking = Object.values(v.info).some(i => i.status === 'inprogress');
   const sentences = [];
-  if (gradAbs != null) sentences.push(`That is ${ayLabel(gradAbs)}, with ${termsText(termsLeft)} of classes from ${absLabel(v.startAbs)}.`);
+  if (gradAbs != null) sentences.push(`That's ${ayLabel(gradAbs)}, with ${termsText(termsLeft)} of classes from ${absLabel(v.startAbs)}.`);
   sentences.push(`You have ${unitsText(v.left.units)} left to pass${nowTaking ? ', counting this term' : ''}.`);
   $('gradSub').textContent = sentences.join(' ');
 
@@ -381,7 +388,7 @@ function renderSummary(v) {
     h('span', {}, h('strong', {}, c.code),
       ` ${c.source === 'whatif' ? 'in the what-if' : c.past ? 'failed' : 'marked failed'}, ${c.cost > 0 ? `${termsText(c.cost)} later` : 'no delay'}`))) : []),
   ...v.conflicts.map(c => h('li', { class: 'bad' }, icon('alert'),
-    h('span', {}, h('strong', {}, c.code), ` is passed, so its prerequisite ${c.pre} cannot be failed. Check the mark on ${c.pre}.`))));
+    h('span', {}, h('strong', {}, c.code), ` is passed, so its prerequisite ${c.pre} can't be failed. Check the mark on ${c.pre}.`))));
 }
 
 /* ---------- Cards and columns ---------- */
@@ -616,7 +623,7 @@ function renderDetail() {
     delay > 1 && h('li', {}, h('strong', {}, delay), ' courses on the longest chain through it'),
     slip === undefined ? null : slip > 0
       ? h('li', { class: 'bad' }, h('strong', {}, 'Critical.'), ` Taking it a term later delays graduation by ${slip === Infinity ? 'more than the plan can show' : termsText(termsLate(v, v.now.result.gradTermIndex, v.now.result.gradTermIndex + slip))}.`)
-      : h('li', {}, 'Has slack. Taking it a term later does not move graduation.'));
+      : h('li', {}, "It has slack. Taking it a term later doesn't move graduation."));
 
   const reqs = [];
   groups.forEach(g => reqs.push(h('li', {}, courseLinks(g, v))));
@@ -627,14 +634,16 @@ function renderDetail() {
 
   const actions = [];
   const past = i.tries.length > 0;
-  if (i.status !== 'passed') actions.push(button({ icon: 'check', text: 'Mark passed', dataset: { act: 'passed' } }));
-  if (i.status !== 'failed') actions.push(button({ icon: 'x', text: past || i.status === 'inprogress' ? 'Mark failed' : 'Mark failed (what-if)', dataset: { act: 'failed' } }));
+  const passBlock = i.status !== 'passed' && markConflict(v, code, 'passed');
+  const failBlock = i.status !== 'failed' && markConflict(v, code, 'failed');
+  if (i.status !== 'passed' && !passBlock) actions.push(button({ icon: 'check', text: 'Mark passed', dataset: { act: 'passed' } }));
+  if (i.status !== 'failed' && !failBlock) actions.push(button({ icon: 'x', text: past || i.status === 'inprogress' ? 'Mark failed' : 'Mark failed (what-if)', dataset: { act: 'failed' } }));
   if (i.override) actions.push(button({ variant: 'text', text: `Use ${past ? 'AMIS status' : 'plan'} again`, dataset: { act: 'clear' } }));
   if (t !== undefined) actions.push(button({ variant: 'text', text: 'Take a term later', dataset: { act: 'later' } }));
   if (state.data.plannerPins[code] != null) actions.push(button({ variant: 'text', text: 'Back to earliest', dataset: { act: 'unpin' } }));
   const petition = restricted(c) && i.status !== 'passed' && h('label', { class: 'pl-check pl-petition' },
     h('input', { type: 'checkbox', dataset: { act: 'petition' }, checked: !!state.data.plannerPetitions[code] }),
-    ' Plan on a petitioned class when it is not offered. Needs about 10 students and department, college and OVCAA approval, so treat it as conditional.');
+    " Plan on a petitioned class when it isn't offered. It needs about 10 students and department, college and OVCAA approval, so treat it as conditional.");
 
   panel.replaceChildren(...flat([
     h('div', { class: 'pl-detail-head' },
@@ -643,7 +652,7 @@ function renderDetail() {
         h('p', { class: 'pl-detail-title' }, c.title)),
       button({ variant: 'icon', icon: 'x', class: 'pl-close', 'aria-label': 'Close details', dataset: { act: 'close' } })),
     h('p', { class: 'pl-muted' }, `${facts.join('. ')}.`),
-    metrics.children.length > 0 && metrics,
+    i.status !== 'passed' && metrics.children.length > 0 && metrics,
     c.options && [h('h4', {}, 'Take one of these'), h('ul', { class: 'pl-reqs' }, c.options.map(o => h('li', {},
       h('strong', {}, o), catalog[o] ? ` ${catalog[o].title.replace(/\.$/, '')}` : '',
       v.passed.has(o) ? ', passed' : '')))],
@@ -651,6 +660,8 @@ function renderDetail() {
     reqs.length ? h('ul', { class: 'pl-reqs' }, reqs) : h('p', { class: 'pl-muted' }, 'No prerequisites.'),
     deps.length > 0 && [h('h4', {}, 'Unlocks'), h('p', { class: 'pl-deps' }, deps.map(d => courseLinks([d], v)))],
     h('div', { class: 'pl-actions' }, actions),
+    failBlock && h('p', { class: 'pl-muted' }, `${failBlock.code} is passed, so ${code} can't be marked failed.`),
+    passBlock && h('p', { class: 'pl-muted' }, `${passBlock.pre} is failed, so ${code} can't be marked passed.`),
     state.acted === code && h('p', {}, h('strong', {}, `${$('gradTerm').textContent}.${$('gradDelta').textContent ? ` ${$('gradDelta').textContent}.` : ''}`)),
     petition,
   ]));
@@ -734,7 +745,7 @@ function simulate(e) {
     const retake = t === undefined ? '' : ` The retake is planned for ${absLabel(v.startAbs + t)}.`;
     $('whatifResult').textContent = pastFail.cost > 0
       ? `${code} is failed on AMIS, which moves graduation ${termsText(pastFail.cost)} later, to ${absLabel(v.startAbs + v.now.result.gradTermIndex)}.${retake}`
-      : `${code} is failed on AMIS, but it does not move graduation.${retake}`;
+      : `${code} is failed on AMIS, but it doesn't move graduation.${retake}`;
     $('whatifClear').classList.remove('hidden');
     state.selected = code;
     renderDetail();
@@ -752,7 +763,7 @@ function simulate(e) {
   const verb = mode === 'fail' ? `Failing ${code}` : `Taking ${code} ${mode === '1' ? 'a term' : 'a year'} later`;
   $('whatifResult').textContent = slip > 0
     ? `${verb} moves graduation to ${absLabel(v.startAbs + after.gradTermIndex)}, ${termsText(slip)} later.${pushed.length ? ` It also pushes back ${list}.` : ''}`
-    : `${verb} does not move graduation.${pushed.length ? ` It shifts ${list}.` : ' Nothing else shifts.'}`;
+    : `${verb} doesn't move graduation.${pushed.length ? ` It shifts ${list}.` : ' Nothing else shifts.'}`;
   $('whatifClear').classList.remove('hidden');
   state.selected = code;
   renderDetail();
@@ -896,14 +907,14 @@ function savePlanFile() {
   announce('Plan saved as a file.');
 }
 
-// Returns a friendly reason the file can't be used, or '' when it is fine.
+// Returns a friendly reason the file can't be used, or '' when it's fine.
 function checkPlan(p) {
   const isObj = x => x != null && typeof x === 'object' && !Array.isArray(x);
   const all = (o, ok) => isObj(o) && Object.values(o).every(ok);
-  if (!isObj(p) || p.source !== 'elbi-gradesim-plan') return 'That file is not a GradeSim course plan. Pick a file made with Save plan.';
+  if (!isObj(p) || p.source !== 'elbi-gradesim-plan') return "That file isn't a GradeSim course plan. Pick a file made with Save plan.";
   if (p.version !== 1) return 'That plan was saved by a newer GradeSim. Update the extension and try again.';
   const prog = typeof UPLB_PROGRAMS !== 'undefined' && UPLB_PROGRAMS[p.program];
-  if (!prog || !prog.majorCourses) return `That plan is for a program this version does not have (${String(p.program)}).`;
+  if (!prog || !prog.majorCourses) return `That plan is for a program this version doesn't have (${String(p.program)}).`;
   const ok = all(p.customCourseStatus, x => ['passed', 'failed', 'planned', 'inprogress'].includes(x)) &&
     all(p.plannerPins, Number.isInteger) &&
     all(p.plannerPetitions, x => x === true) &&
