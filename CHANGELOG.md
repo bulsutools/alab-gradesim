@@ -3,6 +3,7 @@
 ## 2.1.17 (2026-11-16)
 
 ### Changes
+- HK 12 taken for more than one sport now fills one HK slot each time. Before, only the first HK 12 counted.
 - BS CS free electives no longer wait for senior standing.
 
 ## 2.1.16 (2026-11-16)
