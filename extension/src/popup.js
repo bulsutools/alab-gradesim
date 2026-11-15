@@ -846,6 +846,16 @@ function initializeWrapped() {
   $('wrappedPrev').addEventListener('click', () => navigateWrapped(-1));
   $('wrappedNext').addEventListener('click', () => navigateWrapped(1));
   $('wrappedExport').addEventListener('click', exportWrappedToPNG);
+  $('wrappedName').addEventListener('input', redrawTin);
+  $('programSelect').addEventListener('change', redrawTin);
+  $('wrappedPhotoBtn').addEventListener('click', () => $('wrappedPhoto').click());
+  $('wrappedPhoto').addEventListener('change', async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    wrappedPhoto = await createImageBitmap(file).catch(() => wrappedPhoto);
+    $('wrappedPhotoBtn').textContent = 'Change the photo';
+    redrawTin();
+  });
 }
 
 function generateWrappedData(courses) {
@@ -988,7 +998,7 @@ function generateGWAPanel(data) {
     [Infinity, '🌱', 'Comeback arc', "Mababa man ngayon, pwede pa 'yan i-improve. Marami nang naka-recover from this. Kaya mo 'yan."],
   ];
   const [, emoji, title, message] = gwa === 0 ? tiers[0] : tiers.slice(1).find(t => gwa <= t[0]);
-  return { emoji, title, value: gwa > 0 ? gwa.toFixed(4) : '--', subtitle: 'My Elbi GWA', message };
+  return { emoji, title, value: gwa > 0 ? gwa.toFixed(4) : '--', subtitle: 'My Elbi GWA', message, frame: gwa > 0 };
 }
 
 function generateSemesterPanel(data) {
@@ -1118,7 +1128,98 @@ function generateProgressPanel(data) {
 }
 
 // On-screen Wrapped slide.
+let wrappedPhoto = null;
+let wrappedYears = 0;
+
+function wrappedId() {
+  const name = $('wrappedName').value.trim();
+  if (!name && !wrappedPhoto) return null;
+  const year = `${['1st', '2nd', '3rd'][wrappedYears - 1] || `${wrappedYears}th`} year`;
+  return { name, year, course: $('programSelect').value, photo: wrappedPhoto };
+}
+
+const tinImages = {};
+
+// Reann Vargas's tin frame. The lid and the tray are tilted about 10 degrees.
+async function drawTinFrame(canvas, p, id = wrappedId()) {
+  const font = '"Figtree", system-ui, sans-serif';
+  const src = id ? 'frames/tin-id.jpg' : 'frames/tin.jpg';
+  const img = tinImages[src] ||= Object.assign(new Image(), { src });
+  await Promise.all([img.decode(), document.fonts.load(`800 88px ${font}`)]);
+  canvas.width = 1080;
+  canvas.height = 1920;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, 1080, 1920);
+  const tilted = (x, y, draw) => {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(id ? -0.19 : -0.17);
+    draw();
+    ctx.restore();
+  };
+  ctx.textAlign = 'center';
+  if (id) {
+    const { photo } = id;
+    if (photo) tilted(118, 648, () => {
+      const scale = Math.max(297 / photo.width, 318 / photo.height);
+      ctx.beginPath();
+      ctx.rect(0, 0, 297, 318);
+      ctx.clip();
+      ctx.drawImage(photo, (297 - photo.width * scale) / 2, (318 - photo.height * scale) / 2, photo.width * scale, photo.height * scale);
+    });
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#1c1917';
+    [[id.name, 556, 638, 285], [id.year, 566, 738, 295], [id.course, 612, 830, 268]].forEach(([text, x, y, max]) => tilted(x, y, () => {
+      let size = 40;
+      do ctx.font = `700 ${size}px ${font}`;
+      while (ctx.measureText(text).width > max && --size > 24);
+      ctx.fillText(text, 0, 0, max);
+    }));
+    ctx.textAlign = 'center';
+    tilted(592, 1215, () => {
+      ctx.fillStyle = '#7b2a22';
+      ctx.font = `800 190px ${font}`;
+      ctx.fillText(p.value, 0, 0);
+      ctx.fillStyle = '#2b2321';
+      ctx.font = `800 64px ${font}`;
+      ctx.fillText(p.title, 0, 95);
+      ctx.fillStyle = '#4a3f3c';
+      ctx.font = `600 36px ${font}`;
+      ctx.fillText('My Elbi GWA on gradesim.uplb.tools', 0, 160);
+    });
+    return canvas;
+  }
+  tilted(500, 700, () => {
+    ctx.fillStyle = '#2b2321';
+    ctx.font = `800 ${p.title.length > 14 ? 76 : 88}px ${font}`;
+    ctx.fillText(p.title, 0, 0);
+    ctx.fillStyle = '#4a3f3c';
+    ctx.font = `600 40px ${font}`;
+    ctx.fillText('gradesim.uplb.tools', 0, 80);
+  });
+  tilted(596, 1225, () => {
+    ctx.fillStyle = '#7b2a22';
+    ctx.font = `800 190px ${font}`;
+    ctx.fillText(p.value, 0, 40);
+    ctx.font = `700 52px ${font}`;
+    ctx.fillText(p.subtitle, 0, 130);
+  });
+  return canvas;
+}
+
+function tinCanvas(p) {
+  const canvas = h('canvas', { class: 'panel-frame', role: 'img', 'aria-label': `${p.title}, GWA ${p.value}, drawn in a tin on a picnic blanket` });
+  drawTinFrame(canvas, p);
+  return canvas;
+}
+
+function redrawTin() {
+  const canvas = $('wrappedPanel').querySelector('canvas');
+  if (canvas) drawTinFrame(canvas, wrappedPanels[wrappedCurrentPanel]);
+}
+
 function wrappedPanel(p) {
+  if (p.frame) return [tinCanvas(p)];
   return [
     h('div', { class: 'panel-emoji', 'aria-hidden': 'true' }, p.emoji),
     h('h3', { class: 'panel-title' }, p.title),
@@ -1135,6 +1236,7 @@ function wrappedPanel(p) {
 
 function displayWrapped(courses) {
   wrappedPanels = generateWrappedPanels(generateWrappedData(courses));
+  wrappedYears = new Set(courses.map(c => c.academicYear).filter(Boolean)).size;
   wrappedCurrentPanel = 0;
   updateWrappedDisplay();
 }
@@ -1142,6 +1244,7 @@ function displayWrapped(courses) {
 function updateWrappedDisplay() {
   if (!wrappedPanels.length) return;
   $('wrappedPanel').replaceChildren(...flat(wrappedPanel(wrappedPanels[wrappedCurrentPanel])));
+  $('wrappedId').hidden = !wrappedPanels[wrappedCurrentPanel].frame;
   $('wrappedProgress').textContent = `${wrappedCurrentPanel + 1} of ${wrappedPanels.length}`;
   $('wrappedPrev').disabled = wrappedCurrentPanel === 0;
   $('wrappedNext').disabled = wrappedCurrentPanel === wrappedPanels.length - 1;
@@ -1160,6 +1263,8 @@ function navigateWrapped(direction) {
 async function exportWrappedToPNG() {
   const p = wrappedPanels[wrappedCurrentPanel];
   if (!p) return;
+  const save = c => h('a', { download: `elbi-wrapped-${wrappedCurrentPanel + 1}.png`, href: c.toDataURL('image/png') }).click();
+  if (p.frame) return save(await drawTinFrame(document.createElement('canvas'), p));
 
   const DISPLAY = '"Figtree", system-ui, sans-serif';
   const TEXT = DISPLAY;
@@ -1290,7 +1395,7 @@ async function exportWrappedToPNG() {
     }
   }
 
-  h('a', { download: `elbi-wrapped-${wrappedCurrentPanel + 1}.png`, href: canvas.toDataURL('image/png') }).click();
+  save(canvas);
 }
 
 /* ---------- Grade refresh, backup and clear data (platform) ---------- */
