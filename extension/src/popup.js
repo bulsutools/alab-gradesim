@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }));
   }
   showSyncError(lastError);
+  const { newGrades } = await chrome.storage.local.get('newGrades');
+  if (newGrades) {
+    if (!lastError) showNotice($('syncNotice'), { tone: 'ok', icon: 'check', body: `AMIS has ${newGrades === 1 ? '1 new grade' : `${newGrades} new grades`} since you last opened GradeSim.` });
+    chrome.storage.local.remove('newGrades');
+  }
 
   // Load excluded courses from storage
   const savedExclusions = await chrome.storage.local.get(['excludedCourses']);
@@ -848,7 +853,12 @@ function initializeWrapped() {
   $('wrappedNext').addEventListener('click', () => navigateWrapped(1));
   $('wrappedExport').addEventListener('click', exportWrappedToPNG);
   $('wrappedName').addEventListener('input', redrawTin);
-  $('wrappedNumber').addEventListener('change', redrawTin);
+  ['wrappedShow', 'wrappedTop'].forEach(id => $(id).addEventListener('change', redrawTin));
+  $('wrappedLine').addEventListener('input', redrawTin);
+  $('wrappedSem').addEventListener('change', () => {
+    wrappedPanels = generateWrappedPanels(generateWrappedData(wrappedCourses), wrappedCourses, Number($('wrappedSem').value)).filter(Boolean);
+    updateWrappedDisplay();
+  });
   $('programSelect').addEventListener('change', redrawTin);
 }
 
@@ -906,14 +916,49 @@ function generateWrappedData(courses) {
 
 // Each panel is plain data. wrappedPanel() shows it, and drawTinFrame() paints
 // the cards that sit on Reann Vargas's art.
-function generateWrappedPanels(data) {
+function generateWrappedPanels(data, courses, pick) {
   return [
+    generateThisSemPanel(data, courses, pick),
     generateGWAPanel(data),
     generateSemesterPanel(data),
     generateHighlightsPanel(data),
     generateCollectorPanel(data),
     generateProgressPanel(data),
   ];
+}
+
+function generateThisSemPanel(data, courses, pick = data.semList.length - 1) {
+  if (!data.semList.length) return null;
+  const n = Math.min(pick, data.semList.length - 1) + 1;
+  const sem = data.semList[n - 1];
+  const inSem = courses.filter(c => semKeyOf(c) === sem.name);
+  const taken = inSem.filter(c => !NON_GWA_PREFIX.test((c.courseCode || '').trim()));
+  const group = calculateGroupGWA(taken);
+  const held = inSem.some(c => NON_GWA_PREFIX.test((c.courseCode || '').trim()) && ((c.grade || '').toString().toUpperCase().trim() === 'INC' || parseFloat(c.grade) > 3));
+  const scholar = !held && !group.hasFailOrInc && group.totalUnits >= 15
+    ? (group.gwa <= 1.45 ? 'University Scholar' : group.gwa <= 1.75 ? 'College Scholar' : null) : null;
+  const g = sem.gwa;
+  const [title, message] =
+    scholar ? [scholar, 'Ikaw na. Screenshot mo na, deserve mo.']
+    : g <= 1.75 ? ['Uno-heavy sem', 'Ang ganda ng sem mo. Flex mo na.']
+    : g <= 2.0 ? ['Solid sem', 'Kinaya mo lahat. Proud of u.']
+    : g <= 2.5 ? ['Steady sem', 'Pasado lahat ng pinaghirapan mo. Pahinga ka muna.']
+    : g <= 3.0 ? ['Survived the sem', 'Tapos na, nakaraos ka. Panalo pa rin.']
+    : ['Bawi next sem', "Mabigat 'tong sem na 'to. Kaya mo pa 'yan."];
+  let top = null;
+  taken.forEach(c => {
+    const v = parseFloat(c.grade);
+    if (v >= 1 && v <= 5 && !excludedCourses.has(courseIdOf(c)) && (!top || v < top.grade)) top = { code: (c.courseCode || '').trim(), grade: v };
+  });
+  const prev = n > 1 ? data.semList[n - 2].gwa : null;
+  const extra = prev == null ? 'My first sem in Elbi'
+    : data.bestSem === sem ? 'My best sem'
+    : prev - g >= 0.01 ? `Up ${(prev - g).toFixed(2)} from last sem`
+    : `${taken.reduce((u, c) => u + (c.units || 0), 0)} units done this sem`;
+  return {
+    emoji: '🍓', title, value: g.toFixed(4), subtitle: sem.name, message, extra, frame: 'sem',
+    highlights: top ? [{ label: '🏆 Top grade', name: top.code, detail: top.grade.toFixed(2) }] : [],
+  };
 }
 
 function generateGWAPanel(data) {
@@ -1001,15 +1046,32 @@ function generateProgressPanel(data) {
 
 // On-screen Wrapped slide.
 let wrappedYears = 0;
+let wrappedCourses = [];
 
 function wrappedId() {
   const year = `${['1st', '2nd', '3rd'][wrappedYears - 1] || `${wrappedYears}th`} year`;
-  return { name: $('wrappedName').value.trim(), year, course: $('programSelect').value, number: $('wrappedNumber').checked };
+  // The From AMIS mark: grades read from AMIS here, with no removal result and nothing left out.
+  const amis = fetchedAt && !Object.keys(removals).length && !excludedCourses.size
+    ? new Date(fetchedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+  return {
+    name: $('wrappedName').value.trim(), year, course: $('programSelect').value, show: $('wrappedShow').value || 'none',
+    top: $('wrappedTop').checked, line: $('wrappedLine').value.trim(), amis,
+  };
+}
+
+const GWA_SHOWS = ['none', 'xx', 'bx', 'xc', 'bc', 'full'];
+
+// A GWA written the way students post it, like 1.xx or 1.8x. Two decimals are cut, not rounded.
+function shownGwa(value = '', show = 'none') {
+  const [a, d = ''] = value.split('.');
+  if (show === 'none' || !d) return '';
+  if (show === 'full') return value;
+  return `${a}.${{ xx: 'xx', bx: `${d[0]}x`, xc: `x${d[1]}`, bc: d.slice(0, 2) }[show]}`;
 }
 
 const tinImages = {};
 const bareLabel = label => label.replace(/^\P{L}+/u, '');
-const FRAMES = { id: 'tin-id', tin: 'tin', note: 'tin-note', tray: 'tray', open: 'tin-red' };
+const FRAMES = { sem: 'tin-grass', id: 'tin-id', tin: 'tin', note: 'tin-note', tray: 'tray', open: 'tin-red' };
 const INK = '#1c1917', SOFT = '#4a3f3c', RED = '#7b2a22', URL = 'gradesim.uplb.tools';
 
 // Reann Vargas's pages. Each tin, tray and note is tilted, so text is drawn turned with it.
@@ -1043,16 +1105,59 @@ async function drawTinFrame(canvas, p) {
     text(t, weight, size, '#ffffff', y, 1000, x);
     ctx.restore();
   };
+  const id = wrappedId();
+  const g = shownGwa(p.value, id.show);
+
+  if (id.amis) {
+    const label = `From AMIS, ${id.amis}`;
+    ctx.font = `700 34px ${font}`;
+    const w = ctx.measureText(label).width + 100;
+    ctx.fillStyle = 'rgba(28,25,23,0.88)';
+    ctx.beginPath();
+    ctx.roundRect(60, 262, w, 68, 34);
+    ctx.fill();
+    ctx.fillStyle = '#2a8f55';
+    ctx.beginPath();
+    ctx.arc(100, 296, 20, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 6;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(90, 297);
+    ctx.lineTo(98, 305);
+    ctx.lineTo(111, 287);
+    ctx.stroke();
+    ctx.fillStyle = '#ffffff';
+    ctx.textAlign = 'left';
+    ctx.fillText(label, 132, 308);
+    ctx.textAlign = 'center';
+  }
+
+  if (p.frame === 'sem') {
+    const top = id.top ? p.highlights[0] : null;
+    ctx.translate(540, 1040);
+    ctx.rotate(-0.08);
+    ctx.translate(-540, -1040);
+    onGrass(`My ${p.subtitle}`, 700, 50, 540, 760);
+    if (g) {
+      onGrass(g, 800, 220, 540, 990);
+      onGrass(p.title, 800, 76, 540, 1090);
+    } else onGrass(p.title, 800, 112, 540, 960);
+    onGrass(id.line || p.extra, 700, 50, 540, g ? 1180 : 1070);
+    if (top) onGrass(`Top grade ${top.name}, ${top.detail}`, 600, 44, 540, g ? 1260 : 1150);
+    onGrass(URL, 600, 38, 540, g ? 1350 : 1250);
+    return canvas;
+  }
 
   if (p.frame === 'id') {
-    const id = wrappedId();
     ctx.textAlign = 'left';
     [[id.name, 556, 638, 285], [id.year, 566, 738, 295], [id.course, 612, 830, 268]]
       .forEach(([t, x, y, max]) => at(x, y, -0.19, () => text(t, 700, 40, INK, 0, max)));
     ctx.textAlign = 'center';
     at(592, 1215, -0.19, () => {
-      if (id.number) {
-        text(p.value, 800, 190, RED, 0);
+      if (g) {
+        text(g, 800, 190, RED, 0);
         text(p.title, 800, 64, INK, 95);
       } else {
         text(p.title, 800, 120, RED, 20, 700);
@@ -1162,8 +1267,11 @@ async function drawTinFrame(canvas, p) {
 }
 
 function tinCanvas(p) {
-  const shown = p.frame === 'id' && wrappedId().number && `GWA ${p.value}`;
-  const label = [p.title, shown, p.frame !== 'id' && [p.value, p.subtitle].filter(Boolean).join(' '), p.extra, ...(p.highlights || []).map(x => `${bareLabel(x.label)} ${x.name}, ${x.detail}`), 'drawn on a picnic blanket'].filter(Boolean).join(', ');
+  const tier = p.frame === 'id' || p.frame === 'sem';
+  const id = wrappedId();
+  const shown = tier && id.show !== 'none' && `GWA ${shownGwa(p.value, id.show)}`;
+  const highlights = p.frame === 'sem' && !id.top ? [] : p.highlights || [];
+  const label = [p.title, shown, id.amis && `from AMIS on ${id.amis}`, !tier && [p.value, p.subtitle].filter(Boolean).join(' '), p.frame === 'sem' && id.line || p.extra, ...highlights.map(x => `${bareLabel(x.label)} ${x.name}, ${x.detail}`), 'drawn on a picnic blanket'].filter(Boolean).join(', ');
   const canvas = h('canvas', { class: 'panel-frame', role: 'img', 'aria-label': label });
   drawTinFrame(canvas, p);
   return canvas;
@@ -1185,7 +1293,11 @@ function wrappedPanel(p) {
 }
 
 function displayWrapped(courses) {
-  wrappedPanels = generateWrappedPanels(generateWrappedData(courses));
+  wrappedCourses = courses;
+  const data = generateWrappedData(courses);
+  wrappedPanels = generateWrappedPanels(data, courses).filter(Boolean);
+  $('wrappedSem').replaceChildren(...data.semList.map((s, i) => h('option', { value: i }, s.name)));
+  $('wrappedSem').value = data.semList.length - 1;
   wrappedYears = new Set(courses.map(c => c.academicYear).filter(Boolean)).size;
   wrappedCurrentPanel = 0;
   updateWrappedDisplay();
@@ -1194,8 +1306,15 @@ function displayWrapped(courses) {
 function updateWrappedDisplay() {
   if (!wrappedPanels.length) return;
   const p = wrappedPanels[wrappedCurrentPanel];
+  $('wrappedLine').placeholder = p.extra || '';
+  const show = $('wrappedShow').value || 'none';
+  $('wrappedShow').replaceChildren(...GWA_SHOWS.map(k => h('option', { value: k }, k === 'none' ? 'Tier only' : shownGwa(p.value, k))));
+  $('wrappedShow').value = show;
   $('wrappedPanel').replaceChildren(...flat(wrappedPanel(p)));
-  $('wrappedId').hidden = p.frame !== 'id';
+  $('wrappedId').hidden = p.frame !== 'id' && p.frame !== 'sem';
+  $('wrappedId').querySelectorAll('.wrapped-name').forEach(el => (el.hidden = p.frame !== 'id'));
+  $('wrappedId').querySelectorAll('.wrapped-sem').forEach(el => (el.hidden = p.frame !== 'sem'));
+  $('wrappedAmisHint').hidden = !p.frame || !!wrappedId().amis;
   $('wrappedExport').hidden = !p.frame;
   $('wrappedProgress').textContent = `${wrappedCurrentPanel + 1} of ${wrappedPanels.length}`;
   $('wrappedPrev').disabled = wrappedCurrentPanel === 0;
@@ -1270,9 +1389,10 @@ async function refreshGrades() {
 
 const BACKUP_SCHEMA_VERSION = 2;
 // Export writes every stored key. Import restores only these: never
-// termsAccepted (each person accepts the terms on their own device) or
-// lastError (it describes this browser only).
-const BACKUP_KEYS = ['gradesData', 'fetchedAt', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
+// termsAccepted (each person accepts the terms on their own device),
+// lastError (it describes this browser only) or fetchedAt (only a real AMIS
+// read sets it, so the From AMIS mark can't come from a file).
+const BACKUP_KEYS = ['gradesData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
   'substitutions', 'customCourseStatus', 'removals', 'plannerPins', 'plannerPetitions', 'plannerOptions', 'theme'];
 
 function wireBackup() {
@@ -1293,6 +1413,7 @@ function wireBackup() {
     if (!file) return;
     try {
       const toSave = parseBackup(await file.text());
+      await chrome.storage.local.remove('fetchedAt');
       await chrome.storage.local.set(toSave);
       window.location.reload();
     } catch (err) {
