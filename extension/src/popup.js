@@ -786,9 +786,10 @@ function renderWhatIf() {
   const el = $('whatifResults');
   const data = window.gradesData;
   const left = window.requirementsLeft;
+  $('whatifNow').textContent = data?.gwa > 0 ? `Your GWA is ${data.gwa.toFixed(4)} now.` : '';
   if (!data) { el.replaceChildren(); return; }
   if (!left) {
-    showNotice(el, { tone: 'warn', icon: 'alert', body: `GradeSim doesn't have the ${getCurrentCurriculum().name} checklist yet, so it can't count your remaining units. Your GWA above still works.` });
+    showNotice(el, { tone: 'warn', icon: 'alert', body: `GradeSim doesn't have the ${getCurrentCurriculum().name} checklist yet, so it can't count your remaining units. Your GWA on the Grades tab still works.` });
     return;
   }
 
@@ -1155,13 +1156,13 @@ function navigateWrapped(direction) {
 }
 
 // Export the current Wrapped slide as a transparent story-sized PNG, drawn
-// with the bundled Inter and Raleway faces.
+// with the bundled Figtree face.
 async function exportWrappedToPNG() {
   const p = wrappedPanels[wrappedCurrentPanel];
   if (!p) return;
 
-  const DISPLAY = '"Raleway", "Inter", sans-serif';
-  const TEXT = '"Inter", system-ui, sans-serif';
+  const DISPLAY = '"Figtree", system-ui, sans-serif';
+  const TEXT = DISPLAY;
   await Promise.all([
     document.fonts.load(`800 28px ${DISPLAY}`),
     document.fonts.load(`600 16px ${TEXT}`),
