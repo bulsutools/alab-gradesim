@@ -12214,7 +12214,7 @@ const UPLB_PROGRAMS = {
         "title": "Science, Technology, and Society",
         "units": 3,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -12230,7 +12230,7 @@ const UPLB_PROGRAMS = {
         "title": "General Economics",
         "units": 3,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -12246,7 +12246,7 @@ const UPLB_PROGRAMS = {
         "title": "Fundamental Accounting Theory and Practice I",
         "units": 3,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -12262,7 +12262,7 @@ const UPLB_PROGRAMS = {
         "title": "Critical Perspectives in the Arts",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -12278,7 +12278,7 @@ const UPLB_PROGRAMS = {
         "title": "Statistical Methods",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -12296,15 +12296,15 @@ const UPLB_PROGRAMS = {
         "title": "Fundamental Accounting Theory and Practice II",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "BA 183",
         "title": "Introduction to Database Management for Accounting",
         "units": 3,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "midyear",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12314,7 +12314,7 @@ const UPLB_PROGRAMS = {
         "title": "Intermediate Microeconomic Theory",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "ECON 11"
         ]
@@ -12334,7 +12334,7 @@ const UPLB_PROGRAMS = {
         "title": "Introduction to Human Relations and Behavior in Organization",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "MGT 101"
         ]
@@ -12354,7 +12354,7 @@ const UPLB_PROGRAMS = {
         "title": "Accounting Theory and Practice I",
         "units": 6,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12366,7 +12366,7 @@ const UPLB_PROGRAMS = {
         "year": 2,
         "sem": "2",
         "prereqs": [
-          "MGT 101"
+          "MGT 121"
         ]
       },
       {
@@ -12374,7 +12374,7 @@ const UPLB_PROGRAMS = {
         "title": "Accounting Theory and Practice II",
         "units": 6,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12382,7 +12382,7 @@ const UPLB_PROGRAMS = {
       {
         "code": "BA 116",
         "title": "Cost Accounting",
-        "units": 3,
+        "units": 6,
         "year": 2,
         "sem": "2",
         "prereqs": [
@@ -12394,8 +12394,8 @@ const UPLB_PROGRAMS = {
         "title": "Internship I",
         "units": 3,
         "gradeType": "S/U",
-        "year": 3,
-        "sem": "2",
+        "year": 2,
+        "sem": "midyear",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12413,7 +12413,7 @@ const UPLB_PROGRAMS = {
         "title": "Managerial Cost Accounting and Control",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12433,7 +12433,7 @@ const UPLB_PROGRAMS = {
         "title": "Tax Accounting I",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12453,7 +12453,7 @@ const UPLB_PROGRAMS = {
         "title": "Law on Business Transactions",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12463,7 +12463,7 @@ const UPLB_PROGRAMS = {
         "title": "Writing of Scientific Papers",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -12481,7 +12481,7 @@ const UPLB_PROGRAMS = {
         "title": "Advanced Accounting II",
         "units": 6,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12501,7 +12501,7 @@ const UPLB_PROGRAMS = {
         "title": "Tax Accounting II",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12510,7 +12510,7 @@ const UPLB_PROGRAMS = {
         "code": "BA 162",
         "title": "Law on Business Associations",
         "units": 3,
-        "year": 4,
+        "year": 3,
         "sem": "2",
         "prereqs": [
           "BA 99.1"
@@ -12521,8 +12521,8 @@ const UPLB_PROGRAMS = {
         "title": "Internship II",
         "units": 3,
         "gradeType": "S/U",
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "midyear",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12532,7 +12532,7 @@ const UPLB_PROGRAMS = {
         "title": "Investment Management",
         "units": 3,
         "year": 4,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "MGT 101"
         ]
@@ -12549,10 +12549,10 @@ const UPLB_PROGRAMS = {
       },
       {
         "code": "BA 122",
-        "title": "Computerized Accounting and Auditing Theory and Practice",
+        "title": "Government Accounting and Auditing: Theory and Practice",
         "units": 3,
         "year": 4,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12572,7 +12572,7 @@ const UPLB_PROGRAMS = {
         "title": "Computer-based Accounting Systems",
         "units": 3,
         "year": 4,
-        "sem": "2",
+        "sem": "1",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12602,7 +12602,7 @@ const UPLB_PROGRAMS = {
         "title": "Sales and Bailments and other Special Laws",
         "units": 3,
         "year": 4,
-        "sem": "1",
+        "sem": "2",
         "prereqs": [
           "BA 99.1"
         ]
@@ -12622,10 +12622,36 @@ const UPLB_PROGRAMS = {
         "title": "Special Topics",
         "units": 1,
         "year": 4,
-        "sem": "1",
+        "sem": "2",
         "prereqs": [
           "BA 99.1"
         ]
+      },
+      {
+        "code": "BA 190 (2)",
+        "title": "Special Problems",
+        "units": 2,
+        "year": 4,
+        "sem": "2",
+        "prereqs": ["BA 190"]
+      },
+      {
+        "code": "FE 1",
+        "title": "Free Elective",
+        "units": 3,
+        "year": 4,
+        "sem": "1",
+        "prereqs": [],
+        "genericRequirement": "elective"
+      },
+      {
+        "code": "FE 2",
+        "title": "Free Elective",
+        "units": 3,
+        "year": 4,
+        "sem": "2",
+        "prereqs": [],
+        "genericRequirement": "elective"
       }
     ],
     "requiredCodes": [
