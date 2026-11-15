@@ -4,7 +4,7 @@
 const assert = require('assert');
 Object.assign(globalThis, require('./src/curriculum.js'), require('./src/scheduler.js'));
 const { UPLB_CATALOG } = require('./src/catalog.js');
-const { amisTermToAbs, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
+const { amisTermToAbs, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, fillRequirementSlots, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
 
 assert.strictEqual(amisTermToAbs(1251), 2025 * 3);
 assert.strictEqual(amisTermToAbs('1232'), 2023 * 3 + 1);
@@ -64,7 +64,7 @@ assert.deepStrictEqual(left.electives, { doneUnits: 6, totalUnits: 18 });
 assert.ok(!leftCodes.has('CMSC 21'));
 ['CMSC 123', 'MATH 27', 'CMSC 100', 'CMSC 127'].forEach(c => assert.ok(leftCodes.has(c), c));
 // HK and NSTP units are left to take but do not count in the GWA.
-assert.strictEqual(left.units - left.gwaUnits, 2 + 3);
+assert.strictEqual(left.units - left.gwaUnits, 3 * 2 + 3);
 
 // The planner's units left: schedule what the slots leave open, the way
 // planner.js does, and add up every course it places or cannot place.
@@ -158,3 +158,24 @@ console.log('requirements.test.js: all assertions passed');
   assert.deepStrictEqual(surplusElectives(list.filter(c => c.genericRequirement !== 'elective'), extra), [], 'no elective slots, no guess');
 }
 console.log('requirements.test.js: surplus electives passed');
+
+// BSCS SP: CMSC 190 is enlisted twice, CMSC 198 is the midyear practicum and
+// free electives wait for senior standing. The rows add up to the 130 units.
+{
+  const row = (code, units) => ({ code, title: '', units, result: 'passed' });
+  const sp = plannerCourseList(UPLB_PROGRAMS.BSCS, 'sp', UPLB_CATALOG);
+  const gwa = sp.filter(c => !isNonGwaCourseCode(c.code)).reduce((s, c) => s + c.units, 0);
+  assert.strictEqual(gwa, UPLB_PROGRAMS.BSCS.totalUnitsRequired);
+  const once = fillRequirementSlots(sp, [row('CMSC 190', 1), row('CMSC 198', 3)]);
+  assert.ok(once.has('CMSC 190') && !once.has('CMSC 190 (2)') && once.has('CMSC 198') && !once.has('FE 1'));
+  assert.ok(fillRequirementSlots(sp, [row('CMSC 190', 1), row('CMSC 190', 2)]).has('CMSC 190 (2)'));
+  const fresh = scheduleEarliest({ courses: sp, passed: new Set(), useMidyear: false, totalUnits: 130 });
+  assert.strictEqual(fresh.plan.find(t => t.courses.includes('CMSC 198')).sem, 'midyear');
+  const firstFE = Math.min(...sp.filter(c => /^FE/.test(c.code)).map(c => fresh.assignedTerm[c.code]));
+  assert.ok(firstFE >= 9, `free electives start in senior year, got term ${firstFE}`);
+  assert.ok(fresh.assignedTerm['CMSC 190 (2)'] > fresh.assignedTerm['CMSC 190']);
+  const thesis = plannerCourseList(UPLB_PROGRAMS.BSCS, 'thesis', UPLB_CATALOG);
+  assert.strictEqual(thesis.filter(c => !isNonGwaCourseCode(c.code)).reduce((s, c) => s + c.units, 0), 130);
+  assert.ok(fillRequirementSlots(thesis, [row('CMSC 200', 3), row('CMSC 200', 3)]).has('CMSC 200 (2)'));
+}
+console.log('requirements.test.js: BSCS special problem and practicum passed');
