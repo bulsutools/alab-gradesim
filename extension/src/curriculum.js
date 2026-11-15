@@ -648,7 +648,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -688,7 +688,7 @@ const UPLB_PROGRAMS = {
         "title": "Investigative Biology Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -808,7 +808,7 @@ const UPLB_PROGRAMS = {
         "title": "The Life and Works of Jose Rizal",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -1052,7 +1052,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -1092,7 +1092,7 @@ const UPLB_PROGRAMS = {
         "title": "Investigative Biology Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -1479,7 +1479,7 @@ const UPLB_PROGRAMS = {
         "title": "Logic and Matrix Algebra in Statistics",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -1487,7 +1487,7 @@ const UPLB_PROGRAMS = {
         "title": "Statistical Packages",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -1731,16 +1731,16 @@ const UPLB_PROGRAMS = {
         "code": "STAT 174",
         "title": "Introductory Biostatistics",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "STAT 192.1",
         "title": "Statistical Consulting Laboratory",
         "units": 1,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -2435,7 +2435,7 @@ const UPLB_PROGRAMS = {
         "title": "Science, Technology, and Society",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -2443,7 +2443,7 @@ const UPLB_PROGRAMS = {
         "title": "Investigative Biology Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -2451,7 +2451,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -2475,7 +2475,7 @@ const UPLB_PROGRAMS = {
         "title": "Basic Organic Chemistry",
         "units": 4,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -2483,15 +2483,15 @@ const UPLB_PROGRAMS = {
         "title": "Basic Organic Chemistry Laboratory",
         "units": 1,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "BIO 14",
         "title": "Biodiversity",
         "units": 5,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -2989,7 +2989,7 @@ const UPLB_PROGRAMS = {
         "title": "Critical Perspectives in the Arts",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3037,7 +3037,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3069,7 +3069,7 @@ const UPLB_PROGRAMS = {
         "title": "Quantitative Inorganic Analysis",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3077,7 +3077,7 @@ const UPLB_PROGRAMS = {
         "title": "Quantitative Inorganic Analysis Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3117,7 +3117,7 @@ const UPLB_PROGRAMS = {
         "title": "Physical Chemistry I",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3125,15 +3125,15 @@ const UPLB_PROGRAMS = {
         "title": "Organic Chemistry I Laboratory",
         "units": 2,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "CHEM 112",
         "title": "Physical Chemistry II",
         "units": 3,
-        "year": 2,
-        "sem": "2",
+        "year": 3,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3156,8 +3156,8 @@ const UPLB_PROGRAMS = {
         "code": "COMM 10",
         "title": "Critical Perspectives in Communication",
         "units": 3,
-        "year": 2,
-        "sem": "2",
+        "year": 3,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3165,7 +3165,7 @@ const UPLB_PROGRAMS = {
         "title": "Organic Chemistry II",
         "units": 3,
         "year": 2,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3173,7 +3173,7 @@ const UPLB_PROGRAMS = {
         "title": "Organic Chemistry II Laboratory",
         "units": 2,
         "year": 2,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3213,8 +3213,8 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 161A",
         "title": "Biochemistry I",
         "units": 3,
-        "year": 3,
-        "sem": "1",
+        "year": 2,
+        "sem": "midyear",
         "prereqs": []
       },
       {
@@ -3222,7 +3222,7 @@ const UPLB_PROGRAMS = {
         "title": "Chemical Information, Literature and Communication",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3270,7 +3270,7 @@ const UPLB_PROGRAMS = {
         "title": "Biochemistry II",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3501,7 +3501,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3533,7 +3533,7 @@ const UPLB_PROGRAMS = {
         "title": "Theoretical Mechanics I",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3549,7 +3549,7 @@ const UPLB_PROGRAMS = {
         "title": "Physics in Scientific Instruments",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3605,7 +3605,7 @@ const UPLB_PROGRAMS = {
         "title": "Quantum Physics I",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3613,7 +3613,7 @@ const UPLB_PROGRAMS = {
         "title": "Research Methods in Physics",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -3629,7 +3629,7 @@ const UPLB_PROGRAMS = {
         "title": "Physics of Electronic Devices",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -3653,7 +3653,7 @@ const UPLB_PROGRAMS = {
         "title": "Experimental Physics I",
         "units": 2,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -4344,7 +4344,7 @@ const UPLB_PROGRAMS = {
         "title": "Science, Technology, and Society",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -4435,7 +4435,7 @@ const UPLB_PROGRAMS = {
         "title": "The Life and Works of Jose Rizal",
         "units": 3,
         "year": 2,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -4492,8 +4492,8 @@ const UPLB_PROGRAMS = {
         "code": "SOC 166",
         "title": "Social Program Evaluation",
         "units": 3,
-        "year": 3,
-        "sem": "2",
+        "year": 4,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -4557,8 +4557,8 @@ const UPLB_PROGRAMS = {
         "code": "SOC 120",
         "title": "Urban Sociology",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5344,7 +5344,7 @@ const UPLB_PROGRAMS = {
         "title": "Principles of Crop Protection",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5392,7 +5392,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry",
         "units": 3,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5407,7 +5407,7 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 18.1",
         "title": "University Chemistry Laboratory",
         "units": 2,
-        "year": 2,
+        "year": 1,
         "sem": "1",
         "prereqs": []
       },
@@ -5439,7 +5439,7 @@ const UPLB_PROGRAMS = {
         "code": "ABT 10",
         "title": "Traditional and Modern Biotechnology: Principles and Applications",
         "units": 3,
-        "year": 2,
+        "year": 3,
         "sem": "1",
         "prereqs": []
       },
@@ -5456,7 +5456,7 @@ const UPLB_PROGRAMS = {
         "title": "General Economics",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5464,7 +5464,7 @@ const UPLB_PROGRAMS = {
         "title": "Fundamentals of Plant Physiology",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5519,8 +5519,8 @@ const UPLB_PROGRAMS = {
         "code": "MGT 101",
         "title": "Concepts and Dynamics of Management",
         "units": 3,
-        "year": 3,
-        "sem": "1",
+        "year": 2,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5553,7 +5553,7 @@ const UPLB_PROGRAMS = {
         "title": "Introduction to Ecological Agriculture",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5639,8 +5639,8 @@ const UPLB_PROGRAMS = {
         "code": "ABE 1",
         "title": "Fundamentals of Agricultural and Biosystems Engineering I",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 2,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5822,16 +5822,16 @@ const UPLB_PROGRAMS = {
         "code": "AGRI 32",
         "title": "Fundamentals of Crop Science II",
         "units": 3,
-        "year": 1,
-        "sem": "2",
+        "year": 2,
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "AGRI 41",
         "title": "Principles of Crop Protection",
         "units": 3,
-        "year": 1,
-        "sem": "2",
+        "year": 2,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5839,7 +5839,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5862,16 +5862,16 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 40",
         "title": "Basic Organic Chemistry",
         "units": 4,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "CHEM 40.1",
         "title": "Basic Organic Chemistry Laboratory",
         "units": 1,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5879,7 +5879,7 @@ const UPLB_PROGRAMS = {
         "title": "Pest Management",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5894,8 +5894,8 @@ const UPLB_PROGRAMS = {
         "code": "BIO 30",
         "title": "Genetics",
         "units": 3,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -5903,7 +5903,7 @@ const UPLB_PROGRAMS = {
         "title": "Introductory Biochemistry",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5911,15 +5911,15 @@ const UPLB_PROGRAMS = {
         "title": "Fundamentals of Agricultural Biotechnology",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "STAT 162",
         "title": "Experimental Designs I",
         "units": 3,
-        "year": 2,
-        "sem": "2",
+        "year": 3,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -5934,7 +5934,7 @@ const UPLB_PROGRAMS = {
         "code": "MATH 25",
         "title": "Fundamental Calculus",
         "units": 3,
-        "year": 2,
+        "year": 1,
         "sem": "2",
         "prereqs": []
       },
@@ -5950,16 +5950,16 @@ const UPLB_PROGRAMS = {
         "code": "ABT 103",
         "title": "Experimental Techniques in Agricultural Biotechnology I",
         "units": 3,
-        "year": 3,
-        "sem": "1",
+        "year": 2,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "BIO 101",
         "title": "Introductory Molecular Biology",
         "units": 3,
-        "year": 3,
-        "sem": "1",
+        "year": 2,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6007,7 +6007,7 @@ const UPLB_PROGRAMS = {
         "title": "Experimental Techniques in Agricultural Biotechnology II",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6064,8 +6064,8 @@ const UPLB_PROGRAMS = {
         "code": "ABT 107",
         "title": "Recombinant DNA Technology",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6270,7 +6270,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6334,7 +6334,7 @@ const UPLB_PROGRAMS = {
         "title": "Science, Technology, and Society",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6342,7 +6342,7 @@ const UPLB_PROGRAMS = {
         "title": "Statistical Methods",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6653,7 +6653,7 @@ const UPLB_PROGRAMS = {
         "title": "Critical Perspectives in the Arts",
         "units": 3,
         "year": 1,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6725,7 +6725,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6733,7 +6733,7 @@ const UPLB_PROGRAMS = {
         "title": "General Economics",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6741,7 +6741,7 @@ const UPLB_PROGRAMS = {
         "title": "Organic Chemistry I",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6789,7 +6789,7 @@ const UPLB_PROGRAMS = {
         "title": "Quantitative Inorganic Analysis Laboratory",
         "units": 2,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6837,7 +6837,7 @@ const UPLB_PROGRAMS = {
         "title": "Quantitative Inorganic Analysis",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -6901,14 +6901,14 @@ const UPLB_PROGRAMS = {
         "title": "Organic Chemistry II Laboratory",
         "units": 2,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "COMM 10",
         "title": "Critical Perspectives in Communication",
         "units": 3,
-        "year": 3,
+        "year": 4,
         "sem": "2",
         "prereqs": []
       },
@@ -6933,7 +6933,7 @@ const UPLB_PROGRAMS = {
         "title": "Biochemistry I",
         "units": 3,
         "year": 3,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -6972,8 +6972,8 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 140",
         "title": "Organic Analysis",
         "units": 4,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -7030,7 +7030,7 @@ const UPLB_PROGRAMS = {
         "title": "Chemical Information, Literature and Communication",
         "units": 3,
         "year": 4,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -7064,7 +7064,7 @@ const UPLB_PROGRAMS = {
         "title": "Environmental Chemistry",
         "units": 3,
         "year": 5,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -7131,7 +7131,7 @@ const UPLB_PROGRAMS = {
         "title": "Technical Analysis II (Soils, Fertilizers, and Pesticides)",
         "units": 4,
         "year": 5,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -7825,7 +7825,7 @@ const UPLB_PROGRAMS = {
         "title": "University Chemistry Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -7833,15 +7833,15 @@ const UPLB_PROGRAMS = {
         "title": "Biology and Applications of Microorganisms",
         "units": 3,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "ENSC 11",
         "title": "Statics of Rigid Bodies",
         "units": 3,
-        "year": 1,
-        "sem": "2",
+        "year": 2,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -7865,7 +7865,7 @@ const UPLB_PROGRAMS = {
         "title": "Science, Technology and Society",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -7873,7 +7873,7 @@ const UPLB_PROGRAMS = {
         "title": "Critical Perspectives in the Arts",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -7904,32 +7904,32 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 32",
         "title": "Quantitative Inorganic Analysis",
         "units": 3,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "CHEM 32.1",
         "title": "Quantitative Inorganic Analysis Laboratory",
         "units": 2,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "CHEM 40",
         "title": "Basic Organic Chemistry",
         "units": 4,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "CHEM 40.1",
         "title": "Basic Organic Chemistry Laboratory",
         "units": 1,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -7969,7 +7969,7 @@ const UPLB_PROGRAMS = {
         "title": "Physical Chemistry I",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -7977,7 +7977,7 @@ const UPLB_PROGRAMS = {
         "title": "Introductory Biochemistry",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -8016,8 +8016,8 @@ const UPLB_PROGRAMS = {
         "code": "CHEM 112",
         "title": "Physical Chemistry II",
         "units": 3,
-        "year": 3,
-        "sem": "1",
+        "year": 2,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -8073,14 +8073,14 @@ const UPLB_PROGRAMS = {
         "title": "Strength of Materials",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "CHEM 111.1",
         "title": "Physical Chemistry I Laboratory",
         "units": 2,
-        "year": 3,
+        "year": 2,
         "sem": "2",
         "prereqs": []
       },
@@ -8155,16 +8155,16 @@ const UPLB_PROGRAMS = {
         "code": "CHE 172",
         "title": "Introduction to Biochemical Engineering",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
         "code": "CHE 180",
         "title": "Agro-Industrial Waste Management",
         "units": 3,
-        "year": 4,
-        "sem": "1",
+        "year": 3,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -8336,7 +8336,7 @@ const UPLB_PROGRAMS = {
         "title": "Engineering Graphics Laboratory",
         "units": 2,
         "year": 1,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -8423,8 +8423,8 @@ const UPLB_PROGRAMS = {
         "code": "ABE 48",
         "title": "Fundamentals of Surveying",
         "units": 3,
-        "year": 2,
-        "sem": "1",
+        "year": 1,
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -11536,7 +11536,7 @@ const UPLB_PROGRAMS = {
         "title": "Farm Business Accounting",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -11584,7 +11584,7 @@ const UPLB_PROGRAMS = {
         "title": "Food and Nutrition Systems",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -13810,7 +13810,7 @@ const UPLB_PROGRAMS = {
         "title": "Critical Perspectives in the Arts",
         "units": 3,
         "year": 1,
-        "sem": "midyear",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -13834,7 +13834,7 @@ const UPLB_PROGRAMS = {
         "title": "Social Policies",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -13882,15 +13882,15 @@ const UPLB_PROGRAMS = {
         "title": "Community Study in Human Welfare",
         "units": 3,
         "year": 2,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
         "code": "COMM 10",
         "title": "Critical Perspectives in Communication",
         "units": 3,
-        "year": 2,
-        "sem": "midyear",
+        "year": 3,
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -13914,7 +13914,7 @@ const UPLB_PROGRAMS = {
         "title": "Consumer Education",
         "units": 3,
         "year": 3,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -13955,7 +13955,7 @@ const UPLB_PROGRAMS = {
         "title": "Techniques in Community Organizing",
         "units": 3,
         "year": 3,
-        "sem": "2",
+        "sem": "1",
         "prereqs": []
       },
       {
@@ -14006,7 +14006,7 @@ const UPLB_PROGRAMS = {
         "code": "HUME 123",
         "title": "Climate Change Adaptation and Disaster Risk Reduction in Human Ecosystems",
         "units": 3,
-        "year": 4,
+        "year": 3,
         "sem": "1",
         "prereqs": []
       },
@@ -14612,7 +14612,7 @@ const UPLB_PROGRAMS = {
         "title": "Introduction to Communication Theory",
         "units": 3,
         "year": 2,
-        "sem": "1",
+        "sem": "2",
         "prereqs": []
       },
       {
@@ -14662,7 +14662,7 @@ const UPLB_PROGRAMS = {
         "title": "Visual and Audiovisual Media Production",
         "units": 3,
         "year": 2,
-        "sem": "midyear",
+        "sem": "1",
         "prereqs": []
       },
       {
