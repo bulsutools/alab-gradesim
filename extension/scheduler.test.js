@@ -250,3 +250,12 @@ const scarce = scheduleEarliest({ courses: [Y('GE', 1, '1s,2s'), Y('LAB', 4, '1s
 assert.strictEqual(scarce.assignedTerm.LAB, 0);
 
 console.log('scheduler.test.js: all assertions passed');
+
+const perTerm = scheduleEarliest({
+  courses: [C('X1', 12, '1'), C('X2', 12, '1')],
+  passed: new Set(),
+  unitCaps: { '1': 18, '2': 18, 'midyear': 6 },
+  termCaps: { 0: 24 },
+  startSem: '1',
+});
+assert.strictEqual(perTerm.assignedTerm.X2, 0);

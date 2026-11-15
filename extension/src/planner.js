@@ -255,11 +255,27 @@ function compute() {
     if (wi.mode === 'fail') failures.push({ code: wi.code, past: false, source: 'whatif' });
   }
 
-  const unitCaps = { '1': Number(opts.cap), '2': Number(opts.cap), 'midyear': opts.midyear9 ? 9 : 6 };
+  const byChecklist = opts.cap === 'checklist';
+  const regularCap = byChecklist ? 18 : Number(opts.cap);
+  const unitCaps = { '1': regularCap, '2': regularCap, 'midyear': opts.midyear9 ? 9 : 6 };
+  const termCaps = {};
+  if (byChecklist) {
+    const load = {};
+    state.courses.forEach(c => {
+      if (!isNonGwaCourseCode(c.code)) load[`${c.year} ${c.sem}`] = (load[`${c.year} ${c.sem}`] || 0) + (Number(c.units) || 0);
+    });
+    const entryAy = Math.floor(Math.min(startAbs, ...hist.attempts.map(a => a.abs).filter(isDated)) / 3);
+    for (let t = 0; t < 30; t++) {
+      const abs = startAbs + t;
+      if (abs % 3 !== 2) termCaps[t] = Math.max(18, load[`${Math.floor(abs / 3) - entryAy + 1} ${abs % 3 + 1}`] || 0);
+    }
+  }
+  const capAt = abs => termCaps[abs - startAbs] ?? unitCaps['1'];
   const baseOpts = {
     courses: state.courses.map(c => ({ ...c, petition: !!d.plannerPetitions[c.code] })),
     startSem: semOfAbs(startAbs),
     unitCaps,
+    termCaps,
     useMidyear: !!opts.midyear,
     totalUnits: Number(state.program.totalUnitsRequired) || undefined,
   };
@@ -310,7 +326,7 @@ function compute() {
 
   const conflicts = prereqConflicts(state.courses, code => (info[code] ? info[code].status : passed.has(code) && 'passed'));
 
-  return { hist, info, startAbs, passed: now.passed, failures, costs, now, ideal, noWhatif, slips, unitCaps, left, conflicts };
+  return { hist, info, startAbs, passed: now.passed, failures, costs, now, ideal, noWhatif, slips, unitCaps, capAt, byChecklist, left, conflicts };
 }
 
 /* ---------- Summary ---------- */
@@ -494,10 +510,10 @@ function termBlock(column, v) {
   let warn = '';
   if (!isPast && dated) {
     if (isMid && units > 6) warn = "Over 6 units in midyear needs the Dean's approval (max 9).";
-    else if (!isMid && units > v.unitCaps['1']) warn = `Over your ${v.unitCaps['1']}-unit cap, so it needs an overload approval.`;
-    else if (!isMid && units > 18) warn = 'Over 18 units, which is allowed up to 21 when the term has lab courses.';
+    else if (!isMid && units > v.capAt(column.abs)) warn = `Over your ${v.capAt(column.abs)}-unit cap, so it needs an overload approval.`;
+    else if (!isMid && units > 18) warn = v.byChecklist ? 'Over 18 units, which the checklist puts in this sem.' : 'Over 18 units, which is allowed up to 21 when the term has lab courses.';
   }
-  const loud = warn && (isMid || units > v.unitCaps['1']);
+  const loud = warn && (isMid || units > v.capAt(column.abs));
   const nowTerm = column.cards.some(c => c.status === 'inprogress');
   const tag = column.abs === v.startAbs ? 'next' : nowTerm ? 'now' : '';
   const failed = column.cards.filter(c => c.status === 'failed' && !c.hypothetical).length;
@@ -756,7 +772,7 @@ function initControls() {
   $('optMidyear').checked = !!o.midyear;
   $('optMidyear9').checked = !!o.midyear9;
   const setOpt = () => {
-    o.cap = Number($('optCap').value);
+    o.cap = Number($('optCap').value) || $('optCap').value;
     o.midyear = $('optMidyear').checked;
     o.midyear9 = $('optMidyear9').checked;
     save(['plannerOptions']);
@@ -892,7 +908,7 @@ function checkPlan(p) {
     all(p.plannerPins, Number.isInteger) &&
     all(p.plannerPetitions, x => x === true) &&
     all(p.substitutions, x => typeof x === 'string') &&
-    isObj(p.plannerOptions) && [18, 21].includes(Number(p.plannerOptions.cap)) &&
+    isObj(p.plannerOptions) && (p.plannerOptions.cap === 'checklist' || [18, 21].includes(Number(p.plannerOptions.cap))) &&
     (p.whatif == null || (isObj(p.whatif) && typeof p.whatif.code === 'string' && ['fail', '1', '3'].includes(p.whatif.mode)));
   return ok ? '' : 'That plan file looks damaged, so nothing was changed.';
 }
@@ -941,8 +957,8 @@ function exportModel(v) {
       name: dated ? absLabel(column.abs).replace(/ \d+$/, '') : column.abs === -1 ? 'Credited' : "Can't place",
       sub: dated ? ayLabel(column.abs) : column.abs === -1 ? 'No AMIS term' : 'Check prerequisites',
       tag: column.abs === v.startAbs ? 'Next' : column.cards.some(c => c.status === 'inprogress') ? 'Now' : dated && !future ? 'Taken' : '',
-      units: column.cards.reduce((s, c) => s + (Number(state.byCode.get(c.code).units) || 0), 0),
-      cap: future ? (column.abs % 3 === 2 ? v.unitCaps.midyear : v.unitCaps['1']) : null,
+      units: column.cards.filter(c => !isNonGwaCourseCode(c.code)).reduce((s, c) => s + (Number(state.byCode.get(c.code).units) || 0), 0),
+      cap: future ? (column.abs % 3 === 2 ? v.unitCaps.midyear : v.capAt(column.abs)) : null,
     };
     const term = dated ? `${f.sub} ${f.name}` : column.abs === -1 ? 'Credited' : 'Not placed';
     const cards = column.cards.map(card => {
