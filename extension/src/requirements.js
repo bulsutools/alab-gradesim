@@ -70,13 +70,17 @@ const BUILT_IN_EQUIVALENTS = [['KAS 1', 'HIST 1']];
 function fillRequirementSlots(courses, rows, substitutions = {}) {
   const norm = r => normalizeCourseCode(r.code);
   const named = new Set(courses.filter(c => !c.genericRequirement).map(c => normalizeCourseCode(c.code)));
+  // A checklist row that names either of two courses takes the other one too.
+  const altOf = new Map(courses.flatMap(c => (c.alt || []).map(a => [a, normalizeCourseCode(c.code)])));
+  const base = r => named.has(norm(r)) ? norm(r) : altOf.get(norm(r)) || norm(r);
   const fill = new Map();
   // A repeat enrollment fills the next "CODE (n)" row.
-  rows.forEach(r => {
-    let code = norm(r);
-    for (let n = 2; fill.has(code) && named.has(`${norm(r)} (${n})`); n++) code = `${norm(r)} (${n})`;
+  [...rows.filter(r => named.has(norm(r))), ...rows.filter(r => !named.has(norm(r)))].forEach(r => {
+    let code = base(r);
+    for (let n = 2; fill.has(code) && named.has(`${base(r)} (${n})`); n++) code = `${base(r)} (${n})`;
     if (named.has(code) && !fill.has(code)) fill.set(code, r);
   });
+  const filled = new Set([...fill.values()].map(norm));
   const used = new Set();
   [...Object.entries(substitutions || {}), ...BUILT_IN_EQUIVALENTS].forEach(([req, taken]) => {
     const code = normalizeCourseCode(req);
@@ -90,7 +94,7 @@ function fillRequirementSlots(courses, rows, substitutions = {}) {
   const seen = new Set();
   const outside = rows.filter(r => {
     const code = norm(r);
-    if (named.has(code) || used.has(code) || seen.has(code)) return false;
+    if (named.has(code) || used.has(code) || seen.has(code) || filled.has(code)) return false;
     // HK 12 repeats once per sport.
     if (!/^(HK|PE)\b/.test(code)) seen.add(code);
     return true;
@@ -206,6 +210,30 @@ function lightSems(courses) {
   return [...sems.values()].sort((a, b) => a.abs - b.abs).slice(0, -1).filter(s => s.units < 15);
 }
 
+// Scholastic standing after the latest regular sem, from the share of academic
+// units with final grades below 3 (UPLB Academic Catalogue, Scholastic
+// Standing). Midyears, a 4.00 still open for removal, and INC, DRP and W are
+// left out.
+function standingFor(courses) {
+  const sems = new Map();
+  courses.forEach(c => {
+    const abs = amisTermToAbs(c.termId);
+    const n = parseFloat(c.grade);
+    if (abs == null || abs % 3 === 2 || /^(NSTP|HK|PE)\b/i.test((c.courseCode || '').trim()) || isNaN(n) || n === 4) return;
+    const sem = sems.get(abs) || { label: c.term, abs, units: 0, low: 0 };
+    sem.units += c.units || 0;
+    if (n > 3) sem.low += c.units || 0;
+    sems.set(abs, sem);
+  });
+  const [last, prev] = [...sems.values()].filter(s => s.units > 0).sort((a, b) => b.abs - a.abs);
+  if (!last) return null;
+  const share = s => s.low / s.units;
+  const onProbation = prev && share(prev) >= 0.5 && share(prev) <= 0.75;
+  const p = share(last);
+  const level = p === 1 ? 'barred' : p > 0.75 || (onProbation && p >= 0.5) ? 'dropped' : p >= 0.5 ? 'probation' : p >= 0.25 ? 'warning' : null;
+  return level ? { ...last, level } : null;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { gradeResult, amisTermToAbs, lightSems, removalKey, applyRemovals, amisCourses, plannerCourseList, fillRequirementSlots, surplusElectives, remainingRequirements, gwaOutlook, LATIN_HONORS };
+  module.exports = { gradeResult, amisTermToAbs, lightSems, standingFor, removalKey, applyRemovals, amisCourses, plannerCourseList, fillRequirementSlots, surplusElectives, remainingRequirements, gwaOutlook, LATIN_HONORS };
 }

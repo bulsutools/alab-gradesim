@@ -4,7 +4,7 @@
 const assert = require('assert');
 Object.assign(globalThis, require('./src/curriculum.js'), require('./src/scheduler.js'));
 const { UPLB_CATALOG } = require('./src/catalog.js');
-const { amisTermToAbs, lightSems, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, fillRequirementSlots, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
+const { amisTermToAbs, lightSems, standingFor, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, fillRequirementSlots, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
 
 assert.strictEqual(amisTermToAbs(1251), 2025 * 3);
 assert.strictEqual(amisTermToAbs('1232'), 2023 * 3 + 1);
@@ -182,6 +182,19 @@ console.log('requirements.test.js: surplus electives passed');
 }
 console.log('requirements.test.js: BSCS special problem and practicum passed');
 
+// An either-or checklist line takes the other course, and a second one is an elective.
+{
+  const row = (code, units) => ({ code, title: '', units, result: 'passed' });
+  const he = plannerCourseList(UPLB_PROGRAMS.BSHE, null, UPLB_CATALOG);
+  const thesis = fillRequirementSlots(he, [row('HFDS 200', 3), row('HFDS 200', 3)]);
+  assert.ok(thesis.has('CERP 200') && thesis.has('CERP 200 (2)'), 'HFDS 200 fills the BS HE thesis rows');
+  const socio = plannerCourseList(UPLB_PROGRAMS.BASOCIO, null, UPLB_CATALOG);
+  const both = fillRequirementSlots(socio, [row('SOC 135', 3), row('SOC 130', 3)]);
+  assert.strictEqual(both.get('SOC 130').code, 'SOC 130');
+  assert.ok([...both.values()].some(r => r.code === 'SOC 135') && !both.has('SOC 135'), 'the other course counts as an elective');
+}
+console.log('requirements.test.js: either-or checklist lines passed');
+
 // BA Comm: a restricted elective takes only the subjects its title names.
 {
   const row = (code) => ({ code, title: '', units: 3, result: 'passed' });
@@ -204,6 +217,32 @@ assert.deepStrictEqual(lightSems([
   sem(1253, 'Midyear', 6),
   sem(1261, 'Now', 9),
 ]).map(s => [s.label, s.units]), [['1st sem', 12]]);
+
+// Scholastic standing follows the share of units below 3.00 in the latest regular sem.
+{
+  const sem5 = (termId, low) => Array.from({ length: 5 }, (_, i) => sem(termId, 'S' + termId, 3, 'X ' + i, i < low ? '5.00' : '2.00'));
+  assert.strictEqual(standingFor(sem5(1251, 0)), null);
+  assert.deepStrictEqual([1, 2, 3, 4, 5].map(n => standingFor(sem5(1251, n))?.level), [undefined, 'warning', 'probation', 'dropped', 'barred']);
+  assert.strictEqual(standingFor([...sem5(1242, 3), ...sem5(1251, 3)]).level, 'dropped');
+  const s = standingFor([...sem5(1251, 3), sem(1253, 'Midyear', 3, 'M 1', '5.00'), sem(1251, 'S', 2, 'HK 12', '5.00'), sem(1251, 'S', 3, 'Y 1', 'INC'), sem(1251, 'S', 3, 'Y 2', '4.00')]);
+  assert.deepStrictEqual([s.level, s.low, s.units], ['probation', 9, 15]);
+}
+
+// BS IE technical cognates and BA Comm majors take only their department lists.
+{
+  const ie = plannerCourseList(UPLB_PROGRAMS.BSIE, null, UPLB_CATALOG);
+  const fill = fillRequirementSlots(ie, [{ code: 'MGT 131', title: '', units: 3, result: 'passed' }, { code: 'MGT 101', title: '', units: 3, result: 'passed' }]);
+  const cog = ie.filter(c => c.title === 'Technical Cognate').map(c => fill.get(c.code)?.code).filter(Boolean);
+  assert.deepStrictEqual(cog, ['MGT 131']);
+  const comm = plannerCourseList(UPLB_PROGRAMS.BACOMM, null, UPLB_CATALOG);
+  const fc = fillRequirementSlots(comm, [{ code: 'THEA 151', title: '', units: 3, result: 'passed' }, { code: 'ENG 101', title: '', units: 3, result: 'passed' }]);
+  const majors = comm.filter(c => c.title === 'Major').map(c => fc.get(c.code)?.code).filter(Boolean);
+  assert.deepStrictEqual(majors, ['THEA 151']);
+  const aass = plannerCourseList(UPLB_PROGRAMS.AASS, null, UPLB_CATALOG);
+  const fa = fillRequirementSlots(aass, [{ code: 'PEd 120.1', title: '', units: 3, result: 'passed' }, { code: 'PEd 101', title: '', units: 3, result: 'passed' }, { code: 'STS 1', title: '', units: 3, result: 'passed' }]);
+  assert.deepStrictEqual(aass.filter(c => c.title === 'HK Elective').map(c => fa.get(c.code)?.code).filter(Boolean), ['PEd 120.1']);
+  assert.strictEqual(fa.get('ARTS 1')?.code, 'STS 1');
+}
 
 // BS Math major electives take only MATH courses.
 {
