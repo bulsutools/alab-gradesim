@@ -4,7 +4,7 @@
 const assert = require('assert');
 Object.assign(globalThis, require('./src/curriculum.js'), require('./src/scheduler.js'));
 const { UPLB_CATALOG } = require('./src/catalog.js');
-const { amisTermToAbs, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, fillRequirementSlots, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
+const { amisTermToAbs, lightSems, gradeResult, removalKey, applyRemovals, surplusElectives, amisCourses, plannerCourseList, fillRequirementSlots, remainingRequirements, gwaOutlook } = require('./src/requirements.js');
 
 assert.strictEqual(amisTermToAbs(1251), 2025 * 3);
 assert.strictEqual(amisTermToAbs('1232'), 2023 * 3 + 1);
@@ -195,3 +195,21 @@ console.log('requirements.test.js: BSCS special problem and practicum passed');
   assert.ok(!phlo.has(slot('Elective (Foreign Language)')), 'PHLO is not a foreign language');
 }
 console.log('requirements.test.js: restricted electives passed');
+
+// Latin honors need 15 units each regular sem before the latest one.
+const sem = (termId, term, units, code = 'CMSC 21', grade = '1.00') => ({ termId, term, units, courseCode: code, grade });
+assert.deepStrictEqual(lightSems([
+  sem(1251, '1st sem', 12), sem(1251, '1st sem', 2, 'HK 11'),
+  sem(1252, '2nd sem', 15), sem(1252, '2nd sem', 3, 'MATH 27', 'DRP'),
+  sem(1253, 'Midyear', 6),
+  sem(1261, 'Now', 9),
+]).map(s => [s.label, s.units]), [['1st sem', 12]]);
+
+// BS Math major electives take only MATH courses.
+{
+  const math = plannerCourseList(UPLB_PROGRAMS.BSMATH, null, UPLB_CATALOG);
+  const majors = math.filter(c => c.title === 'MATH Major Elective');
+  assert.ok(majors.length >= 3 && majors.every(c => c.allow?.join() === 'MATH'));
+  const fill = fillRequirementSlots(math, [{ code: 'STAT 101', title: '', units: 3, result: 'passed' }]);
+  assert.ok(majors.every(c => !fill.has(c.code)), 'STAT is not a MATH major elective');
+}
