@@ -4428,7 +4428,7 @@ const UPLB_PROGRAMS = {
       {
         "code": "MAJ 1",
         "title": "Elective (SOSC)",
-        "allow": ["ANTH", "ECON", "HIST", "POSC", "PSY", "SOC", "SOSC"],
+        "allow": ["ANTH", "HIST", "POSC", "PSY"],
         "units": 3,
         "year": 2,
         "sem": "2",
@@ -4438,7 +4438,7 @@ const UPLB_PROGRAMS = {
       {
         "code": "MAJ 2",
         "title": "Elective (SOSC)",
-        "allow": ["ANTH", "ECON", "HIST", "POSC", "PSY", "SOC", "SOSC"],
+        "allow": ["ANTH", "HIST", "POSC", "PSY"],
         "units": 3,
         "year": 2,
         "sem": "2",
@@ -4465,7 +4465,7 @@ const UPLB_PROGRAMS = {
       {
         "code": "MAJ 3",
         "title": "Elective (SOSC)",
-        "allow": ["ANTH", "ECON", "HIST", "POSC", "PSY", "SOC", "SOSC"],
+        "allow": ["ANTH", "HIST", "POSC", "PSY"],
         "units": 3,
         "year": 3,
         "sem": "1",
@@ -4475,7 +4475,7 @@ const UPLB_PROGRAMS = {
       {
         "code": "MAJ 4",
         "title": "Elective (SOSC)",
-        "allow": ["ANTH", "ECON", "HIST", "POSC", "PSY", "SOC", "SOSC"],
+        "allow": ["ANTH", "HIST", "POSC", "PSY"],
         "units": 3,
         "year": 3,
         "sem": "1",
