@@ -9,6 +9,8 @@
 - BA Communication Arts' major slots take only the Speech, Theater Arts and Writing courses in the Department of Humanities catalog.
 - AA Sports Studies has its ARTS 1 or STS 1 row in first year, as the CAS checklist has it, so another GE course no longer fills it.
 - AA Sports Studies' HK Elective slots take only the eight PEd courses the CAS catalog marks as electives.
+- The GWA card says when the latest sem's grades below 3.00 mean a warning, probation or worse under UPLB's rules on scholastic standing.
+- A 4.00's removal picker says it turns into 5.00 after a year if it isn't removed.
 - BA Philosophy's Readings in Speculative Thought slot takes only SPEC, the AMIS code for that course.
 - BA Sociology's social science electives take only Anthropology, History, Political Science or Psychology, as the CAS catalog footnote says.
 
