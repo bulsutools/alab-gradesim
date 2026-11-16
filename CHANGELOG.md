@@ -1,10 +1,14 @@
 # Changelog
 
+## 2.1.24 (2026-11-17)
+
+### Changes
+- BS Agriculture students can pick Agronomy, Animal Science, Horticulture, Agricultural Systems, Landscape Agroforestry, Soil Science or Agricultural Extension as their major, and its major courses and seminar fill the major slots. Animal Science and the four ASI majors also fill their specialized course slots from their institute lists.
+
 ## 2.1.23 (2026-11-17)
 
 ### Changes
 - A checklist line that names either of two courses, like SOC 130 or SOC 135 in BA Socio and CERP, HFDS or SDS 200 in BS HE, takes either one. Eight programs have these lines in the 2025 catalogs.
-||||||| ee00230
 - BS Industrial Engineering's technical cognates take only the six courses the IE department lists.
 - BA Communication Arts' major slots take only the Speech, Theater Arts and Writing courses in the Department of Humanities catalog.
 - AA Sports Studies has its ARTS 1 or STS 1 row in first year, as the CAS checklist has it, so another GE course no longer fills it.
