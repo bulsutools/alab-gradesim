@@ -11,6 +11,7 @@
 - AA Sports Studies' HK Elective slots take only the eight PEd courses the CAS catalog marks as electives.
 - The GWA card says when the latest sem's grades below 3.00 mean a warning, probation or worse under UPLB's rules on scholastic standing.
 - A 4.00's removal picker says it turns into 5.00 after a year if it isn't removed.
+- BS Agriculture students can pick Agronomy, Animal Science, Horticulture, Agricultural Systems, Landscape Agroforestry, Soil Science or Agricultural Extension as their major, and its major courses and seminar fill the major slots. Animal Science and the four ASI majors also fill their specialized course slots from their institute lists.
 - BA Philosophy's Readings in Speculative Thought slot takes only SPEC, the AMIS code for that course.
 - BA Sociology's social science electives take only Anthropology, History, Political Science or Psychology, as the CAS catalog footnote says.
 
