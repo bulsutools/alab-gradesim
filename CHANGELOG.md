@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.32 (unreleased)
+
+### Fixes
+- Every special problem (190) counts all its units in the GWA, like CMSC 190. AMIS shows the early units as S, and the final grade applies to them too.
+- A thesis (200) counts all its units the same way. Each sem is S while the work is in progress, and the final grade applies to all of it. A 1-unit sem taken to finish it adds no units.
+
 ## 2.1.31 (2026-11-20)
 
 ### Changes
