@@ -58,7 +58,7 @@
     },
     {
       "matches": [
-        "https://gradesim.uplb.tools/*"
+        "https://gradesim.bulsu.tools/*"
       ],
       "js": [
         "bridge.js"

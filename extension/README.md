@@ -26,7 +26,7 @@ Other keys: `selectedProgram`, `selectedTracks`, `selectedSpecializations` (prog
 | `storage` | Keeps grades and settings on your device |
 | `amis.uplb.edu.ph` | Runs the content script on AMIS and lets the popup find the AMIS tab for Refresh |
 | `api-amis.uplb.edu.ph` (Firefox only) | Lets the content script call the grades API. Chrome sends content script requests with the page's origin, and the API already allows `amis.uplb.edu.ph`, so Chrome, Edge and Opera do not need it |
-| `externally_connectable` / `bridge.js` | Lets gradesim.uplb.tools ask for your grades when you press Import there |
+| `externally_connectable` / `bridge.js` | Lets gradesim.bulsu.tools ask for your grades when you press Import there |
 
 ## Build and test
 

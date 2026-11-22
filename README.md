@@ -10,7 +10,7 @@ Not affiliated with UP. Unofficial estimate. INC/DRP may not reflect correctly. 
 - [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/elbi-gradesim/), desktop and Android
 - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/elbi-gradesim-uplb-gwa-/ebiakebpglddgmkdehdjiadnjgkmgnga)
 
-No extension? The web app at [gradesim.uplb.tools](https://gradesim.uplb.tools) does the same math with grades you import or type in.
+No extension? The web app at [gradesim.bulsu.tools](https://gradesim.bulsu.tools) does the same math with grades you import or type in.
 
 ## What it does
 
@@ -24,7 +24,7 @@ No extension? The web app at [gradesim.uplb.tools](https://gradesim.uplb.tools) 
 
 ## Privacy
 
-Your grades stay in your browser. The extension calls the AMIS grades API with your own login, keeps only the course fields it needs in `chrome.storage.local`, and sends nothing to any server. There are no analytics. It hands your grades to the web app only when you press Import there. Full policy at [gradesim.uplb.tools/privacy](https://gradesim.uplb.tools/privacy/).
+Your grades stay in your browser. The extension calls the AMIS grades API with your own login, keeps only the course fields it needs in `chrome.storage.local`, and sends nothing to any server. There are no analytics. It hands your grades to the web app only when you press Import there. Full policy at [gradesim.bulsu.tools/privacy](https://gradesim.bulsu.tools/privacy/).
 
 ## Build from source
 
@@ -48,7 +48,7 @@ extension/
 scratch/       curriculum pipeline (checklist PDFs, parsers, prerequisite graphs)
 ```
 
-The web app lives in [uplbtools/gradesim-website](https://github.com/uplbtools/gradesim-website).
+The web app lives in [uplbtools/gradesim-website](https://github.com/bulsutools/alab-gradesim-website).
 
 ## License
 

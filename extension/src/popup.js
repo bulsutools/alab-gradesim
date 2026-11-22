@@ -211,7 +211,7 @@ function fillProgramSelect(select, current) {
 }
 
 // The planner lives in the web app, which gets the grades from this extension.
-const WEB_APP = 'https://gradesim.uplb.tools';
+const WEB_APP = 'https://gradesim.bulsu.tools';
 function openPlanner(failedCode) {
   const q = failedCode ? `&whatif=${encodeURIComponent(failedCode)}` : '';
   chrome.tabs.create({ url: `${WEB_APP}/?from=extension${q}#planner` });
@@ -1113,7 +1113,7 @@ function shownGwa(value = '', show = 'none') {
 const tinImages = {};
 const bareLabel = label => label.replace(/^\P{L}+/u, '');
 const FRAMES = { sem: 'tin-stats', id: 'tin-id', tin: 'tin', note: 'tin', tray: 'tray', open: 'tin-red' };
-const INK = '#1c1917', SOFT = '#4a3f3c', RED = '#7b1113', URL = 'gradesim.uplb.tools';
+const INK = '#1c1917', SOFT = '#4a3f3c', RED = '#7b1113', URL = 'gradesim.bulsu.tools';
 const CREDIT = 'Design by Reann Vargas and Danica Manadong';
 
 // Reann Vargas's pages. Each tin, tray and note is tilted, so text is drawn turned with it.
