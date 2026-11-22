@@ -127,6 +127,7 @@
     if (!inFlight) {
       inFlight = fetchGrades()
         .then(async result => {
+          result.portal = 'amis';
           if (result.lastError !== 'not-logged-in') Object.assign(result, await fetchEnlisted(authHeaders()));
           const { gradesData: old } = await chrome.storage.local.get('gradesData');
           const added = old && result.gradesData ? changedGrades(old, result.gradesData) : 0;

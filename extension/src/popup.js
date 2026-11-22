@@ -217,7 +217,7 @@ function openPlanner(failedCode) {
   chrome.tabs.create({ url: `${WEB_APP}/?from=extension${q}#planner` });
 }
 
-// Room TBA's planner opens the classes AMIS says the student is enlisted in, latest sem first.
+// Room TBA's planner opens the classes ALAB SMS says the student is enlisted in, latest sem first.
 async function showEnlisted() {
   const { enlisted } = await chrome.storage.local.get('enlisted');
   const term = Math.max(...Object.keys(enlisted || {}).map(Number));
@@ -225,11 +225,11 @@ async function showEnlisted() {
   if (abs == null) return;
   const s = enlisted[term];
   const courses = new Set(s.map(r => r[0])).size;
-  $('enlistedHint').textContent = `AMIS lists ${plural(courses, 'course')} for your ${['1st sem', '2nd sem', 'midyear'][abs % 3]}. Room TBA shows each room on the map and saves the schedule to your calendar.`;
+  $('enlistedHint').textContent = `ALAB SMS lists ${plural(courses, 'course')} for your ${['1st sem', '2nd sem', 'midyear'][abs % 3]}. Room TBA shows each room on the map and saves the schedule to your calendar.`;
   $('openClassesBtn').addEventListener('click', async () => {
     const { selectedProgram } = await chrome.storage.local.get('selectedProgram');
     const plan = btoa(JSON.stringify({ v: 1, t: term, s })).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-    chrome.tabs.create({ url: `https://room-tba.uplb.tools/planner?plan=${plan}${selectedProgram ? `&program=${selectedProgram}` : ''}` });
+    chrome.tabs.create({ url: `https://room-tba.bulsu.tools/planner?plan=${plan}${selectedProgram ? `&program=${selectedProgram}` : ''}` });
   });
   $('enlistedBox').hidden = false;
 }
@@ -359,7 +359,8 @@ function parseAMISData(data) {
         term: termInfo,
         semester: courseData.grade_term?.term || '',
         academicYear: courseData.grade_term?.ay || ay,
-        status: courseData.status
+        status: courseData.status,
+        includeInGwa: courseData.include_in_gwa !== false
       });
     }
   }
@@ -390,6 +391,7 @@ async function loadGradesData() {
     }
 
     removals = result.removals || {};
+    portal = result.portal || 'amis';
     rawGrades = applyRemovals(result.gradesData, removals);
     const courses = parseAMISData(rawGrades);
     fetchedAt = result.fetchedAt;
@@ -479,6 +481,9 @@ function calculateGWA(courses, excludedIds = new Set()) {
       gradesBySemester[semKey] = [];
     }
     gradesBySemester[semKey].push({ ...course, isNonNumeric: isNonNumericGrade });
+
+    // ALAB SMS flags records that stay out of the GWA (include_in_gwa=false).
+    if (course.includeInGwa === false) return;
 
     const carried = carriedGrade(course, courses);
 
@@ -1424,27 +1429,38 @@ async function exportWrappedToPNG() {
 
 /* ---------- Grade refresh, backup and clear data (platform) ---------- */
 
-const SYNC_ERRORS = {
-  'not-logged-in': 'Log in to AMIS, then press Refresh.',
-  'amis-error': "AMIS didn't answer. Check that AMIS opens in a tab, then press Refresh.",
-  'no-tab': 'Open AMIS in a tab first.',
-  'no-answer': 'Reload your AMIS tab once, then press Refresh.',
+// Which portal last wrote gradesData: 'amis' or 'alab'. Set by the content scripts.
+let portal = 'amis';
+const PORTALS = {
+  amis: { name: 'AMIS', url: 'https://amis.uplb.edu.ph/' },
+  alab: { name: 'ALAB SMS', url: 'https://alabsms.bulsu.edu.ph/' },
 };
+
+function syncErrorText(code) {
+  const p = PORTALS[portal] || PORTALS.amis;
+  return {
+    'not-logged-in': `Log in to ${p.name}, then press Refresh.`,
+    'amis-error': `${p.name} didn't answer. Check that ${p.name} opens in a tab, then press Refresh.`,
+    'alab-error': "ALAB SMS didn't answer. Check that ALAB SMS opens in a tab, then press Refresh.",
+    'no-tab': `Open ${p.name} in a tab first.`,
+    'no-answer': `Reload your ${p.name} tab once, then press Refresh.`,
+  }[code] || `Log in to ${p.name} in a tab, then press Refresh.`;
+}
 
 // Show a refresh problem, or clear it with null. With no grades yet it goes in the empty card.
 let syncError = null;
 function showSyncError(code) {
   syncError = code;
   if (!$('noData').classList.contains('hidden')) {
-    $('noDataHint').textContent = SYNC_ERRORS[code] || 'Log in to AMIS in a tab, then press Refresh.';
+    $('noDataHint').textContent = syncErrorText(code);
     $('syncNotice').replaceChildren();
     return;
   }
-  showNotice($('syncNotice'), SYNC_ERRORS[code] && {
-    tone: 'warn', icon: 'alert', body: SYNC_ERRORS[code],
+  showNotice($('syncNotice'), code && {
+    tone: 'warn', icon: 'alert', body: syncErrorText(code),
     action: (code === 'no-tab' || code === 'not-logged-in') && button({
-      variant: 'text', text: 'Open AMIS', icon: 'external',
-      onclick: () => chrome.tabs.create({ url: 'https://amis.uplb.edu.ph/' }),
+      variant: 'text', text: `Open ${PORTALS[portal] ? PORTALS[portal].name : 'portal'}`, icon: 'external',
+      onclick: () => chrome.tabs.create({ url: (PORTALS[portal] || PORTALS.amis).url }),
     }),
   });
 }
@@ -1455,9 +1471,10 @@ async function refreshGrades() {
   const btns = document.querySelectorAll('#refreshBtn, .refresh-btn');
   btns.forEach(b => { b.disabled = true; });
   try {
-    const [tab] = await chrome.tabs.query({ url: 'https://amis.uplb.edu.ph/*' });
+    let [tab] = await chrome.tabs.query({ url: 'https://alabsms.bulsu.edu.ph/*' });
+    if (!tab) [tab] = await chrome.tabs.query({ url: 'https://amis.uplb.edu.ph/*' });
     if (!tab) { showSyncError('no-tab'); return; }
-    showNotice($('syncNotice'), { tone: 'info', icon: 'clock', body: 'Getting your grades from AMIS.' });
+    showNotice($('syncNotice'), { tone: 'info', icon: 'clock', body: `Getting your grades from ${PORTALS[portal] ? PORTALS[portal].name : 'the portal'}.` });
     let res;
     try {
       res = await chrome.tabs.sendMessage(tab.id, { type: 'FETCH_GRADES', force: true });
@@ -1478,7 +1495,7 @@ const BACKUP_SCHEMA_VERSION = 2;
 // termsAccepted (each person accepts the terms on their own device),
 // lastError (it describes this browser only) or fetchedAt (only a real AMIS
 // read sets it, so the From AMIS mark can't come from a file).
-const BACKUP_KEYS = ['gradesData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
+const BACKUP_KEYS = ['gradesData', 'portal', 'enlisted', 'scheduleData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
   'substitutions', 'customCourseStatus', 'removals', 'plannerPins', 'plannerPetitions', 'plannerOptions', 'theme'];
 
 function wireBackup() {
