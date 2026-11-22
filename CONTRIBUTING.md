@@ -1,10 +1,10 @@
 # Contributing to GradeSim
 
-Thanks for helping UPLB students track grades and plan for Latin honors.
+Thanks for helping BulSU students track grades and plan for Latin honors.
 
 ## Report issues
 
-Open a [GitHub issue](https://github.com/uplbtools/gradesim/issues) with:
+Open a [GitHub issue](https://github.com/bulsutools/alab-gradesim/issues) with:
 
 - Browser and extension version
 - Steps to reproduce
@@ -42,4 +42,4 @@ CI runs the tests on every pull request. The Firefox lint should report 0 errors
 
 ## Code of conduct
 
-See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Be helpful to students, and check grade logic against official UPLB rules when you can.
+See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Be helpful to students, and check grade logic against official BulSU rules when you can.

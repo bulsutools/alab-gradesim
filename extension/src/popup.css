@@ -1,4 +1,4 @@
-/* ALAB GradeSim popup, UPLB Tools identity. Colors, type and radii come from tokens.css. */
+/* ALAB GradeSim popup styles. Colors, type and radii come from tokens.css. */
 * {
   margin: 0;
   padding: 0;
@@ -95,7 +95,7 @@ fieldset {
   display: none;
 }
 
-/* Buttons, after the uplbtools.me .btn rules */
+/* Buttons, after the shared .btn rules */
 .btn {
   display: inline-flex;
   align-items: center;

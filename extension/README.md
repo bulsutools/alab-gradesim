@@ -44,4 +44,4 @@ Load `dist/chrome` (Chrome, Edge, Brave, Opera) or `dist/firefox` as an unpacked
 
 ## Curriculum data
 
-Programs live in `src/curriculum.js` and the course catalog in `src/catalog.js`. `curriculum.js` is edited by hand now, because the generators in `../scratch/` predate tracks and specializations.
+Programs live in `src/curriculum.js` and the course catalog in `src/catalog.js`. `curriculum.js` is edited by hand now; the upstream generators that produced it were removed with the `scratch/` pipeline.
