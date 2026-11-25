@@ -1,6 +1,6 @@
 // extension/src/content.js
 
-// Content script for Elbi GradeSim. Runs on amis.uplb.edu.ph.
+// Content script for ALAB GradeSim. Runs on amis.uplb.edu.ph.
 // It calls the AMIS grades API once with the student's own login token, keeps
 // only the course fields the extension reads, and saves them in
 // chrome.storage.local. It also reads which classes the student is enlisted in
@@ -127,6 +127,7 @@
     if (!inFlight) {
       inFlight = fetchGrades()
         .then(async result => {
+          result.portal = 'amis';
           if (result.lastError !== 'not-logged-in') Object.assign(result, await fetchEnlisted(authHeaders()));
           const { gradesData: old } = await chrome.storage.local.get('gradesData');
           const added = old && result.gradesData ? changedGrades(old, result.gradesData) : 0;

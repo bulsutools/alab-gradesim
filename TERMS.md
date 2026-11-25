@@ -1,19 +1,19 @@
-# Terms of Service for Elbi GradeSim
+# Terms of Service for ALAB GradeSim
 
 **Last Updated: July 4, 2026**
 
 ## Overview
 
-Elbi GradeSim is a free browser extension for UPLB students. By installing and using the extension, you agree to these terms.
+ALAB GradeSim is a free browser extension for BulSU students. By installing and using the extension, you agree to these terms.
 
 ## Permitted use
 
-- Use the extension for personal academic planning on the official UPLB AMIS portal.
-- Do not reverse-engineer, redistribute, or misrepresent the extension as an official UPLB product.
+- Use the extension for personal academic planning on the official ALAB SMS portal.
+- Do not reverse-engineer, redistribute, or misrepresent the extension as an official BulSU product.
 
 ## No official affiliation
 
-GradeSim is an independent student tool. It is **not** affiliated with, endorsed by, or operated by the University of the Philippines Los Baños or the AMIS system.
+GradeSim is an independent student tool. It is **not** affiliated with, endorsed by, or operated by Bulacan State University or the ALAB SMS system.
 
 ## No warranty
 
@@ -29,4 +29,4 @@ We may update these terms. Continued use after the "Last Updated" date constitut
 
 ## Contact
 
-Questions: open an issue on the project GitHub repository.
+Questions: open an issue on the [project GitHub repository](https://github.com/bulsutools/alab-gradesim/issues).

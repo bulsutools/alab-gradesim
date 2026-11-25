@@ -1,5 +1,5 @@
 /**
- * Elbi GradeSim - Graduation Scheduler
+ * ALAB GradeSim - Graduation Scheduler
  * Pure functions, no DOM or chrome.* - also runs under node for tests.
  *
  * Computes the earliest feasible term for every remaining course given

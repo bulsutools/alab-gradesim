@@ -1,7 +1,7 @@
 // extension/src/bridge.js
 
 // Web app bridge for Firefox, which has no externally_connectable for web
-// pages. Runs only on https://gradesim.uplb.tools and answers two requests the
+// pages. Runs only on https://gradesim.bulsu.tools and answers two requests the
 // page posts to itself: GRADESIM_PING (are there grades, and when was AMIS last
 // read?) and GRADESIM_GET_GRADES (hand them over with the student's choices).
 // The reply stays inside this browser tab; nothing is sent over the network.

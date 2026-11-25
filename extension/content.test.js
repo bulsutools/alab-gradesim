@@ -58,7 +58,7 @@ async function page({ token, status = 200, body = AMIS_RESPONSE, stored = {}, am
   assert.strictEqual(p.calls[0].opts.headers.Authorization, 'Bearer abc');
   assert.strictEqual(p.store.lastError, null);
   assert.ok(Date.now() - p.store.fetchedAt < 1000);
-  assert.deepStrictEqual(Object.keys(p.store).sort(), ['fetchedAt', 'gradesData', 'lastError']);
+  assert.deepStrictEqual(Object.keys(p.store).sort(), ['fetchedAt', 'gradesData', 'lastError', 'portal']);
   assert.deepStrictEqual(JSON.parse(JSON.stringify(p.store.gradesData)), {
     student_grades: { 1241: { term: '1st Semester AY 2024-2025', values: [{
       id: 77, grade: '1.25', unit_taken: '3', section: 'A', status: 'Final',

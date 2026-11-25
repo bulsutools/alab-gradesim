@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elbi GradeSim</title>
+  <title>ALAB GradeSim</title>
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="popup.css">
   <script src="components.js"></script>
@@ -13,8 +13,8 @@
     <header>
       <img class="plumbob" src="plumbob.svg" alt="">
       <div class="brand">
-        <h1><a href="https://gradesim.uplb.tools" target="_blank" rel="noopener">Elbi GradeSim</a></h1>
-        <span class="byline">by UPLB Tools</span>
+        <h1><a href="https://gradesim.bulsu.tools" target="_blank" rel="noopener">ALAB GradeSim</a></h1>
+        <span class="byline">by bulsutools</span>
       </div>
       <div class="header-actions">
         <button id="helpBtn" class="theme-toggle" type="button" aria-haspopup="dialog" aria-label="Help" title="Help"><span data-icon="help"></span></button>
@@ -34,10 +34,10 @@
 
     <div id="noData" class="no-data hidden">
       <p class="no-data-title">No grades yet</p>
-      <p id="noDataHint" class="hint">Log in to AMIS in a tab, then press Refresh.</p>
+      <p id="noDataHint" class="hint">Log in to ALAB SMS in a tab, then press Refresh.</p>
       <div class="no-data-actions">
         <button id="refreshBtn" class="btn btn-primary" type="button">Refresh</button>
-        <a href="https://amis.uplb.edu.ph" target="_blank" rel="noopener">Open AMIS</a>
+        <a href="https://alabsms.bulsu.edu.ph" target="_blank" rel="noopener">Open ALAB SMS</a>
       </div>
     </div>
 
@@ -143,7 +143,7 @@
 
           <section id="plannerTab" class="tab-content" hidden>
             <h3>Course planner</h3>
-            <p class="hint">The planner shows when you can graduate and what a failed course costs. It opens on gradesim.uplb.tools with your grades.</p>
+            <p class="hint">The planner shows when you can graduate and what a failed course costs. It opens on gradesim.bulsu.tools with your grades.</p>
             <button id="openPlannerBtn" class="btn btn-primary" type="button">Open planner</button>
             <div id="enlistedBox" hidden>
               <h3>Your classes</h3>
@@ -171,7 +171,7 @@
                 <label class="wrapped-check wrapped-photo"><input id="wrappedPhoto" type="checkbox" checked>Leave a spot for my photo</label>
                 <p id="wrappedPhotoHint" class="hint">Add your photo over the picture in Instagram or Facebook.</p>
               </div>
-              <p id="wrappedAmisHint" class="hint" hidden>Open AMIS so GradeSim reads your grades there, and your cards get the From AMIS mark.</p>
+              <p id="wrappedAmisHint" class="hint" hidden>Open ALAB SMS so GradeSim reads your grades there, and your cards get the From portal mark.</p>
             </div>
           </section>
         </div>
@@ -188,7 +188,7 @@
 
   <dialog id="helpDialog" class="modal help-modal" aria-labelledby="helpTitle">
     <div class="modal-header">
-      <h2 id="helpTitle">How to use Elbi GradeSim</h2>
+      <h2 id="helpTitle">How to use ALAB GradeSim</h2>
       <button class="btn-icon modal-close" type="button" data-close aria-label="Close"><span data-icon="x"></span></button>
     </div>
     <div class="modal-body">
@@ -231,14 +231,14 @@
       <div class="help-item">
         <span class="help-icon"><span data-icon="sparkles"></span></span>
         <div class="help-text">
-          <strong>Elbi GradeSim Wrapped</strong>
+          <strong>ALAB GradeSim Wrapped</strong>
           <p>Wrapped is a short recap of your grades so far. You can save any card for an Instagram story.</p>
         </div>
       </div>
       <div class="help-item">
         <span class="help-icon"><span data-icon="list"></span></span>
         <div class="help-text">
-          <strong>UP grading system</strong>
+          <strong>Grading system</strong>
           <dl class="legend-grid">
             <div class="legend-item"><dt>1.0</dt><dd>Excellent</dd></div>
             <div class="legend-item"><dt>1.25</dt><dd>Excellent</dd></div>
@@ -264,7 +264,7 @@
         <span class="help-icon"><span data-icon="external"></span></span>
         <div class="help-text">
           <strong>Still stuck?</strong>
-          <p><a href="https://github.com/uplbtools/gradesim/discussions/categories/q-a" target="_blank" rel="noopener">Ask on GitHub</a> and we'll answer there.</p>
+          <p><a href="https://github.com/bulsutools/alab-gradesim/discussions/categories/q-a" target="_blank" rel="noopener">Ask on GitHub</a> and we'll answer there.</p>
         </div>
       </div>
     </div>
@@ -272,14 +272,14 @@
 
   <dialog id="termsDialog" class="modal" aria-labelledby="termsTitle">
     <div class="modal-header centered">
-      <h2 id="termsTitle">Elbi GradeSim</h2>
+      <h2 id="termsTitle">ALAB GradeSim</h2>
       <p>Terms of Use and Privacy Notice</p>
       <button id="closeTermsBtn" class="btn-icon modal-close" type="button" data-close aria-label="Close"><span data-icon="x"></span></button>
     </div>
     <div class="modal-body">
       <div class="terms-section">
         <h3>About this tool</h3>
-        <p>Elbi GradeSim is an independent student-made browser extension for <strong>UP Los Baños</strong> students to track and simulate their GWA. It isn't affiliated with, endorsed by, or connected to the University of the Philippines (UP) System, UPLB, or the UPLB AMIS portal.</p>
+        <p>ALAB GradeSim is an independent student-made browser extension for <strong>Bulacan State University</strong> students to track and simulate their GWA. It isn't affiliated with, endorsed by, or connected to BulSU or the ALAB SMS portal.</p>
       </div>
       <div class="terms-section">
         <h3>1. Privacy and data</h3>
@@ -291,11 +291,11 @@
       </div>
       <div class="terms-section">
         <h3>3. Accuracy</h3>
-        <p>All GWA calculations and target simulations are unofficial estimates. They may not account for incomplete (INC), dropped (DRP), or deferred grades. Always check your official records with the UPLB Office of the University Registrar (OUR).</p>
+        <p>All GWA calculations and target simulations are unofficial estimates. They may not account for incomplete (INC), dropped (DRP), or deferred grades. Always check your official records with the BulSU Office of the University Registrar.</p>
       </div>
       <div class="terms-section">
         <h3>4. Responsibility and IP</h3>
-        <p>You're responsible for what you do with this tool, and the developer assumes no liability. UP and UPLB marks belong to the UP System and appear here only to name the university.</p>
+        <p>You're responsible for what you do with this tool, and the developer assumes no liability. BulSU marks belong to Bulacan State University and appear here only to name the university.</p>
       </div>
     </div>
     <div class="modal-footer">
@@ -305,9 +305,9 @@
 
   <footer class="footer">
     <p class="legal-links">
-      <a href="https://gradesim.uplb.tools/privacy/" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://gradesim.bulsu.tools/privacy/" target="_blank" rel="noopener">Privacy</a>
       <span aria-hidden="true">|</span>
-      <a href="https://gradesim.uplb.tools/terms/" target="_blank" rel="noopener">Terms</a>
+      <a href="https://gradesim.bulsu.tools/terms/" target="_blank" rel="noopener">Terms</a>
     </p>
   </footer>
 

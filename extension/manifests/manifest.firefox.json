@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Elbi GradeSim",
+  "name": "ALAB GradeSim",
   "version": "2.1.0",
   "browser_specific_settings": {
     "gecko": {
@@ -16,13 +16,15 @@
       "strict_min_version": "120.0"
     }
   },
-  "description": "UPLB GWA calculator and Latin honors simulator, with a planner for your remaining courses. Your grades stay on your device.",
+  "description": "BulSU GWA calculator and Latin honors simulator, with a planner for your remaining courses. Reads grades from ALAB SMS; your data stays on your device.",
   "permissions": [
     "storage"
   ],
   "host_permissions": [
     "https://amis.uplb.edu.ph/*",
-    "https://api-amis.uplb.edu.ph/*"
+    "https://api-amis.uplb.edu.ph/*",
+    "https://alabsms.bulsu.edu.ph/*",
+    "https://alabsms-server.bulsu.edu.ph/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -56,12 +58,21 @@
     },
     {
       "matches": [
-        "https://gradesim.uplb.tools/*"
+        "https://gradesim.bulsu.tools/*"
       ],
       "js": [
         "bridge.js"
       ],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://alabsms.bulsu.edu.ph/*"
+      ],
+      "js": [
+        "alab-content.js"
+      ],
+      "run_at": "document_idle"
     }
   ]
 }

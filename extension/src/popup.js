@@ -1,7 +1,7 @@
 // extension/src/popup.js
 
 /**
- * Elbi GradeSim popup.
+ * ALAB GradeSim popup.
  * Processes grades data locally. No data is collected, transmitted, or shared.
  * UI pieces come from components.js (h, icon, courseRow, notice, stat, badge...).
  */
@@ -77,9 +77,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }));
   }
   showSyncError(lastError);
-  const { newGrades } = await chrome.storage.local.get('newGrades');
+  const { newGrades, portal: storedPortal } = await chrome.storage.local.get(['newGrades', 'portal']);
   if (newGrades) {
-    if (!lastError) showNotice($('syncNotice'), { tone: 'ok', icon: 'check', body: `AMIS has ${newGrades === 1 ? '1 new grade' : `${newGrades} new grades`} since you last opened GradeSim.` });
+    const p = (PORTALS[storedPortal] || PORTALS.alab).name;
+    if (!lastError) showNotice($('syncNotice'), { tone: 'ok', icon: 'check', body: `${p} has ${newGrades === 1 ? '1 new grade' : `${newGrades} new grades`} since you last opened GradeSim.` });
     chrome.storage.local.remove('newGrades');
   }
 
@@ -211,13 +212,13 @@ function fillProgramSelect(select, current) {
 }
 
 // The planner lives in the web app, which gets the grades from this extension.
-const WEB_APP = 'https://gradesim.uplb.tools';
+const WEB_APP = 'https://gradesim.bulsu.tools';
 function openPlanner(failedCode) {
   const q = failedCode ? `&whatif=${encodeURIComponent(failedCode)}` : '';
   chrome.tabs.create({ url: `${WEB_APP}/?from=extension${q}#planner` });
 }
 
-// Room TBA's planner opens the classes AMIS says the student is enlisted in, latest sem first.
+// Room TBA's planner opens the classes ALAB SMS says the student is enlisted in, latest sem first.
 async function showEnlisted() {
   const { enlisted } = await chrome.storage.local.get('enlisted');
   const term = Math.max(...Object.keys(enlisted || {}).map(Number));
@@ -225,11 +226,11 @@ async function showEnlisted() {
   if (abs == null) return;
   const s = enlisted[term];
   const courses = new Set(s.map(r => r[0])).size;
-  $('enlistedHint').textContent = `AMIS lists ${plural(courses, 'course')} for your ${['1st sem', '2nd sem', 'midyear'][abs % 3]}. Room TBA shows each room on the map and saves the schedule to your calendar.`;
+  $('enlistedHint').textContent = `ALAB SMS lists ${plural(courses, 'course')} for your ${['1st sem', '2nd sem', 'midyear'][abs % 3]}. Room TBA shows each room on the map and saves the schedule to your calendar.`;
   $('openClassesBtn').addEventListener('click', async () => {
     const { selectedProgram } = await chrome.storage.local.get('selectedProgram');
     const plan = btoa(JSON.stringify({ v: 1, t: term, s })).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-    chrome.tabs.create({ url: `https://room-tba.uplb.tools/planner?plan=${plan}${selectedProgram ? `&program=${selectedProgram}` : ''}` });
+    chrome.tabs.create({ url: `https://room-tba.bulsu.tools/planner?plan=${plan}${selectedProgram ? `&program=${selectedProgram}` : ''}` });
   });
   $('enlistedBox').hidden = false;
 }
@@ -331,7 +332,7 @@ function updateTrackOptionsUI() {
   }));
 }
 
-// Parse the AMIS data structure into a flat array of courses
+// Parse the stored grades data into a flat array of courses
 function parseAMISData(data) {
   const courses = [];
 
@@ -359,7 +360,8 @@ function parseAMISData(data) {
         term: termInfo,
         semester: courseData.grade_term?.term || '',
         academicYear: courseData.grade_term?.ay || ay,
-        status: courseData.status
+        status: courseData.status,
+        includeInGwa: courseData.include_in_gwa !== false
       });
     }
   }
@@ -367,7 +369,7 @@ function parseAMISData(data) {
   return courses;
 }
 
-// The stored AMIS data and when it was fetched, for requirements and Refresh.
+// The stored grades data and when it was fetched, for requirements and Refresh.
 let rawGrades = null;
 let fetchedAt = null;
 
@@ -390,6 +392,7 @@ async function loadGradesData() {
     }
 
     removals = result.removals || {};
+    portal = result.portal || 'alab';
     rawGrades = applyRemovals(result.gradesData, removals);
     const courses = parseAMISData(rawGrades);
     fetchedAt = result.fetchedAt;
@@ -480,6 +483,9 @@ function calculateGWA(courses, excludedIds = new Set()) {
     }
     gradesBySemester[semKey].push({ ...course, isNonNumeric: isNonNumericGrade });
 
+    // ALAB SMS flags records that stay out of the GWA (include_in_gwa=false).
+    if (course.includeInGwa === false) return;
+
     const carried = carriedGrade(course, courses);
 
     // For non-numeric grades, add to completed but don't calculate GWA
@@ -533,10 +539,10 @@ function calculateGWA(courses, excludedIds = new Set()) {
 }
 
 const STANDING = {
-  warning: "Under UPLB's rules on scholastic standing, that gets a warning from your Dean.",
+  warning: "That puts your scholastic standing at risk. Check your college's rules.",
   probation: 'That puts you on probation next sem, and your Dean may limit your load. Passing more than half your units next sem lifts it.',
-  dropped: "Under UPLB's rules that can drop you from your college. Talk to your College Secretary about readmission.",
-  barred: "Under UPLB's rules that can bar you from readmission. Talk to your College Secretary soon."
+  dropped: 'That can affect your standing. Talk to your College Secretary about readmission.',
+  barred: 'That can affect readmission. Talk to your College Secretary soon.'
 };
 
 function displayHonorStatus(gwa, totalUnits) {
@@ -716,10 +722,10 @@ function displayRemaining() {
       currentTrack = detectedTrack;
       const trackInfo = curriculum.tracks[detectedTrack];
       const trackName = trackInfo ? `${trackInfo.name} (${trackInfo.code})` : detectedTrack;
-      showNotice(trackInfoEl, { tone: 'ok', icon: 'check', body: `AMIS shows the ${trackName}.` });
+      showNotice(trackInfoEl, { tone: 'ok', icon: 'check', body: `${(PORTALS[portal] || PORTALS.alab).name} shows the ${trackName}.` });
     } else {
       currentTrack = resolveTrack(curriculum, window.selectedTracks?.[curriculum.code]);
-      showNotice(trackInfoEl, { tone: 'warn', icon: 'alert', body: "Your track isn't on AMIS yet, so pick one below." });
+      showNotice(trackInfoEl, { tone: 'warn', icon: 'alert', body: `Your track isn't on ${(PORTALS[portal] || PORTALS.alab).name} yet, so pick one below.` });
     }
 
     const trackRadio = document.querySelector(`input[name="track"][value="${CSS.escape(currentTrack)}"]`);
@@ -786,7 +792,7 @@ function displayHonorsGwa(surplus, allCourses) {
 }
 
 // A 4.00 gets one removal exam. Picking its result recomputes everything as
-// if AMIS already showed 3.00 (pass) or 5.00 (fail).
+// if the portal already showed 3.00 (pass) or 5.00 (fail).
 function removalPicker(course) {
   if (parseFloat(course.removalFrom || course.grade) !== 4) return null;
   const key = removalKey(course.termId, course.courseCode);
@@ -1006,12 +1012,12 @@ function generateGWAPanel(data) {
     [1.45, '⭐', 'Magna tingz', 'Consistent high grades. Ikaw yung type na maayos notes tapos hinahanap ka ng groupmates pag may exam.'],
     [1.75, '🎯', 'Cum laude szn', 'Solid GWA. Di ka nag-slack off pero di rin naman nagpaka-robot. Balance talaga.'],
     [2.00, '🌟', 'Honor roll', 'Pasok sa honors. May hirap-hirap pero kinaya mo naman. Proud of u.'],
-    [2.50, '💪', 'Pasang-alam', 'Passing is passing. May mga sem na mabigat talaga, wag ka maguilty. Nasa UP ka pa rin.'],
-    [3.00, '🎮', 'Survival mode', 'Nandito ka pa, that counts. Minsan ganyan talaga UP. Basta graduate, panalo.'],
+    [2.50, '💪', 'Pasang-alam', 'Passing is passing. May mga sem na mabigat talaga, wag ka maguilty. Nasa BulSU ka pa rin.'],
+    [3.00, '🎮', 'Survival mode', 'Nandito ka pa, that counts. Minsan ganyan talaga sa BulSU. Basta graduate, panalo.'],
     [Infinity, '🌱', 'Comeback arc', "Mababa man ngayon, pwede pa 'yan i-improve. Marami nang naka-recover from this. Kaya mo 'yan."],
   ];
   const [, emoji, title, message] = gwa === 0 ? tiers[0] : tiers.slice(1).find(t => gwa <= t[0]);
-  return { emoji, title, value: gwa > 0 ? gwa.toFixed(4) : '--', subtitle: 'My Elbi GWA', message, frame: gwa > 0 && 'id' };
+  return { emoji, title, value: gwa > 0 ? gwa.toFixed(4) : '--', subtitle: 'My GWA', message, frame: gwa > 0 && 'id' };
 }
 
 function generateSemesterPanel(data) {
@@ -1085,12 +1091,12 @@ let wrappedCourses = [];
 
 function wrappedId() {
   const year = `${['1st', '2nd', '3rd'][wrappedYears - 1] || `${wrappedYears}th`} year`;
-  // The From AMIS mark: grades read from AMIS here, with no removal result and nothing left out.
+  // The From portal mark: grades read from the portal here, with no removal result and nothing left out.
   const amis = fetchedAt && !Object.keys(removals).length && !excludedCourses.size
     ? new Date(fetchedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
   return {
     name: $('wrappedName').value.trim(), year, course: $('programSelect').value, show: $('wrappedShow').value || 'none',
-    amis, photo: $('wrappedPhoto').checked,
+    amis, portal: (PORTALS[portal] || PORTALS.alab).name, photo: $('wrappedPhoto').checked,
   };
 }
 
@@ -1108,7 +1114,7 @@ function shownGwa(value = '', show = 'none') {
 const tinImages = {};
 const bareLabel = label => label.replace(/^\P{L}+/u, '');
 const FRAMES = { sem: 'tin-stats', id: 'tin-id', tin: 'tin', note: 'tin', tray: 'tray', open: 'tin-red' };
-const INK = '#1c1917', SOFT = '#4a3f3c', RED = '#7b1113', URL = 'gradesim.uplb.tools';
+const INK = '#1c1917', SOFT = '#4a3f3c', RED = '#7b1113', URL = 'gradesim.bulsu.tools';
 const CREDIT = 'Design by Reann Vargas and Danica Manadong';
 
 // Reann Vargas's pages. Each tin, tray and note is tilted, so text is drawn turned with it.
@@ -1179,7 +1185,7 @@ async function drawTinFrame(canvas, p) {
   const g = shownGwa(p.value, id.show);
 
   if (id.amis) {
-    const label = `From AMIS, ${id.amis}`;
+    const label = `From ${id.portal}, ${id.amis}`;
     ctx.font = `700 34px ${font}`;
     const w = ctx.measureText(label).width + 100;
     ctx.fillStyle = 'rgba(28,25,23,0.88)';
@@ -1246,7 +1252,7 @@ async function drawTinFrame(canvas, p) {
         text(p.title, 800, 64, INK, 95);
       } else {
         text(p.title, 800, 120, RED, 20, 700);
-        text('My Elbi GWA tier', 700, 44, INK, 95);
+        text('My GWA tier', 700, 44, INK, 95);
       }
       text(`Make yours on ${URL}`, 600, 36, SOFT, 160);
     });
@@ -1356,7 +1362,7 @@ function tinCanvas(p) {
   const id = wrappedId();
   const shown = tier && id.show !== 'none' && `GWA ${shownGwa(p.value, id.show)}`;
   const highlights = p.highlights || [];
-  const label = [p.title, shown, id.amis && `from AMIS on ${id.amis}`, !tier && [p.value, p.subtitle].filter(Boolean).join(' '), p.frame === 'sem' ? `${p.units} units` : p.extra, ...highlights.map(x => `${bareLabel(x.label)} ${x.name}, ${x.detail}`), 'drawn on a picnic blanket'].filter(Boolean).join(', ');
+  const label = [p.title, shown, id.amis && `from ${id.portal} on ${id.amis}`, !tier && [p.value, p.subtitle].filter(Boolean).join(' '), p.frame === 'sem' ? `${p.units} units` : p.extra, ...highlights.map(x => `${bareLabel(x.label)} ${x.name}, ${x.detail}`), 'drawn on a picnic blanket'].filter(Boolean).join(', ');
   const canvas = h('canvas', { class: 'panel-frame', role: 'img', 'aria-label': label });
   drawTinFrame(canvas, p);
   return canvas;
@@ -1424,40 +1430,52 @@ async function exportWrappedToPNG() {
 
 /* ---------- Grade refresh, backup and clear data (platform) ---------- */
 
-const SYNC_ERRORS = {
-  'not-logged-in': 'Log in to AMIS, then press Refresh.',
-  'amis-error': "AMIS didn't answer. Check that AMIS opens in a tab, then press Refresh.",
-  'no-tab': 'Open AMIS in a tab first.',
-  'no-answer': 'Reload your AMIS tab once, then press Refresh.',
+// Which portal last wrote gradesData: 'amis' or 'alab'. Set by the content scripts.
+let portal = 'alab';
+const PORTALS = {
+  amis: { name: 'AMIS', url: 'https://amis.uplb.edu.ph/' },
+  alab: { name: 'ALAB SMS', url: 'https://alabsms.bulsu.edu.ph/' },
 };
+
+function syncErrorText(code) {
+  const p = PORTALS[portal] || PORTALS.alab;
+  return {
+    'not-logged-in': `Log in to ${p.name}, then press Refresh.`,
+    'amis-error': `${p.name} didn't answer. Check that ${p.name} opens in a tab, then press Refresh.`,
+    'alab-error': "ALAB SMS didn't answer. Check that ALAB SMS opens in a tab, then press Refresh.",
+    'no-tab': `Open ${p.name} in a tab first.`,
+    'no-answer': `Reload your ${p.name} tab once, then press Refresh.`,
+  }[code] || `Log in to ${p.name} in a tab, then press Refresh.`;
+}
 
 // Show a refresh problem, or clear it with null. With no grades yet it goes in the empty card.
 let syncError = null;
 function showSyncError(code) {
   syncError = code;
   if (!$('noData').classList.contains('hidden')) {
-    $('noDataHint').textContent = SYNC_ERRORS[code] || 'Log in to AMIS in a tab, then press Refresh.';
+    $('noDataHint').textContent = syncErrorText(code);
     $('syncNotice').replaceChildren();
     return;
   }
-  showNotice($('syncNotice'), SYNC_ERRORS[code] && {
-    tone: 'warn', icon: 'alert', body: SYNC_ERRORS[code],
+  showNotice($('syncNotice'), code && {
+    tone: 'warn', icon: 'alert', body: syncErrorText(code),
     action: (code === 'no-tab' || code === 'not-logged-in') && button({
-      variant: 'text', text: 'Open AMIS', icon: 'external',
-      onclick: () => chrome.tabs.create({ url: 'https://amis.uplb.edu.ph/' }),
+      variant: 'text', text: `Open ${PORTALS[portal] ? PORTALS[portal].name : 'portal'}`, icon: 'external',
+      onclick: () => chrome.tabs.create({ url: (PORTALS[portal] || PORTALS.alab).url }),
     }),
   });
 }
 
-// Asks the open AMIS tab to fetch grades now. content.js answers with
+// Asks the open portal tab to fetch grades now. The content script answers with
 // { ok, lastError, fetchedAt } and writes them to storage.
 async function refreshGrades() {
   const btns = document.querySelectorAll('#refreshBtn, .refresh-btn');
   btns.forEach(b => { b.disabled = true; });
   try {
-    const [tab] = await chrome.tabs.query({ url: 'https://amis.uplb.edu.ph/*' });
+    let [tab] = await chrome.tabs.query({ url: 'https://alabsms.bulsu.edu.ph/*' });
+    if (!tab) [tab] = await chrome.tabs.query({ url: 'https://amis.uplb.edu.ph/*' });
     if (!tab) { showSyncError('no-tab'); return; }
-    showNotice($('syncNotice'), { tone: 'info', icon: 'clock', body: 'Getting your grades from AMIS.' });
+    showNotice($('syncNotice'), { tone: 'info', icon: 'clock', body: `Getting your grades from ${PORTALS[portal] ? PORTALS[portal].name : 'the portal'}.` });
     let res;
     try {
       res = await chrome.tabs.sendMessage(tab.id, { type: 'FETCH_GRADES', force: true });
@@ -1476,9 +1494,9 @@ async function refreshGrades() {
 const BACKUP_SCHEMA_VERSION = 2;
 // Export writes every stored key. Import restores only these: never
 // termsAccepted (each person accepts the terms on their own device),
-// lastError (it describes this browser only) or fetchedAt (only a real AMIS
-// read sets it, so the From AMIS mark can't come from a file).
-const BACKUP_KEYS = ['gradesData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
+// lastError (it describes this browser only) or fetchedAt (only a real portal
+// read sets it, so the From portal mark can't come from a file).
+const BACKUP_KEYS = ['gradesData', 'portal', 'enlisted', 'scheduleData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
   'substitutions', 'customCourseStatus', 'removals', 'plannerPins', 'plannerPetitions', 'plannerOptions', 'theme'];
 
 function wireBackup() {
