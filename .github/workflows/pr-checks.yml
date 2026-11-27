@@ -2,9 +2,12 @@ name: "PR Checks"
 on:
   pull_request:
     types: [opened, edited, synchronize]
+  push:
+    branches: [alab-sms]
 
 jobs:
   validate:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
@@ -28,5 +31,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - name: Extension tests
         run: for t in extension/*.test.js; do node "$t"; done
+      - name: Build all browser targets
+        run: bash extension/build.sh all
+      - name: web-ext lint (firefox)
+        run: npx -y web-ext@8 lint -s extension/dist/firefox
+      - name: Upload dist artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-dist
+          path: extension/dist/
+          retention-days: 14
