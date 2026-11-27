@@ -31,8 +31,9 @@ function normalizeCourseCode(code) {
 
 function isNonGwaCourseCode(courseCode) {
   const code = normalizeCourseCode(courseCode);
-  // Word boundary so PEd and similar majors are not caught by PE.
-  return NON_GWA_PREFIXES.some(prefix => new RegExp(`^${prefix}\\b`).test(code));
+  // The prefix must end the department token: a space, digit, hyphen or the
+  // end, so "PE 12", "PE13", "NSTP11" and "HK-12" count but "PEd 101" doesn't.
+  return NON_GWA_PREFIXES.some(prefix => new RegExp(`^${prefix}(?=$|[\\s\\d-])`).test(code));
 }
 
 function isGECourse(courseCode, courseTitle) {

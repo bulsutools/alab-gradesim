@@ -13,6 +13,10 @@
 //   newGrades   count of grades ALAB SMS added or changed since the popup last opened
 //   enlisted    { <termId>: [[course code, section, type]] } for Room TBA's planner
 //   scheduleData  the current term's subjects with meeting times and rooms
+//     ({ term, academic_year, term_number, subjects[] }); the popup turns it
+//     into the Room TBA schedule payload (src/schedule.js)
+//   curriculumData  the student's real BulSU curriculum (program, per-term
+//     subjects with status, prerequisites, corequisites) for the planner
 
 (function () {
   'use strict';
@@ -90,7 +94,10 @@
   // and Room TBA's planner already understand.
   function slimEnrollment(data) {
     const reg = data && data.registration;
-    if (!reg || !Array.isArray(reg.subjects)) return {};
+    const out = {};
+    const slim = slimCurriculum(data);
+    if (slim) out.curriculumData = slim;
+    if (!reg || !Array.isArray(reg.subjects)) return out;
     const term = reg.academic_term || {};
     const key = termKey(term);
     const refs = [];
@@ -119,9 +126,51 @@
         })),
       });
     }
-    const out = { scheduleData: { term: term.term || '', academic_year: term.academic_year || '', subjects } };
+    out.scheduleData = {
+      term: term.term || '',
+      academic_year: term.academic_year || '',
+      term_number: Number.isInteger(term.term_number) ? term.term_number : null,
+      subjects,
+    };
     if (key && refs.length) out.enlisted = { [key]: refs };
     return out;
+  }
+
+  // The enrollment response's top-level `curriculum` is the student's real
+  // BulSU curriculum: one block per {year_level, term_number} listing every
+  // subject with its status, units, prerequisites and corequisites. Keep it
+  // whole enough for the planner to build the checklist from live data.
+  function slimCurriculum(data) {
+    const blocks = data && data.curriculum;
+    if (!Array.isArray(blocks) || !blocks.length) return null;
+    const program = data.registration && data.registration.curriculum;
+    return {
+      program: program ? {
+        id: program.id ?? null,
+        code: program.code || '',
+        name: program.name || '',
+        effective_academic_year: program.effective_academic_year || '',
+      } : null,
+      student: data.student ? {
+        year_level: data.student.year_level ?? null,
+        academic_status: data.student.academic_status || '',
+      } : null,
+      blocks: blocks.map(b => ({
+        year_level: b.year_level,
+        term_number: b.term_number,
+        subjects: (b.subjects || []).map(s => ({
+          code: s.subject && s.subject.code,
+          title: s.subject && s.subject.title || '',
+          units: (s.subject && s.subject.units) ?? null,
+          is_elective: !!s.is_elective,
+          status: s.status || '',
+          prerequisites: (s.prerequisites || []).map(p => ({ code: p.code, passed: !!p.passed })),
+          corequisites: (s.corequisites || []).map(c => ({ code: c.code })),
+          offered_this_term: !!s.offered_this_term,
+          offered_as: (s.offered_as || []).map(a => a.code).filter(Boolean),
+        })).filter(s => s.code),
+      })),
+    };
   }
 
   async function fetchAll() {

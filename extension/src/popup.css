@@ -686,6 +686,13 @@ input[type="number"] {
   cursor: pointer;
 }
 
+/* The live ALAB SMS curriculum is shown read-only: keep it legible. */
+.program-selector select:disabled {
+  color: var(--ink);
+  cursor: default;
+  opacity: 1;
+}
+
 /* Loading and empty states */
 .loading,
 .no-data {

@@ -15,7 +15,8 @@ Source for the ALAB GradeSim browser extension. Start with the [main README](../
 | `lastError` | `'not-logged-in'`, `'alab-error'` or `null` |
 | `portal` | `'alab'` or `'amis'`, whichever portal last wrote the grades |
 | `enlisted` | `{ <termId>: [[course code, section, type]] }` for the sem in session and the one being enlisted. Bookmarked classes are left out |
-| `scheduleData` | The current term's subjects with meeting times and rooms |
+| `scheduleData` | The current term's subjects with meeting times and rooms (`term`, `academic_year`, `term_number`, `subjects[]`). The popup turns it into the Room TBA schedule payload — see [docs/schedule-payload.md](docs/schedule-payload.md) |
+| `curriculumData` | The student's real BulSU curriculum from `/enrollment/me`: program identity plus one block per `{year_level, term_number}` with each subject's code, title, units, status, prerequisites and corequisites. `src/alab-curriculum.js` turns it into the planner's checklist; the popup prefers it over the bundled UPLB programs whenever `portal` is `'alab'` |
 
 It skips the automatic fetch when `fetchedAt` is under an hour old. The popup's Refresh button sends `{ type: 'FETCH_GRADES', force: true }` to the open portal tab, which fetches right away and replies with `{ ok, lastError, fetchedAt }`.
 
@@ -45,3 +46,5 @@ Load `dist/chrome` (Chrome, Edge, Brave, Opera) or `dist/firefox` as an unpacked
 ## Curriculum data
 
 Programs live in `src/curriculum.js` and the course catalog in `src/catalog.js`. `curriculum.js` is edited by hand now; the upstream generators that produced it were removed with the `scratch/` pipeline.
+
+For ALAB SMS students the checklist is not the bundled data: `curriculumData` (captured live, see above) becomes the program through `src/alab-curriculum.js`, which emits the same shape `getPlannerCourses()`/`enrichCourses()` consume — named rows only, no GE/HK/NSTP placeholder slots, no tracks or specializations (ALAB SMS already knows the exact subject list). The UPLB programs remain the fallback when there is no `curriculumData` or `portal` is not `'alab'`. The live data has no GE/elective slot counts, offering history beyond `offered_this_term`, or standing rules, so the What if counts are exact for named courses but cannot model generic slots.

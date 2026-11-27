@@ -15,7 +15,7 @@
     const type = event.data && event.data.type;
     if (type !== 'GRADESIM_PING' && type !== 'GRADESIM_GET_GRADES') return;
 
-    chrome.storage.local.get(['gradesData', 'fetchedAt', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses', 'substitutions',
+    chrome.storage.local.get(['gradesData', 'curriculumData', 'fetchedAt', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses', 'substitutions',
       'removals', 'customCourseStatus', 'plannerPins', 'plannerPetitions', 'plannerOptions']).then(data => {
       const hasGrades = !!(data.gradesData && data.gradesData.student_grades);
       let payload = { hasGrades, fetchedAt: data.fetchedAt || null };
