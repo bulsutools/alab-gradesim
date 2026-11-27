@@ -28,9 +28,10 @@ let customCourseStatus = {};
 let removals = {};
 
 const NON_NUMERIC_GRADES = ['S', 'U', 'INC', 'DRP', 'W', 'P', 'DFG'];
-// PE, HK and NSTP aren't in the GWA. A word boundary keeps PEd (Physical
-// Education majors) and similar codes in.
-const NON_GWA_PREFIX = /^(NSTP|HK|PE)\b/i;
+// PE, HK and NSTP aren't in the GWA. The prefix must end the department
+// token (space, digit, hyphen or end) so "PE13" and "NSTP11" count but
+// "PEd 101" doesn't.
+const NON_GWA_PREFIX = /^(NSTP|HK|PE)(?=$|[\s\d-])/i;
 const courseIdOf = course => String(course.id || `${course.courseCode}-${course.termId}`);
 const semKeyOf = course => course.term || `${course.academicYear} - ${course.semester}`;
 
