@@ -1,0 +1,4312 @@
+{
+ "data": {
+  "student": {
+   "id": 14401,
+   "student_no": "2024000000",
+   "full_name": "Fixture, Student",
+   "program": {
+    "id": 44,
+    "code": "BSCPE",
+    "name": "Bachelor of Science in Computer Engineering"
+   },
+   "year_level": 3,
+   "academic_status": "regular",
+   "curriculum": {
+    "id": 520,
+    "code": "BSCpE (Revised 2024)",
+    "name": "Bachelor of Science in Computer Engineering",
+    "effective_academic_year": "2024-2025",
+    "is_active": true,
+    "is_locked": false
+   }
+  },
+  "terms": [
+   {
+    "term": {
+     "id": "nzWZG-5crGXyYblyc0R-jw.1KtDtBUd1tw1M4DY__TzCw",
+     "academic_year": "2026-2027",
+     "term": "2nd Semester",
+     "term_number": 2,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 1137,
+       "code": "CPE 307",
+       "title": "Basic Occupational Health and Safety",
+       "units": 3
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 523,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 523,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028789,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6691,
+       "code": "CPE 308",
+       "title": "Computer Networks and Security",
+       "units": 3
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028799,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6690,
+       "code": "CPE 308L",
+       "title": "Computer Networks and Security Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028798,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6689,
+       "code": "CPE 309",
+       "title": "Microprocessors",
+       "units": 3
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 1506,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 1506,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028797,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6688,
+       "code": "CPE 309L",
+       "title": "Microprocessors Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 1506,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 1506,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028796,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6687,
+       "code": "CPE 310",
+       "title": "Methods of Research",
+       "units": 2
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028795,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6686,
+       "code": "CPE 311L",
+       "title": "Introduction to HDL",
+       "units": 1
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 579,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 579,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028794,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6248,
+       "code": "CPE 312L",
+       "title": "Elective 1",
+       "units": 1
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 522,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 522,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028792,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6685,
+       "code": "CPE 313L",
+       "title": "Computer Engineering Drafting and Design",
+       "units": 1
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 523,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 523,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028793,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 1141,
+       "code": "CPE 314",
+       "title": "CpE laws and Professional Practice",
+       "units": 2
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 578,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 578,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028790,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 6247,
+       "code": "CPE 316",
+       "title": "Project Management",
+       "units": 3
+      },
+      "section": {
+       "id": 3843,
+       "name": "CPE 3C"
+      },
+      "faculty": {
+       "id": 329,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 329,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1028791,
+      "status": "missing"
+     }
+    ],
+    "counts": {
+     "subjects": 11,
+     "passed": 0,
+     "not_passed": 0,
+     "missing": 11,
+     "units": 21,
+     "units_passed": 0
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 11,
+     "evaluated": 0,
+     "pending": 11,
+     "required": false
+    }
+   },
+   {
+    "term": {
+     "id": "3NC28-5n1R2MSfduiaSeZQ.7F-J-jDo6ntCUNLhSCantg",
+     "academic_year": "2026-2027",
+     "term": "1st Semester",
+     "term_number": 1,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 638,
+       "code": "CPE 301",
+       "title": "Logic Circuits and Design",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111669,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 639,
+       "code": "CPE 301L",
+       "title": "Logic Circuits and Design Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111711,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 640,
+       "code": "CPE 302",
+       "title": "Operating Systems",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 575,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 575,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": false,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111754,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 643,
+       "code": "CPE 302L",
+       "title": "Operating Systems Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 575,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 575,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111867,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 635,
+       "code": "CPE 303",
+       "title": "Data and Digital Communications",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 579,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 579,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111542,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 641,
+       "code": "CPE 304",
+       "title": "Software Design",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 580,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 580,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111792,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 642,
+       "code": "CPE 304L",
+       "title": "Software Design Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 580,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 580,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111830,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 636,
+       "code": "CPE 305",
+       "title": "Feedback and Control Systems",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 576,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 576,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111583,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 637,
+       "code": "CPE 306",
+       "title": "Fundamentals of Mixed Signals and Sensors",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 577,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 577,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111626,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 9,
+       "code": "RLW 101",
+       "title": "Life and Works of Rizal",
+       "units": 3
+      },
+      "section": {
+       "id": 347,
+       "name": "CPE - 3C"
+      },
+      "faculty": {
+       "id": 166,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 166,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 111498,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 10,
+     "passed": 10,
+     "not_passed": 0,
+     "missing": 0,
+     "units": 24,
+     "units_passed": 24
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 10,
+     "evaluated": 10,
+     "pending": 0,
+     "required": true
+    }
+   },
+   {
+    "term": {
+     "id": "i19QL6ShmawMMcRY_uxLHA.iN0OcA4-gbla_s2EA88Dhg",
+     "academic_year": "2025-2026",
+     "term": "Summer",
+     "term_number": 3,
+     "is_summer": true
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 6152,
+       "code": "CPE 206L",
+       "title": "Data Structure and Algorithm",
+       "units": 2
+      },
+      "section": {
+       "id": 7644,
+       "name": "PC-CPE 206L"
+      },
+      "faculty": {
+       "id": 353,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 353,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 983035,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 1,
+     "passed": 1,
+     "not_passed": 0,
+     "missing": 0,
+     "units": 2,
+     "units_passed": 2
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 1,
+     "evaluated": 0,
+     "pending": 1,
+     "required": false
+    }
+   },
+   {
+    "term": {
+     "id": "ll5WENhKQGV3C7c_H0cofQ.oxEVSA2Om7EIX3f_XZHu4Q",
+     "academic_year": "2025-2026",
+     "term": "2nd Semester",
+     "term_number": 2,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 6150,
+       "code": "CPE 205",
+       "title": "Numerical Methods",
+       "units": 3
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 342,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 342,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812617,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6152,
+       "code": "CPE 206L",
+       "title": "Data Structure and Algorithm",
+       "units": 2
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 525,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 525,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "5.00",
+      "kind": "failing",
+      "numeric_value": 5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "5.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812612,
+      "status": "not_passed"
+     },
+     {
+      "subject": {
+       "id": 1157,
+       "code": "CPE 207",
+       "title": "Fundamentals of Electronic Circuits",
+       "units": 3
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 550,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 550,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.75",
+      "kind": "passing",
+      "numeric_value": 2.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812615,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 1158,
+       "code": "CPE 207L",
+       "title": "Fundamentals of Electronic Circuits Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 566,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 566,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.75",
+      "kind": "passing",
+      "numeric_value": 2.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812616,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6151,
+       "code": "CPE 208",
+       "title": "Engineering Economics",
+       "units": 3
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 508,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 508,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.75",
+      "kind": "passing",
+      "numeric_value": 2.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812613,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6154,
+       "code": "CPE 209",
+       "title": "Database Management System",
+       "units": 2
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 326,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 326,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812610,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6153,
+       "code": "CPE 209L",
+       "title": "Database Management System Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 326,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 326,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": false,
+      "is_nstp": false,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812611,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 1136,
+       "code": "CPE 210*",
+       "title": "Environmental Science and Engineering",
+       "units": 3
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 353,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 353,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812614,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6149,
+       "code": "PE13",
+       "title": "PATHFit 4",
+       "units": 2
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 1563,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 1563,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812618,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 125,
+       "code": "SSP 101D*",
+       "title": "The Entrepreneurial Mind",
+       "units": 3
+      },
+      "section": {
+       "id": 6262,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 188,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 188,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 812609,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 10,
+     "passed": 9,
+     "not_passed": 1,
+     "missing": 0,
+     "units": 23,
+     "units_passed": 21
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 10,
+     "evaluated": 0,
+     "pending": 10,
+     "required": false
+    }
+   },
+   {
+    "term": {
+     "id": "Lt_A_nTnKk6-cV9h7wh-xg.ITceYYavhPb4bNRG4-gQWQ",
+     "academic_year": "2025-2026",
+     "term": "1st Semester",
+     "term_number": 1,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 53,
+       "code": "AAP 101",
+       "title": "Art Appreciation",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 161,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 161,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496030,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 111,
+       "code": "COE 201",
+       "title": "Differential Equation",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 525,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 525,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496037,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 173,
+       "code": "COE 202",
+       "title": "Engineering Data Analysis",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 575,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 575,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496033,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 296,
+       "code": "CPE 201",
+       "title": "Discrete Math",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 329,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 329,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.50",
+      "kind": "passing",
+      "numeric_value": 1.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496032,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 299,
+       "code": "CPE 202L",
+       "title": "Object Oriented Programming",
+       "units": 2
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 578,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 578,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496036,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 297,
+       "code": "CPE 203",
+       "title": "Fundamentals of Electrical Circuits",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 355,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 355,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496034,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 298,
+       "code": "CPE 203L",
+       "title": "Fundamentals of Electrical Circuits Lab",
+       "units": 1
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 355,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 355,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.25",
+      "kind": "passing",
+      "numeric_value": 2.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496035,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 295,
+       "code": "CPE 204L",
+       "title": "Computer Aided Drafting",
+       "units": 1
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 352,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 352,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496031,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 51,
+       "code": "PE 12",
+       "title": "PATHFit 3",
+       "units": 2
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 309,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 309,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "2.75",
+      "kind": "passing",
+      "numeric_value": 2.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496028,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 52,
+       "code": "TCW 101",
+       "title": "The Contemporary World",
+       "units": 3
+      },
+      "section": {
+       "id": 4933,
+       "name": "CPE - 2A"
+      },
+      "faculty": {
+       "id": 351,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 351,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 496029,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 10,
+     "passed": 10,
+     "not_passed": 0,
+     "missing": 0,
+     "units": 24,
+     "units_passed": 24
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 10,
+     "evaluated": 0,
+     "pending": 10,
+     "required": false
+    }
+   },
+   {
+    "term": {
+     "id": "_6Tx-ZgiFsYjHjIqFpIHbw.kmZ6I5v0-tIyEOXZZ4sIDA",
+     "academic_year": "2024-2025",
+     "term": "Summer",
+     "term_number": 3,
+     "is_summer": true
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 1112,
+       "code": "COE 104",
+       "title": "Calculus 2",
+       "units": 3
+      },
+      "section": {
+       "id": 8684,
+       "name": "PC_COE 104 A_CPE"
+      },
+      "faculty": {
+       "id": 525,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 525,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": "3.00",
+      "kind": "passing",
+      "numeric_value": 3,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "3.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1247589,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 1105,
+       "code": "COE 105",
+       "title": "Physics for Engineers - Lecture",
+       "units": 3
+      },
+      "section": {
+       "id": 8680,
+       "name": "PC_COE 105_CPE"
+      },
+      "faculty": {
+       "id": 1590,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 1590,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1247590,
+      "status": "missing"
+     },
+     {
+      "subject": {
+       "id": 1100,
+       "code": "COE 105L",
+       "title": "Physics for Engineers - Laboratory",
+       "units": 1
+      },
+      "section": {
+       "id": 9037,
+       "name": "PC_COE 105L_CPE"
+      },
+      "faculty": {
+       "id": 1590,
+       "employee_no": "2025000000",
+       "full_name": "Fixture, Student"
+      },
+      "teachers": [
+       {
+        "id": 1590,
+        "employee_no": "2025000000",
+        "full_name": "Fixture, Student",
+        "role": "leader"
+       }
+      ],
+      "grade_code": null,
+      "kind": null,
+      "numeric_value": null,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": null,
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": false,
+      "source": "entry",
+      "raw_grade": null,
+      "class_enrollment_id": 1247591,
+      "status": "missing"
+     }
+    ],
+    "counts": {
+     "subjects": 3,
+     "passed": 1,
+     "not_passed": 0,
+     "missing": 2,
+     "units": 7,
+     "units_passed": 3
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 3,
+     "evaluated": 0,
+     "pending": 3,
+     "required": false
+    }
+   },
+   {
+    "term": {
+     "id": "2cLSjaLdMCirCvnWECB0sw.ewN2XFpYnvZiIPbMHCrwlg",
+     "academic_year": "2024-2025",
+     "term": "2nd Semester",
+     "term_number": 2,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 131,
+       "code": "AE 101",
+       "title": "Academic English",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 120,
+       "code": "COE 102",
+       "title": "Calculus 1",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6851,
+       "code": "CPE 103",
+       "title": "Computer Engineering as a Discipline",
+       "units": 1
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6839,
+       "code": "CPE 104L",
+       "title": "Programming Logic and Design",
+       "units": 2
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.75",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6335,
+       "code": "CPE 105L",
+       "title": "Computer Hardware Fundamentals",
+       "units": 1
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.25",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 11213,
+       "code": "NSTP 11",
+       "title": "National Service Training Program 2",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": true,
+      "is_nstp": true,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.25",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6923,
+       "code": "PE 11",
+       "title": "PATHFit 2",
+       "units": 2
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": false,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 6967,
+       "code": "RPH-101",
+       "title": "Readings in the Philippine History",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.50",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 25,
+       "code": "STS 101",
+       "title": "Science, Technology and Society",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.75",
+      "class_enrollment_id": null,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 9,
+     "passed": 9,
+     "not_passed": 0,
+     "missing": 0,
+     "units": 21,
+     "units_passed": 21
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 0,
+     "evaluated": 0,
+     "pending": 0,
+     "required": true
+    }
+   },
+   {
+    "term": {
+     "id": "0nRTkLC3g8eObStePRO-Zg.vSltIsv9OCXKa3bcA5YNYA",
+     "academic_year": "2024-2025",
+     "term": "1st Semester",
+     "term_number": 1,
+     "is_summer": false
+    },
+    "records": [
+     {
+      "subject": {
+       "id": 124,
+       "code": "COE 100",
+       "title": "Mathematics for Engineers",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.50",
+      "kind": "passing",
+      "numeric_value": 2.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.50",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 123,
+       "code": "COE 101",
+       "title": "Introduction to Engineering",
+       "units": 1
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.25",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 120,
+       "code": "COE 102",
+       "title": "Calculus 1",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "5.00",
+      "kind": "failing",
+      "numeric_value": 5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "5.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "5.00",
+      "class_enrollment_id": null,
+      "status": "not_passed"
+     },
+     {
+      "subject": {
+       "id": 122,
+       "code": "COE 103",
+       "title": "Chemistry for Engineers - Lecture",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 121,
+       "code": "COE 103L",
+       "title": "Chemistry for Engineers - Laboratory",
+       "units": 1
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 20,
+       "code": "ETH 101",
+       "title": "Ethics",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.50",
+      "kind": "passing",
+      "numeric_value": 1.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.50",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 1,
+       "code": "MMW 101",
+       "title": "Mathematics in the Modern World",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "2.00",
+      "kind": "passing",
+      "numeric_value": 2,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "2.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "2.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 2,
+       "code": "NSTP 10",
+       "title": "National Service Training Program 1",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.25",
+      "kind": "passing",
+      "numeric_value": 1.25,
+      "include_in_gwa": false,
+      "is_nstp": true,
+      "original_grade_code": "1.25",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.25",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 72,
+       "code": "PAL 101",
+       "title": "Panitikan at Lipunan",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.50",
+      "kind": "passing",
+      "numeric_value": 1.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.50",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 4,
+       "code": "PCM 101",
+       "title": "Purposive Communication",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.50",
+      "kind": "passing",
+      "numeric_value": 1.5,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.50",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.50",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 3,
+       "code": "PE 10",
+       "title": "PATHFit 1",
+       "units": 2
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.00",
+      "kind": "passing",
+      "numeric_value": 1,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.00",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.00",
+      "class_enrollment_id": null,
+      "status": "passed"
+     },
+     {
+      "subject": {
+       "id": 18,
+       "code": "UTS 101",
+       "title": "Understanding the Self",
+       "units": 3
+      },
+      "section": null,
+      "faculty": null,
+      "teachers": [],
+      "grade_code": "1.75",
+      "kind": "passing",
+      "numeric_value": 1.75,
+      "include_in_gwa": true,
+      "is_nstp": false,
+      "original_grade_code": "1.75",
+      "completion_grade_code": null,
+      "pending_grade_code": null,
+      "is_posted": true,
+      "source": "heims",
+      "raw_grade": "1.75",
+      "class_enrollment_id": null,
+      "status": "passed"
+     }
+    ],
+    "counts": {
+     "subjects": 12,
+     "passed": 11,
+     "not_passed": 1,
+     "missing": 0,
+     "units": 31,
+     "units_passed": 28
+    },
+    "locked": false,
+    "withheld": false,
+    "evaluation": {
+     "classes": 0,
+     "evaluated": 0,
+     "pending": 0,
+     "required": true
+    }
+   }
+  ],
+  "totals": {
+   "subjects": 66,
+   "passed": 51,
+   "not_passed": 2,
+   "missing": 13,
+   "units": 153,
+   "units_passed": 123
+  },
+  "credited": {
+   "schools": [],
+   "counts": {
+    "subjects": 0,
+    "units": 0
+   }
+  },
+  "curriculum_progress": {
+   "curriculum": {
+    "id": 520,
+    "code": "BSCpE (Revised 2024)",
+    "name": "Bachelor of Science in Computer Engineering",
+    "effective_academic_year": "2024-2025",
+    "is_active": true,
+    "is_locked": false
+   },
+   "blocks": [
+    {
+     "year_level": 1,
+     "term_number": 1,
+     "label": "1st Year, 1st Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 5949,
+       "subject": {
+        "id": 1,
+        "code": "MMW 101",
+        "title": "Mathematics in the Modern World",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "yTfs4u3DlqhrBIrAVTrixw.NCQAF4zLsbsltv3MmvBCvQ",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5950,
+       "subject": {
+        "id": 18,
+        "code": "UTS 101",
+        "title": "Understanding the Self",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "g8DrSEQSQ0JOqkzFVTJxcA.brrfV5M_Zi0Ta5rGGau0BA",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5951,
+       "subject": {
+        "id": 72,
+        "code": "PAL 101",
+        "title": "Panitikan at Lipunan",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "X-_esr0K1ht8SA9aRB1_Sw.Ryka4pPJf26VaWu8ze39hw",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5952,
+       "subject": {
+        "id": 124,
+        "code": "COE 100",
+        "title": "Mathematics for Engineers",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Syv6k5UQAfGOuVTulD3DaA.o2xXXGuN2UhfxNytXxN9yA",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5953,
+       "subject": {
+        "id": 123,
+        "code": "COE 101",
+        "title": "Introduction to Engineering",
+        "units": "1.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "BJPr35fsBXFQ32GJl9Mh0Q.muRLStyOSBFVff3o3RstQA",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5954,
+       "subject": {
+        "id": 122,
+        "code": "COE 103",
+        "title": "Chemistry for Engineers - Lecture",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "2Ecs0P7hU-2v-uNkxLa9Tw.9oBiRIlx3FAVbX5HJe16Ig",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5955,
+       "subject": {
+        "id": 121,
+        "code": "COE 103L",
+        "title": "Chemistry for Engineers - Laboratory",
+        "units": "1.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "65Fp5GbmY7gmvBM230hm9g.NwntYc2f_MfRwHJcy0CCgw",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5956,
+       "subject": {
+        "id": 3,
+        "code": "PE 10",
+        "title": "PATHFit 1",
+        "units": "2.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "qYDuxmJB2n0UW179Cxi13g.1yJnMquvelfnTlj1BgbcYA",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5957,
+       "subject": {
+        "id": 2,
+        "code": "NSTP 10",
+        "title": "National Service Training Program 1",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "I8x_dNMO8TBrxyRl3uxbFw.Pv180IPAYkOAZKcyIZxYAQ",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5958,
+       "subject": {
+        "id": 20,
+        "code": "ETH 101",
+        "title": "Ethics",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "kUsHRlkD8thu0S1bHN5YrA.Ye6D1IBqVJuKX4ZCVzOeRw",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5959,
+       "subject": {
+        "id": 4,
+        "code": "PCM 101",
+        "title": "Purposive Communication",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 11,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "ec6hjSH55m7BLgjncHhtlw.Zmi7SG-lbsvKjiX-SLG_pQ",
+        "academic_year": "2024-2025",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5960,
+       "subject": {
+        "id": 120,
+        "code": "COE 102",
+        "title": "Calculus 1",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 1,
+       "sequence": 12,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "chLUx7jav6KDVDwPe3BYYw.o0Z5kjdazIRIAorGgab3nA",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 1,
+     "term_number": 2,
+     "label": "1st Year, 2nd Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 5961,
+       "subject": {
+        "id": 1112,
+        "code": "COE 104",
+        "title": "Calculus 2",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "3.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Zo-nIVhj3IPWvU9DZMWajQ.ISN1jTF2a1ktIOCNaciIrg",
+        "academic_year": "2024-2025",
+        "term": "Summer"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5962,
+       "subject": {
+        "id": 1105,
+        "code": "COE 105",
+        "title": "Physics for Engineers - Lecture",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Bv3DcMn3o2Mk8k-BfPWPJA.4UJ7K0PS3YmV0vheQs_Xsg",
+        "academic_year": "2024-2025",
+        "term": "Summer"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5963,
+       "subject": {
+        "id": 1100,
+        "code": "COE 105L",
+        "title": "Physics for Engineers - Laboratory",
+        "units": "1.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "6LU69Naf0lFOd-OP6PCmbw.hqBWH118QcxxHUpqQ-W2_g",
+        "academic_year": "2024-2025",
+        "term": "Summer"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5964,
+       "subject": {
+        "id": 6851,
+        "code": "CPE 103",
+        "title": "Computer Engineering as a Discipline",
+        "units": "1.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "cHXBO93tqjPBceGYoVXpfw.gxA_3V7TX855AuORkIJWGQ",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5965,
+       "subject": {
+        "id": 6839,
+        "code": "CPE 104L",
+        "title": "Programming Logic and Design",
+        "units": "2.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Fow4N59AjUYWKZrGzffRXA.Oc76uG4D4E7rMKMO7pcQcQ",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5966,
+       "subject": {
+        "id": 6923,
+        "code": "PE 11",
+        "title": "PATHFit 2",
+        "units": "2.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "XCaYPNTILD4usehPDhLCPw.Hb9MbwqSCDnTs2Tixj87lw",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5967,
+       "subject": {
+        "id": 11213,
+        "code": "NSTP 11",
+        "title": "National Service Training Program 2",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "looRWkMjKG3HNMWLI0ItTg.crR6DiJRwLsn_V_EMsoj0A",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5968,
+       "subject": {
+        "id": 131,
+        "code": "AE 101",
+        "title": "Academic English",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "hu9E-aFlktXitUf_p7Gv7A.VeRDaa5VjNVhMzG3Mp4qGg",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5969,
+       "subject": {
+        "id": 6335,
+        "code": "CPE 105L",
+        "title": "Computer Hardware Fundamentals",
+        "units": "1.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "X2CHyyDBbqAZXgDoiC21Cg.Cdyn0j73rrySq-v-ynU3PQ",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5970,
+       "subject": {
+        "id": 6967,
+        "code": "RPH-101",
+        "title": "Readings in the Philippine History",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "oGNQL0TeK9T-bSMVD0UI4Q.0FiixZ2mTCL-V5xhP_Zyjw",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5971,
+       "subject": {
+        "id": 25,
+        "code": "STS 101",
+        "title": "Science, Technology and Society",
+        "units": "3.0"
+       },
+       "year_level": 1,
+       "term_number": 2,
+       "sequence": 11,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Syfp7kJKX0PrYpLuS-Yxag.uw7KSHoB96l1zkDVNEpbjA",
+        "academic_year": "2024-2025",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 2,
+     "term_number": 1,
+     "label": "2nd Year, 1st Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 5972,
+       "subject": {
+        "id": 52,
+        "code": "TCW 101",
+        "title": "The Contemporary World",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Bz17rIV3TSaPbb4kOZ-I1w.RWA8pOMMErv7sc7K78v8Ag",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5973,
+       "subject": {
+        "id": 53,
+        "code": "AAP 101",
+        "title": "Art Appreciation",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "5sKtRYpJck-V1giEL1hsxA.HNIpzqEtEZjbW18XXsCpbA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5974,
+       "subject": {
+        "id": 111,
+        "code": "COE 201",
+        "title": "Differential Equation",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "l673Mafqd_stOs9BUIbrYw.ixiRnpXUn7bnPskv7FYJBA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5975,
+       "subject": {
+        "id": 173,
+        "code": "COE 202",
+        "title": "Engineering Data Analysis",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "MY_TPMXlzwuO9A1dHnuvGg.hvuPvcPINKJI_1TobhKtKg",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5976,
+       "subject": {
+        "id": 296,
+        "code": "CPE 201",
+        "title": "Discrete Math",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "ru55oLY4O3hIOpjaVU8BsQ.5n50UiOOjFXY4-l1Zk1jFQ",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5977,
+       "subject": {
+        "id": 299,
+        "code": "CPE 202L",
+        "title": "Object Oriented Programming",
+        "units": "2.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "r1ORKzfkax7KtGx8eCbpXw.zjkWL6eC22PNmHErLo7UyA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5978,
+       "subject": {
+        "id": 297,
+        "code": "CPE 203",
+        "title": "Fundamentals of Electrical Circuits",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "5UalhhFuIH1UMozu_6EEUA.dpxYPcTB3yJwYBgirMOgLA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5979,
+       "subject": {
+        "id": 298,
+        "code": "CPE 203L",
+        "title": "Fundamentals of Electrical Circuits Lab",
+        "units": "1.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "9igEmFnO_eUUFssb83sv-w.adPaaDi4KsWET8yWmLhzQg",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5980,
+       "subject": {
+        "id": 295,
+        "code": "CPE 204L",
+        "title": "Computer Aided Drafting",
+        "units": "1.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "jpLf1ltCJ4pkhiQMiiSGqw.diP5OcCfGHFoCC0uTWuYLA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5981,
+       "subject": {
+        "id": 51,
+        "code": "PE 12",
+        "title": "PATHFit 3",
+        "units": "2.0"
+       },
+       "year_level": 2,
+       "term_number": 1,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "-Qg1Qhbaw-xrNakbJa4XaA.h0m89dGYQcmq72uvvOEfFA",
+        "academic_year": "2025-2026",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 2,
+     "term_number": 2,
+     "label": "2nd Year, 2nd Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 5982,
+       "subject": {
+        "id": 125,
+        "code": "SSP 101D*",
+        "title": "The Entrepreneurial Mind",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "3CkiguAjgifU35eaZS3DCg.EtbiYn1SL0W5roRYM2Fu4w",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5983,
+       "subject": {
+        "id": 6150,
+        "code": "CPE 205",
+        "title": "Numerical Methods",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "n78JDlVTWUs6mkqvBAvcOg.KlS-OhRXM0lbAPtm-Jo-8Q",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5984,
+       "subject": {
+        "id": 6152,
+        "code": "CPE 206L",
+        "title": "Data Structure and Algorithm",
+        "units": "2.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "d4hxdDf0BH4-KcJ1QFIlsA.yV3Tr1fVFxUMUbAVCzoY6w",
+        "academic_year": "2025-2026",
+        "term": "Summer"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5985,
+       "subject": {
+        "id": 1157,
+        "code": "CPE 207",
+        "title": "Fundamentals of Electronic Circuits",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "nLZimR1ea5Tk0nFtC292bQ.zso9WyoLtJfCk31bTgqLlQ",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5986,
+       "subject": {
+        "id": 1158,
+        "code": "CPE 207L",
+        "title": "Fundamentals of Electronic Circuits Lab",
+        "units": "1.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Gt2RDV3dQnqFw2cW7_x-YQ.fChwaFqyaECFrqFbzouDWQ",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5987,
+       "subject": {
+        "id": 6151,
+        "code": "CPE 208",
+        "title": "Engineering Economics",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.75",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "r7bV2Kx_wyvqaXHgHympaA.j4LPYXaNnC4vgMZj_JSmjg",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5988,
+       "subject": {
+        "id": 6154,
+        "code": "CPE 209",
+        "title": "Database Management System",
+        "units": "2.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "aWVLfbw3gnJfSehk3vkcQQ.ud2UHIwI6zkc17wvYeVO2w",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5989,
+       "subject": {
+        "id": 6153,
+        "code": "CPE 209L",
+        "title": "Database Management System Lab",
+        "units": "1.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Qvk516TxcAOtnBH7PaBkjA.R4PeU_G_4sLqJvJ754mMGQ",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5990,
+       "subject": {
+        "id": 1136,
+        "code": "CPE 210*",
+        "title": "Environmental Science and Engineering",
+        "units": "3.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "nI-A2Icixtuh4Oj7XyMRxQ.rOSPa-Pmk2F_AcXFxTyWHQ",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5991,
+       "subject": {
+        "id": 6149,
+        "code": "PE13",
+        "title": "PATHFit 4",
+        "units": "2.0"
+       },
+       "year_level": 2,
+       "term_number": 2,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "CwH9xhAfiEc5UUeOKGFKqw.DYkRJFhq7XAZYUODpsjRRw",
+        "academic_year": "2025-2026",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 3,
+     "term_number": 1,
+     "label": "3rd Year, 1st Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 5992,
+       "subject": {
+        "id": 9,
+        "code": "RLW 101",
+        "title": "Life and Works of Rizal",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "kZiz7qN69e-f6XjEOZQ8-g.E_Jw-NbVWjRNNzrJeGY6sg",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5993,
+       "subject": {
+        "id": 638,
+        "code": "CPE 301",
+        "title": "Logic Circuits and Design",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "ZDCzoFaKMJsQSr4W9388fg.lSHegjY6jk9g3bTOhljR7A",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5994,
+       "subject": {
+        "id": 639,
+        "code": "CPE 301L",
+        "title": "Logic Circuits and Design Lab",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.25",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "pRjDtJlUx9nYbJcK0tU9vQ.hSpCHlyXo0FHxEGVJURoFw",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5995,
+       "subject": {
+        "id": 640,
+        "code": "CPE 302",
+        "title": "Operating Systems",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Nw6y65xTTK50vpumSWcG0A.094lnPm0H15_KLw4QW_1vA",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5996,
+       "subject": {
+        "id": 635,
+        "code": "CPE 303",
+        "title": "Data and Digital Communications",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "MfBxzjHP6tjqgN84eBbq0A.mIviX0B7_afOQmHUyjFCFQ",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5997,
+       "subject": {
+        "id": 641,
+        "code": "CPE 304",
+        "title": "Software Design",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "GNNXlDim7JnvIHYvRXyWWg.vWxPa-TB8FlpGPbFNRUk9w",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5998,
+       "subject": {
+        "id": 642,
+        "code": "CPE 304L",
+        "title": "Software Design Lab",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "1.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "aqEQ2xJ8ObpOHjilTmlYyQ.FfwkZjLk2ss_Uqrz8DsOlA",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 5999,
+       "subject": {
+        "id": 636,
+        "code": "CPE 305",
+        "title": "Feedback and Control Systems",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.50",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "IydUL9EsgSy37EP_6ksloA.i83LhMU3QMX8_o415WCMxQ",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6000,
+       "subject": {
+        "id": 637,
+        "code": "CPE 306",
+        "title": "Fundamentals of Mixed Signals and Sensors",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "N29pqtqzdccJ6YfXrBayMg.mhmAjnkeM43Xjjov0AKbCg",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6001,
+       "subject": {
+        "id": 643,
+        "code": "CPE 302L",
+        "title": "Operating Systems Lab",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 1,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "passed",
+       "grade_code": "2.00",
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "U0O1DbleWrFcfcy41Y_iDg.AgNc1bz9RcuYeauumcjCrg",
+        "academic_year": "2026-2027",
+        "term": "1st Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 3,
+     "term_number": 2,
+     "label": "3rd Year, 2nd Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 6002,
+       "subject": {
+        "id": 1137,
+        "code": "CPE 307",
+        "title": "Basic Occupational Health and Safety",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "5iC9f5hIUzBbYkskmld9yg.pSZemZUjiE8KsNuhz8JX0Q",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6003,
+       "subject": {
+        "id": 6691,
+        "code": "CPE 308",
+        "title": "Computer Networks and Security",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "e9ymplty1N6HSK-yep9NJQ.sM_h6rnzg-Vu7_9CGYaAWA",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6004,
+       "subject": {
+        "id": 6690,
+        "code": "CPE 308L",
+        "title": "Computer Networks and Security Lab",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "GEnnEZsajZVVWVU7xBc-Lg.UOTRsC6-Dd64MCGDTkI2jg",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6005,
+       "subject": {
+        "id": 6689,
+        "code": "CPE 309",
+        "title": "Microprocessors",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "Rkbq6IhHaQVB6hP1zkLIrA.s1bmPfzRMtHJtp-NWJpYWA",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6006,
+       "subject": {
+        "id": 6688,
+        "code": "CPE 309L",
+        "title": "Microprocessors Lab",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "JZi38yb3yUt1jQA3euAzXw.ym8cg9FDhlGXaHQt8T0Wkw",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6007,
+       "subject": {
+        "id": 6687,
+        "code": "CPE 310",
+        "title": "Methods of Research",
+        "units": "2.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "7AeqlLe_xOuX-mIvNRw5Kw.t_dRXiPogSFZa51GLgGCnA",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6008,
+       "subject": {
+        "id": 6686,
+        "code": "CPE 311L",
+        "title": "Introduction to HDL",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "WIevIJ97-eqJaXbaeNyzrQ.9XwZXKJLk1QrChhQPcE_0g",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6009,
+       "subject": {
+        "id": 6685,
+        "code": "CPE 313L",
+        "title": "Computer Engineering Drafting and Design",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "IL7wGgbZlgBXSUBPzN2t_g.8AYtk_FY5BvSDlwDTk7c4g",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6010,
+       "subject": {
+        "id": 1141,
+        "code": "CPE 314",
+        "title": "CpE laws and Professional Practice",
+        "units": "2.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "9MX_R6BSSZxYNrK0d37u6A.7igDft6ApA2-hGbWucVolg",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6011,
+       "subject": {
+        "id": 6248,
+        "code": "CPE 312L",
+        "title": "Elective 1",
+        "units": "1.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 10,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "6CW9WY7Y7C2GUFgb-PX71w.j8sXvyUUXvy_RgfxzyeYAQ",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6012,
+       "subject": {
+        "id": 6247,
+        "code": "CPE 316",
+        "title": "Project Management",
+        "units": "3.0"
+       },
+       "year_level": 3,
+       "term_number": 2,
+       "sequence": 11,
+       "is_elective": false,
+       "status": "in_progress",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": {
+        "id": "A1iretyqN5bx3GsbU3xicA.r6ZnBdZIpUQ81UZrIJolcA",
+        "academic_year": "2026-2027",
+        "term": "2nd Semester"
+       },
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 3,
+     "term_number": 3,
+     "label": "3rd Year, Summer",
+     "subjects": [
+      {
+       "curriculum_subject_id": 6013,
+       "subject": {
+        "id": 7491,
+        "code": "OJT CPE",
+        "title": "Midyear On-the-Job Training (250 hours)",
+        "units": "5.0"
+       },
+       "year_level": 3,
+       "term_number": 3,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 4,
+     "term_number": 1,
+     "label": "4th Year, 1st Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 6014,
+       "subject": {
+        "id": 648,
+        "code": "CPE 401",
+        "title": "Embedded Systems",
+        "units": "3.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6015,
+       "subject": {
+        "id": 649,
+        "code": "CPE 401L",
+        "title": "Embedded Systems Lab",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6016,
+       "subject": {
+        "id": 650,
+        "code": "CPE 402",
+        "title": "Computer Architecture and Organization",
+        "units": "3.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6017,
+       "subject": {
+        "id": 651,
+        "code": "CPE 402L",
+        "title": "Computer Architecture and Organization Lab",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6018,
+       "subject": {
+        "id": 644,
+        "code": "CPE 404D",
+        "title": "CpE Practice and Design 1",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6019,
+       "subject": {
+        "id": 645,
+        "code": "CPE 405",
+        "title": "Digital Signal Processing",
+        "units": "3.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 6,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6020,
+       "subject": {
+        "id": 646,
+        "code": "CPE 405L",
+        "title": "Digital Signal Processing Lab",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 7,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6021,
+       "subject": {
+        "id": 6549,
+        "code": "CPE 410",
+        "title": "Technopreneurship 101",
+        "units": "3.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 8,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6022,
+       "subject": {
+        "id": 7465,
+        "code": "CPE 415L",
+        "title": "Elective 2",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 1,
+       "sequence": 9,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    },
+    {
+     "year_level": 4,
+     "term_number": 2,
+     "label": "4th Year, 2nd Semester",
+     "subjects": [
+      {
+       "curriculum_subject_id": 6023,
+       "subject": {
+        "id": 6553,
+        "code": "CPE 406D",
+        "title": "CpE Practice and Design 2",
+        "units": "2.0"
+       },
+       "year_level": 4,
+       "term_number": 2,
+       "sequence": 1,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6024,
+       "subject": {
+        "id": 6552,
+        "code": "CPE 407D",
+        "title": "Seminars and Field Trip",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 2,
+       "sequence": 2,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6025,
+       "subject": {
+        "id": 6550,
+        "code": "CPE 409",
+        "title": "Emerging Technologies in CpE",
+        "units": "3.0"
+       },
+       "year_level": 4,
+       "term_number": 2,
+       "sequence": 3,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6026,
+       "subject": {
+        "id": 7464,
+        "code": "CPE 403L",
+        "title": "Elective 3",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 2,
+       "sequence": 4,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      },
+      {
+       "curriculum_subject_id": 6027,
+       "subject": {
+        "id": 7463,
+        "code": "CPE 412L",
+        "title": "CPE Course Enhancement",
+        "units": "1.0"
+       },
+       "year_level": 4,
+       "term_number": 2,
+       "sequence": 5,
+       "is_elective": false,
+       "status": "not_taken",
+       "grade_code": null,
+       "pending_grade_code": null,
+       "taken_in": null,
+       "via_equivalent": null,
+       "via_credit": null
+      }
+     ]
+    }
+   ],
+   "counts": {
+    "placements": 79,
+    "passed": 51,
+    "in_progress": 13,
+    "failed": 0,
+    "not_taken": 15
+   }
+  },
+  "locked_terms": 0,
+  "withheld_terms": 0
+ }
+}

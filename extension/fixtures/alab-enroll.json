@@ -1,0 +1,5263 @@
+{
+ "settings": {
+  "balance_hold_enforced": false,
+  "can_enlist": true,
+  "self_service_enabled": true,
+  "message": "Enrollment is open.",
+  "term": {
+   "id": "l3txUCVUO_297t6Bphu2AA.ZVq355TGrtANiTxubsxYwQ",
+   "academic_year": "2026-2027",
+   "term": "2nd Semester",
+   "term_number": 2,
+   "previous_term_id": 1
+  },
+  "previous_term": {
+   "id": "_IvwoEFCFUYaR-sE3F9uog.NLrjpTde6orARzdFU-JEJg",
+   "academic_year": "2026-2027",
+   "term": "1st Semester",
+   "term_number": 1,
+   "previous_term_id": 36
+  },
+  "missing_grade_policy": "provisional",
+  "campus_windows": [
+   {
+    "campus": {
+     "id": 2,
+     "code": "BC",
+     "name": "Bustos Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   },
+   {
+    "campus": {
+     "id": 5,
+     "code": "HC",
+     "name": "Hagonoy Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   },
+   {
+    "campus": {
+     "id": 1,
+     "code": "MAIN",
+     "name": "Main Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   },
+   {
+    "campus": {
+     "id": 4,
+     "code": "MC",
+     "name": "Meneses Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   },
+   {
+    "campus": {
+     "id": 3,
+     "code": "SC",
+     "name": "Sarmiento Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   },
+   {
+    "campus": {
+     "id": 6,
+     "code": "SRC",
+     "name": "San Rafael Campus"
+    },
+    "is_enrollment_open": true,
+    "enrollment_start_date": "2026-11-14 08:00:00",
+    "enrollment_end_date": "2026-11-28 23:59:00",
+    "state": "within",
+    "year_levels": [
+     {
+      "year_level": 1,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 2,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 3,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 4,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     },
+     {
+      "year_level": 5,
+      "regular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      },
+      "irregular": {
+       "start_date": "2026-11-14 08:00:00",
+       "end_date": "2026-11-28 23:59:00",
+       "source": "year_level",
+       "state": "within"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "window": {
+  "campus": {
+   "id": 1,
+   "code": "MAIN",
+   "name": "Main Campus"
+  },
+  "enrollee_type": "regular",
+  "year_level": 3,
+  "start_date": "2026-11-14 08:00:00",
+  "end_date": "2026-11-28 23:59:00",
+  "source": "year_level",
+  "state": "within",
+  "can_enlist": true
+ },
+ "viewing": {
+  "id": "yM6Bskd567eQQ8CALbO0Aw.Ifgme6KiL_7PrAwJvPdinA",
+  "academic_year": "2026-2027",
+  "term": "2nd Semester",
+  "term_number": 2,
+  "previous_term_id": 1
+ },
+ "is_current": true,
+ "available_terms": [
+  {
+   "id": "qGSU12wLQavsppgW8ITdHA.YuZrAazC3qEWm88oEiKqIQ",
+   "academic_year": "2026-2027",
+   "term": "2nd Semester",
+   "term_number": 2,
+   "registration_status": "validated"
+  },
+  {
+   "id": "JhcEtIb4jcvt9ar1Cib41A.pYXPUC0gZdcQjvJJaEWgjw",
+   "academic_year": "2026-2027",
+   "term": "1st Semester",
+   "term_number": 1,
+   "registration_status": "validated"
+  },
+  {
+   "id": "UwiDrZq4GluwRpU3qPjh1g.MwfKp3OD3FU-kodBrbM6YQ",
+   "academic_year": "2025-2026",
+   "term": "Summer",
+   "term_number": 3,
+   "registration_status": "validated"
+  },
+  {
+   "id": "5wgIPZHPWF0jD-Vx_GVG3g.SoUHwRAfr9CtgO070nBdJA",
+   "academic_year": "2025-2026",
+   "term": "2nd Semester",
+   "term_number": 2,
+   "registration_status": "validated"
+  },
+  {
+   "id": "9wp_ZWpuSy8jugvAiRoCKw.obeR-jFgEuEwENy4it4PEA",
+   "academic_year": "2025-2026",
+   "term": "1st Semester",
+   "term_number": 1,
+   "registration_status": "validated"
+  },
+  {
+   "id": "REQ_WLZ1SPrw2R1j41_4Bw.d5Sj79IKKPi2h2MVvnrj6g",
+   "academic_year": "2024-2025",
+   "term": "Summer",
+   "term_number": 3,
+   "registration_status": "validated"
+  },
+  {
+   "id": "S6LW-ph-Z9Vv22s3JJiSng.z_cfT1a8OGtSX0SvzRQgCQ",
+   "academic_year": "2024-2025",
+   "term": "2nd Semester",
+   "term_number": 2,
+   "registration_status": "validated"
+  },
+  {
+   "id": "NBO0qPI0DS-HvP642CbObw.2pEDvnZpHpkQ3mkA5U5jkw",
+   "academic_year": "2024-2025",
+   "term": "1st Semester",
+   "term_number": 1,
+   "registration_status": "validated"
+  }
+ ],
+ "student": {
+  "id": 14401,
+  "student_no": "2024000000",
+  "program": {
+   "id": 44,
+   "code": "BSCPE",
+   "name": "Bachelor of Science in Computer Engineering"
+  },
+  "campus": {
+   "id": 1,
+   "code": "MAIN",
+   "name": "Main Campus"
+  },
+  "year_level": 3,
+  "academic_status": "regular",
+  "curriculum_id": 520
+ },
+ "registration": {
+  "id": 300671,
+  "status": "validated",
+  "display_status": "validated",
+  "loa": null,
+  "documents": {
+   "certificate_of_registration": true,
+   "pre_registration": false
+  },
+  "academic_term": {
+   "id": "WCgXoBb6Bg2RFlPy2feB8w.pzux8uF6Qf4rI190A9ecXA",
+   "academic_year": "2026-2027",
+   "term": "2nd Semester",
+   "term_number": 2
+  },
+  "student": {
+   "id": 14401,
+   "student_no": "2024000000",
+   "full_name": "Fixture, Student",
+   "email": "student@example.edu",
+   "year_level": 3,
+   "academic_status": "regular",
+   "student_type": "old"
+  },
+  "program": {
+   "id": 44,
+   "code": "BSCPE",
+   "name": "Bachelor of Science in Computer Engineering"
+  },
+  "college": {
+   "id": 5,
+   "code": "COE",
+   "name": "College of Engineering"
+  },
+  "campus": {
+   "id": 1,
+   "code": "MAIN",
+   "name": "Main Campus"
+  },
+  "curriculum": {
+   "id": 520,
+   "code": "BSCpE (Revised 2024)",
+   "name": "Bachelor of Science in Computer Engineering",
+   "effective_academic_year": "2024-2025"
+  },
+  "section": {
+   "id": 3843,
+   "name": "CPE 3C"
+  },
+  "year_level": 3,
+  "student_type": "old",
+  "academic_status": "regular",
+  "billing_class": "unifast",
+  "source": "system",
+  "subjects": [
+   {
+    "id": 2035613,
+    "subject": {
+     "id": 1137,
+     "code": "CPE 307",
+     "title": "Basic Occupational Health and Safety"
+    },
+    "units": 3,
+    "lecture_units": 3,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15311,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 1137,
+      "code": "CPE 307",
+      "title": "Basic Occupational Health and Safety",
+      "units": 3,
+      "lecture_units": 3,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 523,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35388,
+       "weekday": "Mon",
+       "meeting_date": null,
+       "start_time": "14:00",
+       "end_time": "17:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 860,
+        "code": "NH-509*",
+        "name": "NH 509*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 37,
+      "available": 23,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028789,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035623,
+    "subject": {
+     "id": 1141,
+     "code": "CPE 314",
+     "title": "CpE laws and Professional Practice"
+    },
+    "units": 2,
+    "lecture_units": 2,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15321,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 1141,
+      "code": "CPE 314",
+      "title": "CpE laws and Professional Practice",
+      "units": 2,
+      "lecture_units": 2,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 578,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35359,
+       "weekday": "Wed",
+       "meeting_date": null,
+       "start_time": "14:00",
+       "end_time": "16:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 839,
+        "code": "COE2-303*",
+        "name": "COE 2 - 303*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 37,
+      "available": 23,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028790,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035615,
+    "subject": {
+     "id": 6247,
+     "code": "CPE 316",
+     "title": "Project Management"
+    },
+    "units": 3,
+    "lecture_units": 3,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15313,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6247,
+      "code": "CPE 316",
+      "title": "Project Management",
+      "units": 3,
+      "lecture_units": 3,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 329,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35353,
+       "weekday": "Tue",
+       "meeting_date": null,
+       "start_time": "17:00",
+       "end_time": "20:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 839,
+        "code": "COE2-303*",
+        "name": "COE 2 - 303*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 38,
+      "available": 22,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028791,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035614,
+    "subject": {
+     "id": 6248,
+     "code": "CPE 312L",
+     "title": "Elective 1"
+    },
+    "units": 1,
+    "lecture_units": 0,
+    "lab_units": 1,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15312,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6248,
+      "code": "CPE 312L",
+      "title": "Elective 1",
+      "units": 1,
+      "lecture_units": 0,
+      "lab_units": 1
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 522,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35355,
+       "weekday": "Sat",
+       "meeting_date": null,
+       "start_time": "14:00",
+       "end_time": "17:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": {
+        "id": 829,
+        "code": "COE2-404*",
+        "name": "COE 2 - 404*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 36,
+      "available": 24,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028792,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035622,
+    "subject": {
+     "id": 6685,
+     "code": "CPE 313L",
+     "title": "Computer Engineering Drafting and Design"
+    },
+    "units": 1,
+    "lecture_units": 0,
+    "lab_units": 1,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15320,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6685,
+      "code": "CPE 313L",
+      "title": "Computer Engineering Drafting and Design",
+      "units": 1,
+      "lecture_units": 0,
+      "lab_units": 1
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 523,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35362,
+       "weekday": "Wed",
+       "meeting_date": null,
+       "start_time": "07:00",
+       "end_time": "10:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": {
+        "id": 866,
+        "code": "NH-310*",
+        "name": "NH 310*"
+       }
+      },
+      {
+       "id": 35363,
+       "weekday": "Tue",
+       "meeting_date": null,
+       "start_time": "10:00",
+       "end_time": "13:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": null
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 39,
+      "available": 21,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028793,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035620,
+    "subject": {
+     "id": 6686,
+     "code": "CPE 311L",
+     "title": "Introduction to HDL"
+    },
+    "units": 1,
+    "lecture_units": 0,
+    "lab_units": 1,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15318,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6686,
+      "code": "CPE 311L",
+      "title": "Introduction to HDL",
+      "units": 1,
+      "lecture_units": 0,
+      "lab_units": 1
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 579,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35368,
+       "weekday": "Thu",
+       "meeting_date": null,
+       "start_time": "17:00",
+       "end_time": "20:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": {
+        "id": 866,
+        "code": "NH-310*",
+        "name": "NH 310*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 38,
+      "available": 22,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028794,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035619,
+    "subject": {
+     "id": 6687,
+     "code": "CPE 310",
+     "title": "Methods of Research"
+    },
+    "units": 2,
+    "lecture_units": 2,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15317,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6687,
+      "code": "CPE 310",
+      "title": "Methods of Research",
+      "units": 2,
+      "lecture_units": 2,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 576,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35371,
+       "weekday": "Wed",
+       "meeting_date": null,
+       "start_time": "17:00",
+       "end_time": "19:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 829,
+        "code": "COE2-404*",
+        "name": "COE 2 - 404*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 40,
+      "available": 20,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028795,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035618,
+    "subject": {
+     "id": 6688,
+     "code": "CPE 309L",
+     "title": "Microprocessors Lab"
+    },
+    "units": 1,
+    "lecture_units": 0,
+    "lab_units": 1,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15316,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6688,
+      "code": "CPE 309L",
+      "title": "Microprocessors Lab",
+      "units": 1,
+      "lecture_units": 0,
+      "lab_units": 1
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 1506,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35374,
+       "weekday": "Tue",
+       "meeting_date": null,
+       "start_time": "14:00",
+       "end_time": "17:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": null
+      },
+      {
+       "id": 35377,
+       "weekday": "Thu",
+       "meeting_date": null,
+       "start_time": "14:00",
+       "end_time": "17:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": {
+        "id": 840,
+        "code": "COE2-302B",
+        "name": "COE 2 - 302B*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 39,
+      "available": 21,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028796,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035617,
+    "subject": {
+     "id": 6689,
+     "code": "CPE 309",
+     "title": "Microprocessors"
+    },
+    "units": 3,
+    "lecture_units": 3,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15315,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6689,
+      "code": "CPE 309",
+      "title": "Microprocessors",
+      "units": 3,
+      "lecture_units": 3,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 1506,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35381,
+       "weekday": "Sat",
+       "meeting_date": null,
+       "start_time": "07:00",
+       "end_time": "10:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 839,
+        "code": "COE2-303*",
+        "name": "COE 2 - 303*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 40,
+      "available": 20,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028797,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035616,
+    "subject": {
+     "id": 6690,
+     "code": "CPE 308L",
+     "title": "Computer Networks and Security Lab"
+    },
+    "units": 1,
+    "lecture_units": 0,
+    "lab_units": 1,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15314,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6690,
+      "code": "CPE 308L",
+      "title": "Computer Networks and Security Lab",
+      "units": 1,
+      "lecture_units": 0,
+      "lab_units": 1
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 576,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35383,
+       "weekday": "Sat",
+       "meeting_date": null,
+       "start_time": "10:00",
+       "end_time": "13:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": {
+        "id": 842,
+        "code": "COE2-301A",
+        "name": "COE 2 - 301A*"
+       }
+      },
+      {
+       "id": 35412,
+       "weekday": "Thu",
+       "meeting_date": null,
+       "start_time": "10:00",
+       "end_time": "13:00",
+       "mode": "laboratory",
+       "is_online": false,
+       "room": null
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 35,
+      "available": 25,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028798,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   },
+   {
+    "id": 2035621,
+    "subject": {
+     "id": 6691,
+     "code": "CPE 308",
+     "title": "Computer Networks and Security"
+    },
+    "units": 3,
+    "lecture_units": 3,
+    "lab_units": 0,
+    "status": "enlisted",
+    "is_out_of_sequence": false,
+    "is_retake": false,
+    "placement": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "class_offering": {
+     "id": 15319,
+     "academic_term_id": 2,
+     "faculty_role": "primary",
+     "subject": {
+      "id": 6691,
+      "code": "CPE 308",
+      "title": "Computer Networks and Security",
+      "units": 3,
+      "lecture_units": 3,
+      "lab_units": 0
+     },
+     "section": {
+      "id": 3843,
+      "name": "CPE 3C",
+      "year_level": 3,
+      "allow_schedule_conflict": false,
+      "campus": {
+       "id": 1,
+       "code": "MAIN",
+       "name": "Main Campus"
+      },
+      "program": {
+       "id": 44,
+       "code": "BSCPE",
+       "name": "Bachelor of Science in Computer Engineering"
+      }
+     },
+     "faculty": {
+      "id": 576,
+      "employee_no": "2025000000",
+      "full_name": "Fixture, Student"
+     },
+     "meetings": [
+      {
+       "id": 35384,
+       "weekday": "Wed",
+       "meeting_date": null,
+       "start_time": "10:00",
+       "end_time": "13:00",
+       "mode": "lecture",
+       "is_online": false,
+       "room": {
+        "id": 829,
+        "code": "COE2-404*",
+        "name": "COE 2 - 404*"
+       }
+      }
+     ],
+     "seats": {
+      "capacity": 60,
+      "taken": 36,
+      "available": 24,
+      "is_open": true
+     },
+     "is_posted": true
+    },
+    "class_enrollment_id": 1028799,
+    "other_campus": null,
+    "is_cross_enrolled": false
+   }
+  ],
+  "total_units": 21,
+  "grants": [
+   {
+    "id": 295586,
+    "provider": {
+     "id": 1,
+     "code": "UNIFAST",
+     "name": "UniFAST - Free Higher Education (RA 10931)"
+    },
+    "status": "confirmed",
+    "coverage": "full",
+    "percent": null,
+    "amount": null,
+    "covers": "covered_lines",
+    "origin": "rule",
+    "confirmed_at": "2026-11-14 17:31:24",
+    "revoked_at": null,
+    "notes": "Created by the UniFAST rule"
+   }
+  ],
+  "assessment": {
+   "id": 156100,
+   "registration_id": 300671,
+   "version": 1,
+   "status": "current",
+   "fee_template_id": 93,
+   "fee_template": {
+    "id": 93,
+    "code": "COE TOSF 2ND SEMESTER 2026-2027",
+    "name": "COE TOSF 2nd Semester 2026-2027"
+   },
+   "total_units": 21,
+   "total_lab_units": 5,
+   "gross_amount": 7418,
+   "discount_amount": 7418,
+   "net_amount": 0,
+   "computed_at": "2026-11-14 17:31:47",
+   "computed_by_user_id": 15722,
+   "reason": "Enlisted",
+   "lines": [
+    {
+     "id": 2980327,
+     "account": {
+      "id": 981,
+      "code": "2999-007",
+      "name": "Athletic Fee"
+     },
+     "fee_template_line_id": 1671,
+     "course_fee_id": null,
+     "description": "Athletic Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 266,
+     "amount": 266,
+     "covered_amount": 266,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 1
+    },
+    {
+     "id": 2980328,
+     "account": {
+      "id": 988,
+      "code": "2999-039",
+      "name": "Computer Lab Fee"
+     },
+     "fee_template_line_id": 1672,
+     "course_fee_id": null,
+     "description": "Computer Lab Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 133,
+     "amount": 133,
+     "covered_amount": 133,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 2
+    },
+    {
+     "id": 2980329,
+     "account": {
+      "id": 980,
+      "code": "2999-168",
+      "name": "Socio Cultural Fee"
+     },
+     "fee_template_line_id": 1673,
+     "course_fee_id": null,
+     "description": "Socio Cultural Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 67,
+     "amount": 67,
+     "covered_amount": 67,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 3
+    },
+    {
+     "id": 2980330,
+     "account": {
+      "id": 1396,
+      "code": "2999-272",
+      "name": "Development fee Publication"
+     },
+     "fee_template_line_id": 1674,
+     "course_fee_id": null,
+     "description": "Development fee Publication",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 41,
+     "amount": 41,
+     "covered_amount": 41,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 4
+    },
+    {
+     "id": 2980331,
+     "account": {
+      "id": 1395,
+      "code": "2999-271",
+      "name": "Development fee Student Government"
+     },
+     "fee_template_line_id": 1675,
+     "course_fee_id": null,
+     "description": "Development fee Student Government",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 28,
+     "amount": 28,
+     "covered_amount": 28,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 5
+    },
+    {
+     "id": 2980332,
+     "account": {
+      "id": 1394,
+      "code": "2999-270",
+      "name": "Development fee Security"
+     },
+     "fee_template_line_id": 1676,
+     "course_fee_id": null,
+     "description": "Development fee Security",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 41,
+     "amount": 41,
+     "covered_amount": 41,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 6
+    },
+    {
+     "id": 2980333,
+     "account": {
+      "id": 1393,
+      "code": "2999-269",
+      "name": "Development fee School Paper"
+     },
+     "fee_template_line_id": 1677,
+     "course_fee_id": null,
+     "description": "Development fee School Paper",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 28,
+     "amount": 28,
+     "covered_amount": 28,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 7
+    },
+    {
+     "id": 2980334,
+     "account": {
+      "id": 982,
+      "code": "2999-091",
+      "name": "Guidance Fee"
+     },
+     "fee_template_line_id": 1679,
+     "course_fee_id": null,
+     "description": "Guidance Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 41,
+     "amount": 41,
+     "covered_amount": 41,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 8
+    },
+    {
+     "id": 2980335,
+     "account": {
+      "id": 1046,
+      "code": "2999-110",
+      "name": "Lab FEE"
+     },
+     "fee_template_line_id": 1681,
+     "course_fee_id": null,
+     "description": "Lab FEE",
+     "remarks": null,
+     "basis": "per_lab_unit",
+     "quantity": 5,
+     "rate": 67,
+     "amount": 335,
+     "covered_amount": 335,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 9
+    },
+    {
+     "id": 2980336,
+     "account": {
+      "id": 973,
+      "code": "2999-113",
+      "name": "Library Fee"
+     },
+     "fee_template_line_id": 1682,
+     "course_fee_id": null,
+     "description": "Library Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 117,
+     "amount": 117,
+     "covered_amount": 117,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 10
+    },
+    {
+     "id": 2980337,
+     "account": {
+      "id": 975,
+      "code": "2999-115",
+      "name": "Medical Dental Fee"
+     },
+     "fee_template_line_id": 1683,
+     "course_fee_id": null,
+     "description": "Medical Dental Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 54,
+     "amount": 54,
+     "covered_amount": 54,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 11
+    },
+    {
+     "id": 2980338,
+     "account": {
+      "id": 972,
+      "code": "2999-144",
+      "name": "Registration Fee"
+     },
+     "fee_template_line_id": 1684,
+     "course_fee_id": null,
+     "description": "Registration Fee",
+     "remarks": null,
+     "basis": "fixed",
+     "quantity": 1,
+     "rate": 67,
+     "amount": 67,
+     "covered_amount": 67,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 12
+    },
+    {
+     "id": 2980339,
+     "account": {
+      "id": 974,
+      "code": "4210-054",
+      "name": "Tuition Laboratory Fee"
+     },
+     "fee_template_line_id": 1687,
+     "course_fee_id": null,
+     "description": "Tuition Laboratory Fee",
+     "remarks": null,
+     "basis": "per_lab_unit",
+     "quantity": 5,
+     "rate": 600,
+     "amount": 3000,
+     "covered_amount": 3000,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 13
+    },
+    {
+     "id": 2980340,
+     "account": {
+      "id": 996,
+      "code": "4210-002",
+      "name": "Tuition Fee Regular"
+     },
+     "fee_template_line_id": 1688,
+     "course_fee_id": null,
+     "description": "Tuition Fee Regular",
+     "remarks": null,
+     "basis": "per_lecture_unit",
+     "quantity": 16,
+     "rate": 200,
+     "amount": 3200,
+     "covered_amount": 3200,
+     "net_amount": 0,
+     "scholarship_grant_id": 295586,
+     "sequence": 14
+    }
+   ],
+   "grants_applied": [
+    {
+     "id": 295586,
+     "provider": {
+      "id": 1,
+      "code": "UNIFAST",
+      "name": "UniFAST - Free Higher Education (RA 10931)"
+     },
+     "status": "confirmed",
+     "coverage": "full",
+     "percent": null,
+     "amount": null,
+     "covers": "covered_lines",
+     "covered_amount": 7418
+    }
+   ],
+   "created_at": "2026-11-14 17:31:47",
+   "updated_at": "2026-11-14 17:31:47"
+  },
+  "eligibility": {
+   "id": 9205,
+   "student_id": 14401,
+   "target_term": {
+    "id": "R0HF_Tog2_utm8VqA-njiQ.Pp5J8TRbEZKurGrdZre5Og",
+    "academic_year": "2026-2027",
+    "term": "2nd Semester",
+    "term_number": 2
+   },
+   "basis_term": {
+    "id": "6hPFWmfpLh2GARN-8NtKQQ.9TdM-or4ZKPfMezCH5Br7w",
+    "academic_year": "2026-2027",
+    "term": "1st Semester",
+    "term_number": 1
+   },
+   "basis_kind": "previous_term",
+   "verdict": "ELIGIBLE_REGULAR",
+   "verdict_text": "You may enroll as a regular student.",
+   "can_enlist": true,
+   "blocked_reason": null,
+   "blocked_text": null,
+   "is_provisional": false,
+   "is_stale": false,
+   "year_level": 3,
+   "promoted_year_level": 3,
+   "curriculum_id": 520,
+   "counts": {
+    "subjects": 10,
+    "not_passed": 0,
+    "missing": 0,
+    "not_passed_percent": 0,
+    "out_of_sequence": 0,
+    "back_subjects": 0
+   },
+   "details": {
+    "subjects": [
+     {
+      "subject_id": 9,
+      "subject_code": "RLW 101",
+      "subject_title": "Life and Works of Rizal",
+      "grade": "2.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": false
+     },
+     {
+      "subject_id": 635,
+      "subject_code": "CPE 303",
+      "subject_title": "Data and Digital Communications",
+      "grade": "2.50",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 636,
+      "subject_code": "CPE 305",
+      "subject_title": "Feedback and Control Systems",
+      "grade": "2.50",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 637,
+      "subject_code": "CPE 306",
+      "subject_title": "Fundamentals of Mixed Signals and Sensors",
+      "grade": "2.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 638,
+      "subject_code": "CPE 301",
+      "subject_title": "Logic Circuits and Design",
+      "grade": "2.25",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 639,
+      "subject_code": "CPE 301L",
+      "subject_title": "Logic Circuits and Design Lab",
+      "grade": "2.25",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 640,
+      "subject_code": "CPE 302",
+      "subject_title": "Operating Systems",
+      "grade": "2.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 641,
+      "subject_code": "CPE 304",
+      "subject_title": "Software Design",
+      "grade": "1.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 642,
+      "subject_code": "CPE 304L",
+      "subject_title": "Software Design Lab",
+      "grade": "1.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     },
+     {
+      "subject_id": 643,
+      "subject_code": "CPE 302L",
+      "subject_title": "Operating Systems Lab",
+      "grade": "2.00",
+      "pending_grade": null,
+      "kind": "passing",
+      "status": "passed",
+      "placement": {
+       "year_level": 3,
+       "term_number": 1
+      },
+      "out_of_sequence": false,
+      "is_requisite": true
+     }
+    ],
+    "back_subjects": [],
+    "out_of_sequence": [],
+    "passed_in_block": [],
+    "expected_block": {
+     "year_level": 3,
+     "term_number": 2
+    },
+    "year_level_basis": {
+     "rule": "enrolled",
+     "from_registration": 3,
+     "by_curriculum": 3,
+     "furthest_block": {
+      "year_level": 3,
+      "term_number": 1,
+      "done": 10,
+      "total": 10
+     },
+     "hand_set": null,
+     "enrolled": 3,
+     "owed_before": 0
+    },
+    "status_basis": null,
+    "flags": []
+   },
+   "computed_at": "2026-11-20 14:24:40",
+   "computed_by": {
+    "id": "0VgxY5-vtQV1tsVfzf70Sw.9YWFcDkdu7beSVoHYWiIiQ",
+    "username": "superadmin"
+   }
+  },
+  "balance": 0,
+  "enlisted_at": "2026-11-14 17:31:47",
+  "assessed_at": "2026-11-14 17:31:47",
+  "validated_at": "2026-11-14 17:31:48",
+  "validation_mode": "scholarship",
+  "cancelled_at": null,
+  "cancel_reason": null,
+  "created_at": "2026-11-14 17:31:24",
+  "updated_at": "2026-11-14 17:31:48"
+ },
+ "eligibility": {
+  "id": 9205,
+  "student_id": 14401,
+  "target_term": {
+   "id": "mUcvoPXRkS_DVRJKCYgp1g.kKlCb6-uIzrpafZiAMbz7Q",
+   "academic_year": "2026-2027",
+   "term": "2nd Semester",
+   "term_number": 2
+  },
+  "basis_term": {
+   "id": "jO8_wEs3b1b1eivNJsHCyg.4gR1Km2W_JBg7sb8wY03Ag",
+   "academic_year": "2026-2027",
+   "term": "1st Semester",
+   "term_number": 1
+  },
+  "basis_kind": "previous_term",
+  "verdict": "ELIGIBLE_REGULAR",
+  "verdict_text": "You may enroll as a regular student.",
+  "can_enlist": true,
+  "blocked_reason": null,
+  "blocked_text": null,
+  "is_provisional": false,
+  "is_stale": false,
+  "year_level": 3,
+  "promoted_year_level": 3,
+  "curriculum_id": 520,
+  "counts": {
+   "subjects": 10,
+   "not_passed": 0,
+   "missing": 0,
+   "not_passed_percent": 0,
+   "out_of_sequence": 0,
+   "back_subjects": 0
+  },
+  "details": {
+   "subjects": [
+    {
+     "subject_id": 9,
+     "subject_code": "RLW 101",
+     "subject_title": "Life and Works of Rizal",
+     "grade": "2.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": false
+    },
+    {
+     "subject_id": 635,
+     "subject_code": "CPE 303",
+     "subject_title": "Data and Digital Communications",
+     "grade": "2.50",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 636,
+     "subject_code": "CPE 305",
+     "subject_title": "Feedback and Control Systems",
+     "grade": "2.50",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 637,
+     "subject_code": "CPE 306",
+     "subject_title": "Fundamentals of Mixed Signals and Sensors",
+     "grade": "2.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 638,
+     "subject_code": "CPE 301",
+     "subject_title": "Logic Circuits and Design",
+     "grade": "2.25",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 639,
+     "subject_code": "CPE 301L",
+     "subject_title": "Logic Circuits and Design Lab",
+     "grade": "2.25",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 640,
+     "subject_code": "CPE 302",
+     "subject_title": "Operating Systems",
+     "grade": "2.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 641,
+     "subject_code": "CPE 304",
+     "subject_title": "Software Design",
+     "grade": "1.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 642,
+     "subject_code": "CPE 304L",
+     "subject_title": "Software Design Lab",
+     "grade": "1.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    },
+    {
+     "subject_id": 643,
+     "subject_code": "CPE 302L",
+     "subject_title": "Operating Systems Lab",
+     "grade": "2.00",
+     "pending_grade": null,
+     "kind": "passing",
+     "status": "passed",
+     "placement": {
+      "year_level": 3,
+      "term_number": 1
+     },
+     "out_of_sequence": false,
+     "is_requisite": true
+    }
+   ],
+   "back_subjects": [],
+   "out_of_sequence": [],
+   "passed_in_block": [],
+   "expected_block": {
+    "year_level": 3,
+    "term_number": 2
+   },
+   "year_level_basis": {
+    "rule": "enrolled",
+    "from_registration": 3,
+    "by_curriculum": 3,
+    "furthest_block": {
+     "year_level": 3,
+     "term_number": 1,
+     "done": 10,
+     "total": 10
+    },
+    "hand_set": null,
+    "enrolled": 3,
+    "owed_before": 0
+   },
+   "status_basis": null,
+   "flags": []
+  },
+  "computed_at": "2026-11-20 14:24:40",
+  "computed_by": {
+   "id": "afe879BdBFFHPmk-DvUebA.9jzmti4BiBvqe2uMRmDOJw",
+   "username": "superadmin"
+  }
+ },
+ "unvalidated_enrollments": [],
+ "curriculum": [
+  {
+   "year_level": 1,
+   "term_number": 1,
+   "subjects": [
+    {
+     "subject": {
+      "id": 1,
+      "code": "MMW 101",
+      "title": "Mathematics in the Modern World",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 18,
+      "code": "UTS 101",
+      "title": "Understanding the Self",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 72,
+      "code": "PAL 101",
+      "title": "Panitikan at Lipunan",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 124,
+      "code": "COE 100",
+      "title": "Mathematics for Engineers",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 123,
+      "code": "COE 101",
+      "title": "Introduction to Engineering",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 122,
+      "code": "COE 103",
+      "title": "Chemistry for Engineers - Lecture",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 121,
+      "code": "COE 103L",
+      "title": "Chemistry for Engineers - Laboratory",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 122,
+       "code": "COE 103"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 3,
+      "code": "PE 10",
+      "title": "PATHFit 1",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 2,
+      "code": "NSTP 10",
+      "title": "National Service Training Program 1",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 20,
+      "code": "ETH 101",
+      "title": "Ethics",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 4,
+      "code": "PCM 101",
+      "title": "Purposive Communication",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 120,
+      "code": "COE 102",
+      "title": "Calculus 1",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 1,
+   "term_number": 2,
+   "subjects": [
+    {
+     "subject": {
+      "id": 1112,
+      "code": "COE 104",
+      "title": "Calculus 2",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1105,
+      "code": "COE 105",
+      "title": "Physics for Engineers - Lecture",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 120,
+       "code": "COE 102",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 1112,
+       "code": "COE 104"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1100,
+      "code": "COE 105L",
+      "title": "Physics for Engineers - Laboratory",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 120,
+       "code": "COE 102",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 1112,
+       "code": "COE 104"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6851,
+      "code": "CPE 103",
+      "title": "Computer Engineering as a Discipline",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 123,
+       "code": "COE 101",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6839,
+      "code": "CPE 104L",
+      "title": "Programming Logic and Design",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6923,
+      "code": "PE 11",
+      "title": "PATHFit 2",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 3,
+       "code": "PE 10",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 11213,
+      "code": "NSTP 11",
+      "title": "National Service Training Program 2",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 2,
+       "code": "NSTP 10",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 131,
+      "code": "AE 101",
+      "title": "Academic English",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6335,
+      "code": "CPE 105L",
+      "title": "Computer Hardware Fundamentals",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6967,
+      "code": "RPH-101",
+      "title": "Readings in the Philippine History",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [
+      {
+       "id": 112,
+       "code": "RPH 101",
+       "title": "Readings in the Philippine History"
+      }
+     ],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 25,
+      "code": "STS 101",
+      "title": "Science, Technology and Society",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [
+      {
+       "id": 11106,
+       "code": "STS 101",
+       "title": "Agham, Teknolohiya,at Lipunan"
+      }
+     ],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 2,
+   "term_number": 1,
+   "subjects": [
+    {
+     "subject": {
+      "id": 52,
+      "code": "TCW 101",
+      "title": "The Contemporary World",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 53,
+      "code": "AAP 101",
+      "title": "Art Appreciation",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 111,
+      "code": "COE 201",
+      "title": "Differential Equation",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 1112,
+       "code": "COE 104",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 173,
+      "code": "COE 202",
+      "title": "Engineering Data Analysis",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 120,
+       "code": "COE 102",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 296,
+      "code": "CPE 201",
+      "title": "Discrete Math",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 120,
+       "code": "COE 102",
+       "passed": true
+      },
+      {
+       "id": 124,
+       "code": "COE 100",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 299,
+      "code": "CPE 202L",
+      "title": "Object Oriented Programming",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6335,
+       "code": "CPE 105L",
+       "passed": true
+      },
+      {
+       "id": 6839,
+       "code": "CPE 104L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 297,
+      "code": "CPE 203",
+      "title": "Fundamentals of Electrical Circuits",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 298,
+      "code": "CPE 203L",
+      "title": "Fundamentals of Electrical Circuits Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 297,
+       "code": "CPE 203"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 295,
+      "code": "CPE 204L",
+      "title": "Computer Aided Drafting",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 121,
+       "code": "COE 103L",
+       "passed": true
+      },
+      {
+       "id": 122,
+       "code": "COE 103",
+       "passed": true
+      },
+      {
+       "id": 1112,
+       "code": "COE 104",
+       "passed": true
+      },
+      {
+       "id": 6335,
+       "code": "CPE 105L",
+       "passed": true
+      },
+      {
+       "id": 6839,
+       "code": "CPE 104L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 51,
+      "code": "PE 12",
+      "title": "PATHFit 3",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6923,
+       "code": "PE 11",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 2,
+   "term_number": 2,
+   "subjects": [
+    {
+     "subject": {
+      "id": 125,
+      "code": "SSP 101D*",
+      "title": "The Entrepreneurial Mind",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [
+      {
+       "id": 145,
+       "code": "SSP 101D",
+       "title": "The Entrepreneurial Mind"
+      },
+      {
+       "id": 6706,
+       "code": "SSP101D*",
+       "title": "The Entrepreneurial Mind"
+      }
+     ],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6150,
+      "code": "CPE 205",
+      "title": "Numerical Methods",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 111,
+       "code": "COE 201",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6152,
+      "code": "CPE 206L",
+      "title": "Data Structure and Algorithm",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 299,
+       "code": "CPE 202L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1157,
+      "code": "CPE 207",
+      "title": "Fundamentals of Electronic Circuits",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 297,
+       "code": "CPE 203",
+       "passed": true
+      },
+      {
+       "id": 298,
+       "code": "CPE 203L",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 1158,
+       "code": "CPE 207L"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1158,
+      "code": "CPE 207L",
+      "title": "Fundamentals of Electronic Circuits Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 297,
+       "code": "CPE 203",
+       "passed": true
+      },
+      {
+       "id": 298,
+       "code": "CPE 203L",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6151,
+      "code": "CPE 208",
+      "title": "Engineering Economics",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 111,
+       "code": "COE 201",
+       "passed": true
+      },
+      {
+       "id": 173,
+       "code": "COE 202",
+       "passed": true
+      },
+      {
+       "id": 295,
+       "code": "CPE 204L",
+       "passed": true
+      },
+      {
+       "id": 296,
+       "code": "CPE 201",
+       "passed": true
+      },
+      {
+       "id": 297,
+       "code": "CPE 203",
+       "passed": true
+      },
+      {
+       "id": 298,
+       "code": "CPE 203L",
+       "passed": true
+      },
+      {
+       "id": 299,
+       "code": "CPE 202L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6154,
+      "code": "CPE 209",
+      "title": "Database Management System",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6839,
+       "code": "CPE 104L",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 6153,
+       "code": "CPE 209L"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6153,
+      "code": "CPE 209L",
+      "title": "Database Management System Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6839,
+       "code": "CPE 104L",
+       "passed": true
+      }
+     ],
+     "corequisites": [
+      {
+       "id": 6154,
+       "code": "CPE 209"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1136,
+      "code": "CPE 210*",
+      "title": "Environmental Science and Engineering",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 111,
+       "code": "COE 201",
+       "passed": true
+      },
+      {
+       "id": 121,
+       "code": "COE 103L",
+       "passed": true
+      },
+      {
+       "id": 122,
+       "code": "COE 103",
+       "passed": true
+      },
+      {
+       "id": 173,
+       "code": "COE 202",
+       "passed": true
+      },
+      {
+       "id": 295,
+       "code": "CPE 204L",
+       "passed": true
+      },
+      {
+       "id": 296,
+       "code": "CPE 201",
+       "passed": true
+      },
+      {
+       "id": 297,
+       "code": "CPE 203",
+       "passed": true
+      },
+      {
+       "id": 298,
+       "code": "CPE 203L",
+       "passed": true
+      },
+      {
+       "id": 299,
+       "code": "CPE 202L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6149,
+      "code": "PE13",
+      "title": "PATHFit 4",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 51,
+       "code": "PE 12",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [
+      {
+       "id": 6004,
+       "code": "PE 13",
+       "title": "PathFit 4"
+      }
+     ],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 3,
+   "term_number": 1,
+   "subjects": [
+    {
+     "subject": {
+      "id": 9,
+      "code": "RLW 101",
+      "title": "Life and Works of Rizal",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 638,
+      "code": "CPE 301",
+      "title": "Logic Circuits and Design",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207",
+       "passed": true
+      },
+      {
+       "id": 1158,
+       "code": "CPE 207L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 639,
+      "code": "CPE 301L",
+      "title": "Logic Circuits and Design Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 638,
+       "code": "CPE 301"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 640,
+      "code": "CPE 302",
+      "title": "Operating Systems",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6152,
+       "code": "CPE 206L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 635,
+      "code": "CPE 303",
+      "title": "Data and Digital Communications",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207",
+       "passed": true
+      },
+      {
+       "id": 1158,
+       "code": "CPE 207L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 641,
+      "code": "CPE 304",
+      "title": "Software Design",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 6152,
+       "code": "CPE 206L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 642,
+      "code": "CPE 304L",
+      "title": "Software Design Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 641,
+       "code": "CPE 304"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 636,
+      "code": "CPE 305",
+      "title": "Feedback and Control Systems",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 297,
+       "code": "CPE 203",
+       "passed": true
+      },
+      {
+       "id": 298,
+       "code": "CPE 203L",
+       "passed": true
+      },
+      {
+       "id": 6150,
+       "code": "CPE 205",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 637,
+      "code": "CPE 306",
+      "title": "Fundamentals of Mixed Signals and Sensors",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207",
+       "passed": true
+      },
+      {
+       "id": 1158,
+       "code": "CPE 207L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 643,
+      "code": "CPE 302L",
+      "title": "Operating Systems Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "passed",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 640,
+       "code": "CPE 302"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 3,
+   "term_number": 2,
+   "subjects": [
+    {
+     "subject": {
+      "id": 1137,
+      "code": "CPE 307",
+      "title": "Basic Occupational Health and Safety",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 295,
+       "code": "CPE 204L",
+       "passed": true
+      },
+      {
+       "id": 635,
+       "code": "CPE 303",
+       "passed": true
+      },
+      {
+       "id": 636,
+       "code": "CPE 305",
+       "passed": true
+      },
+      {
+       "id": 637,
+       "code": "CPE 306",
+       "passed": true
+      },
+      {
+       "id": 638,
+       "code": "CPE 301",
+       "passed": true
+      },
+      {
+       "id": 639,
+       "code": "CPE 301L",
+       "passed": true
+      },
+      {
+       "id": 640,
+       "code": "CPE 302",
+       "passed": true
+      },
+      {
+       "id": 641,
+       "code": "CPE 304",
+       "passed": true
+      },
+      {
+       "id": 642,
+       "code": "CPE 304L",
+       "passed": true
+      },
+      {
+       "id": 643,
+       "code": "CPE 302L",
+       "passed": true
+      },
+      {
+       "id": 1136,
+       "code": "CPE 210*",
+       "passed": true
+      },
+      {
+       "id": 6151,
+       "code": "CPE 208",
+       "passed": true
+      },
+      {
+       "id": 6153,
+       "code": "CPE 209L",
+       "passed": true
+      },
+      {
+       "id": 6154,
+       "code": "CPE 209",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6691,
+      "code": "CPE 308",
+      "title": "Computer Networks and Security",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 635,
+       "code": "CPE 303",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6690,
+      "code": "CPE 308L",
+      "title": "Computer Networks and Security Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 6691,
+       "code": "CPE 308"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6689,
+      "code": "CPE 309",
+      "title": "Microprocessors",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 638,
+       "code": "CPE 301",
+       "passed": true
+      },
+      {
+       "id": 639,
+       "code": "CPE 301L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6688,
+      "code": "CPE 309L",
+      "title": "Microprocessors Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 6689,
+       "code": "CPE 309"
+      }
+     ],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6687,
+      "code": "CPE 310",
+      "title": "Methods of Research",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 4,
+       "code": "PCM 101",
+       "passed": true
+      },
+      {
+       "id": 173,
+       "code": "COE 202",
+       "passed": true
+      },
+      {
+       "id": 638,
+       "code": "CPE 301",
+       "passed": true
+      },
+      {
+       "id": 639,
+       "code": "CPE 301L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6686,
+      "code": "CPE 311L",
+      "title": "Introduction to HDL",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207",
+       "passed": true
+      },
+      {
+       "id": 1158,
+       "code": "CPE 207L",
+       "passed": true
+      },
+      {
+       "id": 6839,
+       "code": "CPE 104L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6685,
+      "code": "CPE 313L",
+      "title": "Computer Engineering Drafting and Design",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 1157,
+       "code": "CPE 207",
+       "passed": true
+      },
+      {
+       "id": 1158,
+       "code": "CPE 207L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 1141,
+      "code": "CPE 314",
+      "title": "CpE laws and Professional Practice",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 295,
+       "code": "CPE 204L",
+       "passed": true
+      },
+      {
+       "id": 635,
+       "code": "CPE 303",
+       "passed": true
+      },
+      {
+       "id": 636,
+       "code": "CPE 305",
+       "passed": true
+      },
+      {
+       "id": 637,
+       "code": "CPE 306",
+       "passed": true
+      },
+      {
+       "id": 638,
+       "code": "CPE 301",
+       "passed": true
+      },
+      {
+       "id": 639,
+       "code": "CPE 301L",
+       "passed": true
+      },
+      {
+       "id": 640,
+       "code": "CPE 302",
+       "passed": true
+      },
+      {
+       "id": 641,
+       "code": "CPE 304",
+       "passed": true
+      },
+      {
+       "id": 642,
+       "code": "CPE 304L",
+       "passed": true
+      },
+      {
+       "id": 643,
+       "code": "CPE 302L",
+       "passed": true
+      },
+      {
+       "id": 1136,
+       "code": "CPE 210*",
+       "passed": true
+      },
+      {
+       "id": 6151,
+       "code": "CPE 208",
+       "passed": true
+      },
+      {
+       "id": 6153,
+       "code": "CPE 209L",
+       "passed": true
+      },
+      {
+       "id": 6154,
+       "code": "CPE 209",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6248,
+      "code": "CPE 312L",
+      "title": "Elective 1",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 295,
+       "code": "CPE 204L",
+       "passed": true
+      },
+      {
+       "id": 635,
+       "code": "CPE 303",
+       "passed": true
+      },
+      {
+       "id": 636,
+       "code": "CPE 305",
+       "passed": true
+      },
+      {
+       "id": 637,
+       "code": "CPE 306",
+       "passed": true
+      },
+      {
+       "id": 638,
+       "code": "CPE 301",
+       "passed": true
+      },
+      {
+       "id": 639,
+       "code": "CPE 301L",
+       "passed": true
+      },
+      {
+       "id": 640,
+       "code": "CPE 302",
+       "passed": true
+      },
+      {
+       "id": 641,
+       "code": "CPE 304",
+       "passed": true
+      },
+      {
+       "id": 642,
+       "code": "CPE 304L",
+       "passed": true
+      },
+      {
+       "id": 643,
+       "code": "CPE 302L",
+       "passed": true
+      },
+      {
+       "id": 1136,
+       "code": "CPE 210*",
+       "passed": true
+      },
+      {
+       "id": 6151,
+       "code": "CPE 208",
+       "passed": true
+      },
+      {
+       "id": 6153,
+       "code": "CPE 209L",
+       "passed": true
+      },
+      {
+       "id": 6154,
+       "code": "CPE 209",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6247,
+      "code": "CPE 316",
+      "title": "Project Management",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "pending",
+     "prerequisites": [
+      {
+       "id": 641,
+       "code": "CPE 304",
+       "passed": true
+      },
+      {
+       "id": 642,
+       "code": "CPE 304L",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 3,
+   "term_number": 3,
+   "subjects": [
+    {
+     "subject": {
+      "id": 7491,
+      "code": "OJT CPE",
+      "title": "Midyear On-the-Job Training (250 hours)",
+      "units": 5
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 1136,
+       "code": "CPE 210*",
+       "passed": true
+      },
+      {
+       "id": 1137,
+       "code": "CPE 307",
+       "passed": false
+      },
+      {
+       "id": 1141,
+       "code": "CPE 314",
+       "passed": false
+      },
+      {
+       "id": 6151,
+       "code": "CPE 208",
+       "passed": true
+      },
+      {
+       "id": 6153,
+       "code": "CPE 209L",
+       "passed": true
+      },
+      {
+       "id": 6154,
+       "code": "CPE 209",
+       "passed": true
+      },
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      },
+      {
+       "id": 6685,
+       "code": "CPE 313L",
+       "passed": false
+      },
+      {
+       "id": 6686,
+       "code": "CPE 311L",
+       "passed": false
+      },
+      {
+       "id": 6687,
+       "code": "CPE 310",
+       "passed": false
+      },
+      {
+       "id": 6688,
+       "code": "CPE 309L",
+       "passed": false
+      },
+      {
+       "id": 6689,
+       "code": "CPE 309",
+       "passed": false
+      },
+      {
+       "id": 6690,
+       "code": "CPE 308L",
+       "passed": false
+      },
+      {
+       "id": 6691,
+       "code": "CPE 308",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 4,
+   "term_number": 1,
+   "subjects": [
+    {
+     "subject": {
+      "id": 648,
+      "code": "CPE 401",
+      "title": "Embedded Systems",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 6688,
+       "code": "CPE 309L",
+       "passed": false
+      },
+      {
+       "id": 6689,
+       "code": "CPE 309",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 649,
+      "code": "CPE 401L",
+      "title": "Embedded Systems Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 648,
+       "code": "CPE 401"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 650,
+      "code": "CPE 402",
+      "title": "Computer Architecture and Organization",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 6688,
+       "code": "CPE 309L",
+       "passed": false
+      },
+      {
+       "id": 6689,
+       "code": "CPE 309",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 651,
+      "code": "CPE 402L",
+      "title": "Computer Architecture and Organization Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 650,
+       "code": "CPE 402"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 644,
+      "code": "CPE 404D",
+      "title": "CpE Practice and Design 1",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6687,
+       "code": "CPE 310",
+       "passed": false
+      },
+      {
+       "id": 6688,
+       "code": "CPE 309L",
+       "passed": false
+      },
+      {
+       "id": 6689,
+       "code": "CPE 309",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 645,
+      "code": "CPE 405",
+      "title": "Digital Signal Processing",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 636,
+       "code": "CPE 305",
+       "passed": true
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 646,
+      "code": "CPE 405L",
+      "title": "Digital Signal Processing Lab",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [],
+     "corequisites": [
+      {
+       "id": 645,
+       "code": "CPE 405"
+      }
+     ],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6549,
+      "code": "CPE 410",
+      "title": "Technopreneurship 101",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 1136,
+       "code": "CPE 210*",
+       "passed": true
+      },
+      {
+       "id": 1137,
+       "code": "CPE 307",
+       "passed": false
+      },
+      {
+       "id": 1141,
+       "code": "CPE 314",
+       "passed": false
+      },
+      {
+       "id": 6151,
+       "code": "CPE 208",
+       "passed": true
+      },
+      {
+       "id": 6153,
+       "code": "CPE 209L",
+       "passed": true
+      },
+      {
+       "id": 6154,
+       "code": "CPE 209",
+       "passed": true
+      },
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      },
+      {
+       "id": 6685,
+       "code": "CPE 313L",
+       "passed": false
+      },
+      {
+       "id": 6686,
+       "code": "CPE 311L",
+       "passed": false
+      },
+      {
+       "id": 6687,
+       "code": "CPE 310",
+       "passed": false
+      },
+      {
+       "id": 6688,
+       "code": "CPE 309L",
+       "passed": false
+      },
+      {
+       "id": 6689,
+       "code": "CPE 309",
+       "passed": false
+      },
+      {
+       "id": 6690,
+       "code": "CPE 308L",
+       "passed": false
+      },
+      {
+       "id": 6691,
+       "code": "CPE 308",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 7465,
+      "code": "CPE 415L",
+      "title": "Elective 2",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": true,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  },
+  {
+   "year_level": 4,
+   "term_number": 2,
+   "subjects": [
+    {
+     "subject": {
+      "id": 6553,
+      "code": "CPE 406D",
+      "title": "CpE Practice and Design 2",
+      "units": 2
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 644,
+       "code": "CPE 404D",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6552,
+      "code": "CPE 407D",
+      "title": "Seminars and Field Trip",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 644,
+       "code": "CPE 404D",
+       "passed": false
+      },
+      {
+       "id": 645,
+       "code": "CPE 405",
+       "passed": false
+      },
+      {
+       "id": 646,
+       "code": "CPE 405L",
+       "passed": false
+      },
+      {
+       "id": 648,
+       "code": "CPE 401",
+       "passed": false
+      },
+      {
+       "id": 649,
+       "code": "CPE 401L",
+       "passed": false
+      },
+      {
+       "id": 650,
+       "code": "CPE 402",
+       "passed": false
+      },
+      {
+       "id": 651,
+       "code": "CPE 402L",
+       "passed": false
+      },
+      {
+       "id": 1137,
+       "code": "CPE 307",
+       "passed": false
+      },
+      {
+       "id": 1141,
+       "code": "CPE 314",
+       "passed": false
+      },
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      },
+      {
+       "id": 6685,
+       "code": "CPE 313L",
+       "passed": false
+      },
+      {
+       "id": 6686,
+       "code": "CPE 311L",
+       "passed": false
+      },
+      {
+       "id": 6690,
+       "code": "CPE 308L",
+       "passed": false
+      },
+      {
+       "id": 6691,
+       "code": "CPE 308",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 6550,
+      "code": "CPE 409",
+      "title": "Emerging Technologies in CpE",
+      "units": 3
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 644,
+       "code": "CPE 404D",
+       "passed": false
+      },
+      {
+       "id": 645,
+       "code": "CPE 405",
+       "passed": false
+      },
+      {
+       "id": 646,
+       "code": "CPE 405L",
+       "passed": false
+      },
+      {
+       "id": 648,
+       "code": "CPE 401",
+       "passed": false
+      },
+      {
+       "id": 649,
+       "code": "CPE 401L",
+       "passed": false
+      },
+      {
+       "id": 650,
+       "code": "CPE 402",
+       "passed": false
+      },
+      {
+       "id": 651,
+       "code": "CPE 402L",
+       "passed": false
+      },
+      {
+       "id": 1137,
+       "code": "CPE 307",
+       "passed": false
+      },
+      {
+       "id": 1141,
+       "code": "CPE 314",
+       "passed": false
+      },
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      },
+      {
+       "id": 6685,
+       "code": "CPE 313L",
+       "passed": false
+      },
+      {
+       "id": 6686,
+       "code": "CPE 311L",
+       "passed": false
+      },
+      {
+       "id": 6690,
+       "code": "CPE 308L",
+       "passed": false
+      },
+      {
+       "id": 6691,
+       "code": "CPE 308",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": true,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 7464,
+      "code": "CPE 403L",
+      "title": "Elective 3",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 7465,
+       "code": "CPE 415L",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    },
+    {
+     "subject": {
+      "id": 7463,
+      "code": "CPE 412L",
+      "title": "CPE Course Enhancement",
+      "units": 1
+     },
+     "is_elective": false,
+     "status": "not_taken",
+     "prerequisites": [
+      {
+       "id": 644,
+       "code": "CPE 404D",
+       "passed": false
+      },
+      {
+       "id": 645,
+       "code": "CPE 405",
+       "passed": false
+      },
+      {
+       "id": 646,
+       "code": "CPE 405L",
+       "passed": false
+      },
+      {
+       "id": 648,
+       "code": "CPE 401",
+       "passed": false
+      },
+      {
+       "id": 649,
+       "code": "CPE 401L",
+       "passed": false
+      },
+      {
+       "id": 650,
+       "code": "CPE 402",
+       "passed": false
+      },
+      {
+       "id": 651,
+       "code": "CPE 402L",
+       "passed": false
+      },
+      {
+       "id": 1137,
+       "code": "CPE 307",
+       "passed": false
+      },
+      {
+       "id": 1141,
+       "code": "CPE 314",
+       "passed": false
+      },
+      {
+       "id": 6247,
+       "code": "CPE 316",
+       "passed": false
+      },
+      {
+       "id": 6248,
+       "code": "CPE 312L",
+       "passed": false
+      },
+      {
+       "id": 6549,
+       "code": "CPE 410",
+       "passed": false
+      },
+      {
+       "id": 6685,
+       "code": "CPE 313L",
+       "passed": false
+      },
+      {
+       "id": 6686,
+       "code": "CPE 311L",
+       "passed": false
+      },
+      {
+       "id": 6690,
+       "code": "CPE 308L",
+       "passed": false
+      },
+      {
+       "id": 6691,
+       "code": "CPE 308",
+       "passed": false
+      },
+      {
+       "id": 7465,
+       "code": "CPE 415L",
+       "passed": false
+      }
+     ],
+     "corequisites": [],
+     "offered_this_term": false,
+     "not_posted_yet": false,
+     "offered_as": [],
+     "offered_other_campus": false,
+     "other_campuses": []
+    }
+   ]
+  }
+ ],
+ "assessment": {
+  "id": 156100,
+  "registration_id": 300671,
+  "version": 1,
+  "status": "current",
+  "fee_template_id": 93,
+  "fee_template": {
+   "id": 93,
+   "code": "COE TOSF 2ND SEMESTER 2026-2027",
+   "name": "COE TOSF 2nd Semester 2026-2027"
+  },
+  "total_units": 21,
+  "total_lab_units": 5,
+  "gross_amount": 7418,
+  "discount_amount": 7418,
+  "net_amount": 0,
+  "computed_at": "2026-11-14 17:31:47",
+  "computed_by_user_id": 15722,
+  "reason": "Enlisted",
+  "lines": [
+   {
+    "id": 2980327,
+    "account": {
+     "id": 981,
+     "code": "2999-007",
+     "name": "Athletic Fee"
+    },
+    "fee_template_line_id": 1671,
+    "course_fee_id": null,
+    "description": "Athletic Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 266,
+    "amount": 266,
+    "covered_amount": 266,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 1
+   },
+   {
+    "id": 2980328,
+    "account": {
+     "id": 988,
+     "code": "2999-039",
+     "name": "Computer Lab Fee"
+    },
+    "fee_template_line_id": 1672,
+    "course_fee_id": null,
+    "description": "Computer Lab Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 133,
+    "amount": 133,
+    "covered_amount": 133,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 2
+   },
+   {
+    "id": 2980329,
+    "account": {
+     "id": 980,
+     "code": "2999-168",
+     "name": "Socio Cultural Fee"
+    },
+    "fee_template_line_id": 1673,
+    "course_fee_id": null,
+    "description": "Socio Cultural Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 67,
+    "amount": 67,
+    "covered_amount": 67,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 3
+   },
+   {
+    "id": 2980330,
+    "account": {
+     "id": 1396,
+     "code": "2999-272",
+     "name": "Development fee Publication"
+    },
+    "fee_template_line_id": 1674,
+    "course_fee_id": null,
+    "description": "Development fee Publication",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 41,
+    "amount": 41,
+    "covered_amount": 41,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 4
+   },
+   {
+    "id": 2980331,
+    "account": {
+     "id": 1395,
+     "code": "2999-271",
+     "name": "Development fee Student Government"
+    },
+    "fee_template_line_id": 1675,
+    "course_fee_id": null,
+    "description": "Development fee Student Government",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 28,
+    "amount": 28,
+    "covered_amount": 28,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 5
+   },
+   {
+    "id": 2980332,
+    "account": {
+     "id": 1394,
+     "code": "2999-270",
+     "name": "Development fee Security"
+    },
+    "fee_template_line_id": 1676,
+    "course_fee_id": null,
+    "description": "Development fee Security",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 41,
+    "amount": 41,
+    "covered_amount": 41,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 6
+   },
+   {
+    "id": 2980333,
+    "account": {
+     "id": 1393,
+     "code": "2999-269",
+     "name": "Development fee School Paper"
+    },
+    "fee_template_line_id": 1677,
+    "course_fee_id": null,
+    "description": "Development fee School Paper",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 28,
+    "amount": 28,
+    "covered_amount": 28,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 7
+   },
+   {
+    "id": 2980334,
+    "account": {
+     "id": 982,
+     "code": "2999-091",
+     "name": "Guidance Fee"
+    },
+    "fee_template_line_id": 1679,
+    "course_fee_id": null,
+    "description": "Guidance Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 41,
+    "amount": 41,
+    "covered_amount": 41,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 8
+   },
+   {
+    "id": 2980335,
+    "account": {
+     "id": 1046,
+     "code": "2999-110",
+     "name": "Lab FEE"
+    },
+    "fee_template_line_id": 1681,
+    "course_fee_id": null,
+    "description": "Lab FEE",
+    "remarks": null,
+    "basis": "per_lab_unit",
+    "quantity": 5,
+    "rate": 67,
+    "amount": 335,
+    "covered_amount": 335,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 9
+   },
+   {
+    "id": 2980336,
+    "account": {
+     "id": 973,
+     "code": "2999-113",
+     "name": "Library Fee"
+    },
+    "fee_template_line_id": 1682,
+    "course_fee_id": null,
+    "description": "Library Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 117,
+    "amount": 117,
+    "covered_amount": 117,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 10
+   },
+   {
+    "id": 2980337,
+    "account": {
+     "id": 975,
+     "code": "2999-115",
+     "name": "Medical Dental Fee"
+    },
+    "fee_template_line_id": 1683,
+    "course_fee_id": null,
+    "description": "Medical Dental Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 54,
+    "amount": 54,
+    "covered_amount": 54,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 11
+   },
+   {
+    "id": 2980338,
+    "account": {
+     "id": 972,
+     "code": "2999-144",
+     "name": "Registration Fee"
+    },
+    "fee_template_line_id": 1684,
+    "course_fee_id": null,
+    "description": "Registration Fee",
+    "remarks": null,
+    "basis": "fixed",
+    "quantity": 1,
+    "rate": 67,
+    "amount": 67,
+    "covered_amount": 67,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 12
+   },
+   {
+    "id": 2980339,
+    "account": {
+     "id": 974,
+     "code": "4210-054",
+     "name": "Tuition Laboratory Fee"
+    },
+    "fee_template_line_id": 1687,
+    "course_fee_id": null,
+    "description": "Tuition Laboratory Fee",
+    "remarks": null,
+    "basis": "per_lab_unit",
+    "quantity": 5,
+    "rate": 600,
+    "amount": 3000,
+    "covered_amount": 3000,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 13
+   },
+   {
+    "id": 2980340,
+    "account": {
+     "id": 996,
+     "code": "4210-002",
+     "name": "Tuition Fee Regular"
+    },
+    "fee_template_line_id": 1688,
+    "course_fee_id": null,
+    "description": "Tuition Fee Regular",
+    "remarks": null,
+    "basis": "per_lecture_unit",
+    "quantity": 16,
+    "rate": 200,
+    "amount": 3200,
+    "covered_amount": 3200,
+    "net_amount": 0,
+    "scholarship_grant_id": 295586,
+    "sequence": 14
+   }
+  ],
+  "grants_applied": [
+   {
+    "id": 295586,
+    "provider": {
+     "id": 1,
+     "code": "UNIFAST",
+     "name": "UniFAST - Free Higher Education (RA 10931)"
+    },
+    "status": "confirmed",
+    "coverage": "full",
+    "percent": null,
+    "amount": null,
+    "covers": "covered_lines",
+    "covered_amount": 7418
+   }
+  ],
+  "created_at": "2026-11-14 17:31:47",
+  "updated_at": "2026-11-14 17:31:47"
+ },
+ "balance": 0,
+ "balance_hold": {
+  "held": false,
+  "cleared": false,
+  "enforced": false,
+  "previous_balance": 0,
+  "payment_made": false,
+  "payment_since": "2026-11-12",
+  "message": null,
+  "clearance": null
+ },
+ "override": {
+  "year_level": null,
+  "academic_status": null
+ },
+ "loa_hold": null,
+ "cross_enrollment": {
+  "allowances": []
+ }
+}
