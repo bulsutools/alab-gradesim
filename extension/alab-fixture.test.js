@@ -69,6 +69,7 @@ async function page() {
   const sched = store.scheduleData;
   assert.strictEqual(sched.academic_year, '2026-2027');
   assert.strictEqual(sched.term, '2nd Semester');
+  assert.strictEqual(sched.term_number, 2);
   assert.strictEqual(sched.subjects.length, 11);
   const lab = sched.subjects.find(s => s.code === 'CPE 312L');
   assert.strictEqual(lab.meetings[0].mode, 'laboratory');

@@ -13,6 +13,8 @@
 //   newGrades   count of grades ALAB SMS added or changed since the popup last opened
 //   enlisted    { <termId>: [[course code, section, type]] } for Room TBA's planner
 //   scheduleData  the current term's subjects with meeting times and rooms
+//     ({ term, academic_year, term_number, subjects[] }); the popup turns it
+//     into the Room TBA schedule payload (src/schedule.js)
 //   curriculumData  the student's real BulSU curriculum (program, per-term
 //     subjects with status, prerequisites, corequisites) for the planner
 
@@ -124,7 +126,12 @@
         })),
       });
     }
-    out.scheduleData = { term: term.term || '', academic_year: term.academic_year || '', subjects };
+    out.scheduleData = {
+      term: term.term || '',
+      academic_year: term.academic_year || '',
+      term_number: Number.isInteger(term.term_number) ? term.term_number : null,
+      subjects,
+    };
     if (key && refs.length) out.enlisted = { [key]: refs };
     return out;
   }

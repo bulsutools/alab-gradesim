@@ -257,7 +257,7 @@ function openPlanner(failedCode) {
 
 // Room TBA's planner opens the classes ALAB SMS says the student is enlisted in, latest sem first.
 async function showEnlisted() {
-  const { enlisted } = await chrome.storage.local.get('enlisted');
+  const { enlisted, scheduleData } = await chrome.storage.local.get(['enlisted', 'scheduleData']);
   const term = Math.max(...Object.keys(enlisted || {}).map(Number));
   const abs = amisTermToAbs(term);
   if (abs == null) return;
@@ -269,7 +269,55 @@ async function showEnlisted() {
     const plan = btoa(JSON.stringify({ v: 1, t: term, s })).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
     chrome.tabs.create({ url: `https://room-tba.bulsu.tools/planner?plan=${plan}${selectedProgram ? `&program=${selectedProgram}` : ''}` });
   });
+
+  // "Send schedule to Room TBA": payload v1 rides in the URL fragment, so it
+  // never reaches a server. Built from scheduleData (already in storage —
+  // no fresh fetch, no grades, no student identity).
+  const slim = scheduleData && SchedulePayload.slimScheduleData(scheduleData, scheduleTermNumber(scheduleData, term));
+  const payload = slim && slim.classes.length ? SchedulePayload.buildSchedulePayload(slim) : null;
+  if (payload) {
+    $('sendScheduleBtn').addEventListener('click', () => {
+      chrome.tabs.create({ url: SchedulePayload.roomTbaScheduleUrl(payload) });
+    });
+    $('copyScheduleBtn').addEventListener('click', () => copyScheduleJson(payload));
+    $('scheduleSendBox').hidden = false;
+  } else {
+    $('sendScheduleBtn').hidden = true;
+    $('copyScheduleBtn').hidden = true;
+    $('scheduleHint').textContent = 'No meeting times saved yet — Refresh on the ALAB SMS tab to capture them.';
+    $('scheduleSendBox').hidden = false;
+  }
   $('enlistedBox').hidden = false;
+}
+
+// term_number for the stored scheduleData: the field newer captures carry,
+// else the last digit of the AMIS term key ('1262' -> 2). Null when unknown —
+// term.semester is optional in the Room TBA contract.
+function scheduleTermNumber(scheduleData, enlistedTerm) {
+  if (scheduleData && Number.isInteger(scheduleData.term_number)) return scheduleData.term_number;
+  const abs = amisTermToAbs(enlistedTerm);
+  return abs == null ? null : (abs % 3) + 1;
+}
+
+// navigator.clipboard needs a focused document; fall back to a textarea so
+// the copy still works where the async API is unavailable.
+async function copyScheduleJson(payload) {
+  const text = SchedulePayload.schedulePayloadJson(payload);
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    ta.remove();
+  }
+  const hint = $('scheduleHint');
+  hint.textContent = 'Schedule JSON copied.';
+  setTimeout(() => { if (hint.isConnected) hint.textContent = ''; }, 2500);
 }
 
 // Set the curriculum and redraw the track and specialization pickers for it.

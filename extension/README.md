@@ -15,7 +15,7 @@ Source for the ALAB GradeSim browser extension. Start with the [main README](../
 | `lastError` | `'not-logged-in'`, `'alab-error'` or `null` |
 | `portal` | `'alab'` or `'amis'`, whichever portal last wrote the grades |
 | `enlisted` | `{ <termId>: [[course code, section, type]] }` for the sem in session and the one being enlisted. Bookmarked classes are left out |
-| `scheduleData` | The current term's subjects with meeting times and rooms |
+| `scheduleData` | The current term's subjects with meeting times and rooms (`term`, `academic_year`, `term_number`, `subjects[]`). The popup turns it into the Room TBA schedule payload — see [docs/schedule-payload.md](docs/schedule-payload.md) |
 | `curriculumData` | The student's real BulSU curriculum from `/enrollment/me`: program identity plus one block per `{year_level, term_number}` with each subject's code, title, units, status, prerequisites and corequisites. `src/alab-curriculum.js` turns it into the planner's checklist; the popup prefers it over the bundled UPLB programs whenever `portal` is `'alab'` |
 
 It skips the automatic fetch when `fetchedAt` is under an hour old. The popup's Refresh button sends `{ type: 'FETCH_GRADES', force: true }` to the open portal tab, which fetches right away and replies with `{ ok, lastError, fetchedAt }`.
