@@ -32,7 +32,7 @@ chrome.runtime.onInstalled.addListener(() => chrome.storage.local.remove('update
 // shape as Export JSON. The data goes straight to the page in the browser;
 // nothing is sent over the network.
 const WEB_APP_ORIGIN = 'https://gradesim.bulsu.tools';
-const WEB_APP_KEYS = ['gradesData', 'fetchedAt', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses', 'substitutions',
+const WEB_APP_KEYS = ['gradesData', 'curriculumData', 'fetchedAt', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses', 'substitutions',
   'removals', 'customCourseStatus', 'plannerPins', 'plannerPetitions', 'plannerOptions'];
 if (chrome.runtime.onMessageExternal) {
   chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {

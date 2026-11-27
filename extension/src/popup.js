@@ -27,6 +27,23 @@ let customCourseStatus = {};
 // Removal exam results for 4.00 grades, removalKey(termId, code) -> pass | fail.
 let removals = {};
 
+// The student's real BulSU curriculum from ALAB SMS (curriculumData in
+// storage), converted to a program + catalog by alab-curriculum.js. When it
+// exists it replaces the bundled UPLB checklist entirely; the UPLB programs
+// remain the fallback for students without live curriculum data.
+let alabCurriculum = null;
+
+// The curriculum the What if tab and pickers should use: live ALAB SMS data
+// when we have it, else the bundled UPLB program the student picked.
+function currentCurriculum() {
+  return alabCurriculum || getCurrentCurriculum();
+}
+
+// The catalog for enrichCourses: the live per-student one when present.
+function currentCatalog() {
+  return (alabCurriculum && alabCurriculum.catalog) || UPLB_CATALOG;
+}
+
 const NON_NUMERIC_GRADES = ['S', 'U', 'INC', 'DRP', 'W', 'P', 'DFG'];
 // PE, HK and NSTP aren't in the GWA. The prefix must end the department
 // token (space, digit, hyphen or end) so "PE13" and "NSTP11" count but
@@ -91,7 +108,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       icon: 'info', body: `GradeSim ${updateReady} is ready.`,
       action: button({ text: 'Update', small: true, onclick: () => chrome.runtime.reload() }),
     });
-  } else Promise.resolve().then(() => chrome.runtime.requestUpdateCheck?.()).catch(() => {});
+  // requestUpdateCheck is Chromium-only; Firefox lacks it, so look it up
+  // without naming the API for the Firefox linter.
+  } else Promise.resolve().then(() => chrome.runtime['requestUpdateCheck']?.()).catch(() => {});
 
   // Load excluded courses from storage
   const savedExclusions = await chrome.storage.local.get(['excludedCourses']);
@@ -119,28 +138,45 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Program: the first run (or a stored code GradeSim no longer has) asks
-  // before showing anything that depends on it.
+  // before showing anything that depends on it. When ALAB SMS gave us the
+  // student's real curriculum, it is the program - the select shows it and
+  // the bundled UPLB list stays out of the way.
   const programSelect = $('programSelect');
-  const savedProgram = await chrome.storage.local.get(['selectedProgram', 'selectedTracks', 'selectedSpecializations']);
+  const savedProgram = await chrome.storage.local.get(['selectedProgram', 'selectedTracks', 'selectedSpecializations', 'curriculumData', 'portal']);
   window.selectedTracks = savedProgram.selectedTracks || {};
   window.selectedSpecializations = savedProgram.selectedSpecializations || {};
-  const known = UPLB_PROGRAMS[savedProgram.selectedProgram] ? savedProgram.selectedProgram : null;
-  fillProgramSelect(programSelect, known);
-  if (known) selectProgram(known);
-  else {
-    document.body.classList.add('needs-program');
-    $('programLabel').textContent = 'Pick your program to start';
-  }
-
-  programSelect.addEventListener('change', (e) => {
-    const programCode = e.target.value;
-    selectProgram(programCode);
-    chrome.storage.local.set({ selectedProgram: programCode });
-    document.body.classList.remove('needs-program');
+  // curriculumData only counts when ALAB SMS wrote the grades too - a stale
+  // copy must not pair an ALAB checklist with AMIS grades.
+  alabCurriculum = savedProgram.portal === 'alab' ? alabProgram(savedProgram.curriculumData, isNonGwaCourseCode) : null;
+  if (alabCurriculum) {
+    const label = alabCurriculum.curriculumCode
+      ? `${alabCurriculum.name} (${alabCurriculum.curriculumCode})`
+      : alabCurriculum.name;
+    programSelect.replaceChildren(h('option', { value: 'ALAB', selected: true }, `${label} · live from ALAB SMS`));
+    programSelect.disabled = true;
     $('programLabel').textContent = 'Your program';
-    programSelect.querySelector('option[value=""]')?.remove();
-    if (window.gradesData) displayRemaining();
-  });
+  } else {
+    const known = UPLB_PROGRAMS[savedProgram.selectedProgram] ? savedProgram.selectedProgram : null;
+    fillProgramSelect(programSelect, known);
+    if (known) selectProgram(known);
+    else {
+      document.body.classList.add('needs-program');
+      $('programLabel').textContent = 'Pick your program to start';
+    }
+
+    programSelect.addEventListener('change', (e) => {
+      const programCode = e.target.value;
+      selectProgram(programCode);
+      chrome.storage.local.set({ selectedProgram: programCode });
+      document.body.classList.remove('needs-program');
+      $('programLabel').textContent = 'Your program';
+      programSelect.querySelector('option[value=""]')?.remove();
+      if (window.gradesData) displayRemaining();
+    });
+  }
+  // Track and specialization pickers follow whichever curriculum is active.
+  updateTrackOptionsUI();
+  updateSpecializationUI();
 
   // View toggle handling (semester or year)
   $('pickExclusions').addEventListener('click', e => {
@@ -245,14 +281,14 @@ function selectProgram(code) {
 
 // The specialization picked for the current program, or null.
 function currentSpecialization() {
-  const program = getCurrentCurriculum();
+  const program = currentCurriculum();
   const key = (window.selectedSpecializations || {})[program.code];
   return program.specializations && program.specializations[key] ? key : null;
 }
 
 // Specialization picker for programs whose catalog lists fields or tracks.
 function updateSpecializationUI() {
-  const program = getCurrentCurriculum();
+  const program = currentCurriculum();
   const specs = program.specializations;
   $('specSelector').hidden = !specs;
   $('whatifMoreLabel').textContent = specs ? 'Track, specialization and substitutions' : 'Track and substitutions';
@@ -275,7 +311,7 @@ function updateSpecializationUI() {
 
 // The chosen specialization's courses by pool, with the ones already passed.
 function renderSpecializationCourses(passed = new Set()) {
-  const program = getCurrentCurriculum();
+  const program = currentCurriculum();
   const spec = program.specializations && program.specializations[currentSpecialization()];
   if (!spec) {
     $('specCourses').replaceChildren(...flat([program.specializations &&
@@ -309,7 +345,7 @@ function renderSpecializationCourses(passed = new Set()) {
 
 // Track radios for the current program.
 function updateTrackOptionsUI() {
-  const program = getCurrentCurriculum();
+  const program = currentCurriculum();
   const trackSelector = $('trackSelector');
   trackSelector.hidden = !program.tracks;
   if (!program.tracks) return;
@@ -699,11 +735,12 @@ function displayRemaining() {
   const allCourses = window.gradesData?.courses || [];
   const completedCourses = window.gradesData?.completedCourses || [];
   const trackInfoEl = $('trackInfo');
-  const curriculum = getCurrentCurriculum();
+  const curriculum = currentCurriculum();
 
   $('honorsGwa').replaceChildren();
   if (window.gradesData) displayHonorStatus(window.gradesData.gwa, window.gradesData.totalUnits);
-  const quality = getProgramDataQuality(curriculum.code);
+  // The live ALAB SMS curriculum is authoritative - no quality warning.
+  const quality = curriculum.live ? { confident: true, reasons: [] } : getProgramDataQuality(curriculum.code);
   showNotice($('whatifQuality'), !quality.confident && {
     tone: 'warn', icon: 'alert', title: 'Treat these numbers as a rough guide', body: quality.reasons.join(' '),
   });
@@ -738,7 +775,7 @@ function displayRemaining() {
   }
 
   const passedRows = amisCourses(rawGrades).filter(r => r.result === 'passed');
-  const courses = plannerCourseList(curriculum, currentTrack, UPLB_CATALOG, currentSpecialization());
+  const courses = plannerCourseList(curriculum, currentTrack, currentCatalog(), currentSpecialization());
   renderSpecializationCourses(new Set(passedRows.map(r => r.code)));
   const left = remainingRequirements(courses, passedRows, { substitutions, overrides: customCourseStatus });
   window.requirementsLeft = left;
@@ -852,7 +889,7 @@ function renderWhatIf() {
   $('whatifNow').textContent = data?.gwa > 0 ? `Your GWA is ${data.gwa.toFixed(4)} now.` : '';
   if (!data) { el.replaceChildren(); return; }
   if (!left) {
-    showNotice(el, { tone: 'warn', icon: 'alert', body: `GradeSim doesn't have the ${getCurrentCurriculum().name} checklist yet, so it can't count your remaining units. Your GWA on the Grades tab still works.` });
+    showNotice(el, { tone: 'warn', icon: 'alert', body: `GradeSim doesn't have the ${currentCurriculum().name} checklist yet, so it can't count your remaining units. Your GWA on the Grades tab still works.` });
     return;
   }
 
@@ -1069,7 +1106,7 @@ function generateCollectorPanel(data) {
 }
 
 function generateProgressPanel(data) {
-  const totalRequired = getCurrentCurriculum()?.totalUnitsRequired || 155;
+  const totalRequired = currentCurriculum()?.totalUnitsRequired || 155;
   const done = data.passedUnits;
   const left = Math.max(0, totalRequired - done);
   const pct = Math.min(100, Math.round((done / totalRequired) * 100));
@@ -1497,7 +1534,7 @@ const BACKUP_SCHEMA_VERSION = 2;
 // termsAccepted (each person accepts the terms on their own device),
 // lastError (it describes this browser only) or fetchedAt (only a real portal
 // read sets it, so the From portal mark can't come from a file).
-const BACKUP_KEYS = ['gradesData', 'portal', 'enlisted', 'scheduleData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
+const BACKUP_KEYS = ['gradesData', 'portal', 'enlisted', 'scheduleData', 'curriculumData', 'selectedProgram', 'selectedTracks', 'selectedSpecializations', 'excludedCourses',
   'substitutions', 'customCourseStatus', 'removals', 'plannerPins', 'plannerPetitions', 'plannerOptions', 'theme'];
 
 function wireBackup() {
