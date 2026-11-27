@@ -305,7 +305,10 @@ function enrichCourses(list, catalog) {
   (list || []).forEach(row => {
     const raw = normCode(row.code);
     if (!raw || raw === 'ELECTIVE' || /^\d+$/.test(raw)) return;
-    if (row.genericRequirement || CLEAN_CODE_RE.test(raw) || !/\d/.test(raw)) {
+    // A code the catalog knows is clean even when it fails CLEAN_CODE_RE
+    // (BulSU codes like "RPH-101", "CPE 210*" or "PE13" come straight from
+    // ALAB SMS, not the garbled PDF checklist this branch was built for).
+    if (row.genericRequirement || CLEAN_CODE_RE.test(raw) || !/\d/.test(raw) || cat[raw]) {
       // GE/HK/NSTP/elective slots can be filled any regular sem.
       add(CLEAN_CODE_RE.test(raw) && !row.genericRequirement ? { ...row, code: raw } : { ...row, code: raw, catalogSem: '1s,2s' });
       return;
